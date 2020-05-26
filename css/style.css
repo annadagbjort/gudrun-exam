@@ -89,3 +89,19 @@ footer{
     display: block;
 }
 
+.inner-footer{
+    width: 95%;
+    margin: auto;
+    padding: 30px 10px;
+    display: flex;
+    flex-wrap: wrap;
+    box-sizing: border-box;
+}
+
+.footer-items{
+    width: 45%;
+    padding: 10px 10px;
+    box-sizing: border-box;
+
+}
+
