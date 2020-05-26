@@ -25,15 +25,18 @@ body {
     color: var(--black);
 }
 
-h1,h2,h3 {
+h1,
+h2,
+h3 {
     font-family: "crimson pro", serif;
     color: var(--text-red);
-    font-weight:500;
+    font-weight: 500;
 }
 
 h1 {
     text-transform: uppercase;
-    }
+    font-size: 2.3em;
+}
 
 
 p {
@@ -69,17 +72,33 @@ button {
     color: var(--white);
     padding: .5rem 2rem;
     font-size: 22px;
-    border:none;
+    border: none;
 }
 
 .grey-button {
- background-color: var(--grey);
+    background-color: var(--grey);
     padding: .5rem 2rem;
     font-size: 22px;
-    border:none;
+    border: none;
 }
 
 .red-text {
     color: var(--text-red);
 }
 
+
+/*    FRONT PAGE   */
+
+main.front-page-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+}
+
+iframe.front-page-youtube {
+    width: 50vw;
+    height: 25em;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+
+}
