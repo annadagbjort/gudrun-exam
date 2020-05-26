@@ -23,6 +23,7 @@
 * {
     padding: 0;
     margin: 0;
+    box-sizing: border-box;
 }
 
 body {
@@ -111,12 +112,17 @@ button {
 
 header {
     height: 45vh;
-    background-color: aquamarine;
+    background-image: url("../images/repertoire_header_big.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+
 }
 
 .repertoire-header {
     text-align: center;
     margin: 3rem;
+    font-size: 45px;
 }
 
 /*BUTTON GRID*/
@@ -134,11 +140,15 @@ header {
 
 }
 
+.repertoire-button-container > button:focus {
+    outline: 0;
+}
+
 /*CONTAINER WITH THE CONTENT*/
 
 .repertoire-all-container {
     background-color: var(--grey);
-    width: 50vw;
+    width:60vw;
     margin: 2rem auto;
     padding: 3.5rem;
     font-size: 24px;
@@ -151,10 +161,15 @@ header {
 
 
 .repertoire-one-opera,
-.repertoire-one-oratorio,
 .repertoire-one-music {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-template-columns: repeat(3, minmax(200px, 1fr));
+}
+
+.repertoire-one-oratorio {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(200px, 1fr));
+
 }
 
 .repertoire-one-opera div,
@@ -174,4 +189,48 @@ header {
 .active-rep-button {
     background-color: var(--button-red);
     color: var(--white);
+}
+
+/* REPERTOIRE MEDIA QUERIES */
+
+@media only screen and (max-width: 1100px) and (min-width: 910px) {
+    .repertoire-all-container {
+        width: 70vw;
+
+    }
+
+}
+
+
+    @media only screen and (max-width: 910px) {
+        .repertoire-all-container {
+        width: 80vw;
+    }
+
+        .repertoire-one-opera,
+        .repertoire-one-music {
+            grid-template-columns: repeat(1, 1fr);
+            grid-template-rows: repeat(3);
+            border-bottom: 1px solid black;
+        }
+
+        .repertoire-one-oratorio {
+            grid-template-columns: repeat(1, 1fr);
+            grid-template-rows: repeat(2);
+            border-bottom: 1px solid black;
+
+        }
+
+    }
+
+@media only screen and (max-width: 450px) {
+    .repertoire-all-container {
+        padding: 1rem;
+        width: 90vw;
+    }
+
+    body {
+        margin: 0 15px;
+    }
+
 }
