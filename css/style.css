@@ -83,3 +83,9 @@ button {
     color: var(--text-red);
 }
 
+footer{
+    width: 100%;
+    background: #D44456;
+    display: block;
+}
+
