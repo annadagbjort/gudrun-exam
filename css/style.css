@@ -83,3 +83,71 @@ button {
     color: var(--text-red);
 }
 
+/*Quote slideshow */
+.slideshow-container {
+    position: relative;
+}
+
+.mySlides {
+    display: none;
+    padding: 80px;
+    text-align: center;
+}
+
+/*Next and previous buttons */
+.prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    margin-top: -30px;
+    padding: 16px;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+}
+
+/*Positioning the "next button" to the right*/
+.next {
+    position: absolute;
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+
+/*add see-through bg color on hover */
+.prev:hover, .next:hover{
+    background-color: black;
+    color: white;
+}
+
+/*dots */
+.dot-container {
+    text-align: center;
+    padding: 20px;
+}
+
+.dot {
+    cursor: pointer;
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: var(--black);
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+    background-color: var(--grey);
+}
+
+q{
+    font-style: italic;
+}
+
+.author {
+    color: var(--grey);
+}
+
+
+
+
