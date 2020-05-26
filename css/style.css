@@ -1,0 +1,85 @@
+:root {
+    --black: #0D0D0D;
+    --white: #fff;
+
+    /* grey is for example used as a background, button in schedule and contact form*/
+    --grey: #F2F1F0;
+
+    /* the text in the forms */
+    --text-grey: #696969;
+
+    /* All red text*/
+    --text-red: #C10009;
+
+    /* All red buttons*/
+    --button-red: #D02E42;
+
+    /* the footer background*/
+    --footer-red: #D2394C;
+}
+
+
+/*  B A S I C S T Y L I N G    */
+body {
+    font-family: "crimson text", serif;
+    color: var(--black);
+}
+
+h1,h2,h3 {
+    font-family: "crimson pro", serif;
+    color: var(--text-red);
+    font-weight:500;
+}
+
+h1 {
+    text-transform: uppercase;
+    }
+
+
+p {
+    color: var(--black);
+
+}
+
+/*  B A S I C  S T U F F  */
+
+.hide {
+    display: none;
+}
+
+a {
+    text-decoration: none;
+    color: var(--black);
+}
+
+ul {
+    list-style: none;
+}
+
+button {
+    cursor: pointer;
+    font-family: "crimson text", serif;
+}
+
+/*  S T Y L I N G   */
+
+
+.red-button {
+    background-color: var(--button-red);
+    color: var(--white);
+    padding: .5rem 2rem;
+    font-size: 22px;
+    border:none;
+}
+
+.grey-button {
+ background-color: var(--grey);
+    padding: .5rem 2rem;
+    font-size: 22px;
+    border:none;
+}
+
+.red-text {
+    color: var(--text-red);
+}
+
