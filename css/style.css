@@ -94,12 +94,89 @@ main.front-page-grid {
     display: grid;
     grid-template-columns: 1fr;
 }
+.fp-header{
+    grid-column: 1/3;
+    padding-top:1.2em;
+}
+
+.gudrun-live{
+    background: var(--grey);
+}
 
 iframe.front-page-youtube {
     width: 50vw;
-    height: 25em;
+    height: 28em;
     display: block;
     margin-left: auto;
     margin-right: auto;
+}
+.the-video-title-fetched{
+    text-align: center;
+}
+
+article.newsletter-updates{
+    display:grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.text-about-newsletter{
+    width:30em;
+    padding:2em 4em;
+    margin-left: auto;
+}
+
+.newsletter-signup-form{
+/*display:flex;*/
+    padding:2em 4em;
+    margin-right: auto;
+    text-align: center;
+}
+.fp-newsletter{
+    display:flex;
+    margin:1em;
+    background: var(--grey);
+    border: none;
+    color: var(--text-grey);
+    padding: .8em 1.2em;
+    font-size: 14px;
+    width: 18em;
+    margin: 1.7em;
+}
+.newsletter-signup-form > .red-button{
+    margin-top: .2em
+}
+
+
+
+.debut-album {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    background: var(--grey);
+    margin:4em 0;
+}
+
+.fp-album-cover{
+    width:24em;
+    padding:0em 2em;
+    display: block;
+    margin-left: auto;
+}
+.about-album{
+    width:28em;
+    padding:0em 3em;
+    display: block;
+    margin-right: auto;
+/*    text-align: center;*/
+}
+.about-album > button{
+    display:block;
+    margin-left:auto;
+    margin-right:auto;
+    margin-top:1em;
+}
+
+.gudruns-gallery{
 
 }
+
+
