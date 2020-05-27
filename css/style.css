@@ -83,6 +83,8 @@ button {
     color: var(--text-red);
 }
 
+/*FOOTER*/
+
 footer{
     width: 100%;
     background: #D44456;
@@ -120,6 +122,13 @@ footer p{
 }
 
 footer img{
-    width: 10%;
+    width: 12%;
+    margin-top: 10px;
 }
+
+/*FOOTER END*/
+
+
+
+
 
