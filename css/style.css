@@ -68,6 +68,11 @@ ul {
 button {
     cursor: pointer;
     font-family: "crimson text", serif;
+
+}
+
+button:focus {
+    outline: 0;
 }
 
 /* fade in effect */
@@ -83,6 +88,20 @@ button {
 
     100% {
         opacity: 1;
+    }
+}
+
+.fade-out {
+    animation: fadeOut ease-in 0.5s;
+}
+
+@keyframes fadeOut {
+    0% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
     }
 }
 
@@ -110,7 +129,7 @@ button {
 
 /* REPERTORIE SUBPAGE */
 
-header {
+.rep-img-header {
     height: 45vh;
     background-image: url("../images/repertoire_header_big.jpg");
     background-repeat: no-repeat;
@@ -148,7 +167,7 @@ header {
 
 .repertoire-all-container {
     background-color: var(--grey);
-    width:60vw;
+    width: 60vw;
     margin: 2rem auto;
     padding: 3.5rem;
     font-size: 24px;
@@ -202,31 +221,31 @@ header {
 }
 
 
-    @media only screen and (max-width: 910px) {
-        .repertoire-all-container {
+@media only screen and (max-width: 910px) {
+    .repertoire-all-container {
         width: 80vw;
     }
 
-        .repertoire-one-opera,
-        .repertoire-one-music {
-            grid-template-columns: repeat(1, 1fr);
-            grid-template-rows: repeat(3);
-            border-bottom: 1px solid black;
-        }
+    .repertoire-one-opera,
+    .repertoire-one-music {
+        grid-template-columns: repeat(1, 1fr);
+        grid-template-rows: repeat(3);
+        border-bottom: 1px solid black;
+    }
 
-        .repertoire-one-oratorio {
-            grid-template-columns: repeat(1, 1fr);
-            grid-template-rows: repeat(2);
-            border-bottom: 1px solid black;
-
-        }
-
-
-        .repertoire-header {
-            margin: 2rem 1rem;
-        }
+    .repertoire-one-oratorio {
+        grid-template-columns: repeat(1, 1fr);
+        grid-template-rows: repeat(2);
+        border-bottom: 1px solid black;
 
     }
+
+
+    .repertoire-header {
+        margin: 2rem 1rem;
+    }
+
+}
 
 @media only screen and (max-width: 450px) {
     .repertoire-all-container {
@@ -236,6 +255,164 @@ header {
 
     body {
         margin: 0 15px;
+    }
+
+}
+
+
+/* SCHEDULE SUBPAGE STYLING */
+
+.schedule-img-header {
+    height: 45vh;
+    background-image: url("../images/classical-music-1838390_1920.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+
+}
+
+
+
+.schedule-main-heading {
+    margin: 3rem auto;
+    font-size: 45px;
+    text-align: center;
+
+}
+
+.schedule-container {
+    margin: 2rem auto;
+    width: 75vw;
+    justify-content: center;
+}
+
+.one-event {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(200px, 1fr));
+    font-size: 24px;
+    font-family: "crimson pro", serif;
+    padding: 1rem 0;
+}
+
+.one-event p,
+.one-event > div {
+    padding: 0.5rem;
+}
+
+.schedule-btn-wrapper {
+    margin: auto;
+    justify-self: center;
+}
+
+.schedule-btn-wrapper > button {
+    color: var(--text-red);
+}
+
+.schedule-date {
+    background-color: var(--grey);
+}
+
+.schedule-expand {
+    margin: 2rem;
+
+}
+
+.one-event .schedule-date {
+    text-align: right;
+    padding: 2rem;
+}
+
+.schedule-wrapper {
+    text-align: center;
+}
+
+.booking-container {
+    height: 55vh;
+    background-image: url("../images/chicago-94510_1920.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    margin-bottom: 2rem;
+    position: relative;
+    z-index: 1;
+    width: 100%;
+}
+
+.booking-buttons-wrap {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    position: absolute;
+    z-index: 10;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 150px;
+    background-color: rgba(255, 255, 255, 0.7);
+}
+
+.btn-to-repertoire-wrap,
+.btn-to-contact-wrap {
+    margin: auto;
+    justify-self: center;
+}
+
+/* MEDIA QUERIES FOR SCHEDULE */
+
+@media only screen and (max-width: 910px) {
+    .schedule-container {
+        width: 85vw;
+    }
+}
+
+@media only screen and (max-width: 800px) {
+    .one-event {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        grid-template-rows: repeat(3);
+        border-bottom: 1px solid black;
+    }
+
+    .schedule-date {
+        background: transparent;
+    }
+
+    .schedule-container {
+        width: 100%;
+    }
+
+    .schedule-main-heading {
+        font-size: 35px;
+    }
+
+    .one-event p,
+    .one-event > div {
+        text-align: left;
+    }
+
+    .one-event .schedule-date {
+        text-align: left;
+        padding: 0.5rem;
+        color: var(--text-red);
+    }
+
+}
+
+@media only screen and (max-width: 500px) {
+
+    .booking-buttons-wrap {
+        grid-template-columns: repeat(1, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+        height: 220px;
+    }
+
+    .btn-to-repertoire-wrap > button,
+    .btn-to-contact-wrap > button {
+        margin-top: 2rem;
+        margin-bottom: 1rem;
+    }
+
+    .booking-container {
+        height: 90vh;
     }
 
 }
