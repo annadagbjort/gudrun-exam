@@ -4,7 +4,9 @@
 //http://designhavn.dk/5Wordpress/wp-json/wp/v2/posts?_embed
 
 // cat id = 6 : about the album
-
+fetch("http://designhavn.dk/5Wordpress/wp-json/wp/v2/media?_embed")
+    .then(res => res.json())
+    .then(handleInstagramPhotosData)
 
 fetch("http://designhavn.dk/5Wordpress/wp-json/wp/v2/youtube_link")
     .then(res => res.json())
@@ -57,4 +59,24 @@ function handleYoutubeLinkData(youtubeLinks) {
             }
         });
     });
+}
+
+function handleInstagramPhotosData(InstagramPhotos) {
+
+
+
+    InstagramPhotos.forEach(instaPhoto => {
+        //        cloneInstaTemp.instaPhoto
+        const instagramTemplate = document.querySelector(".instagramTemplate").content;
+    const cloneInstaTemp = instagramTemplate.cloneNode(true);
+
+                    cloneInstaTemp.querySelector(".imgInstagramCarousel").src = instaPhoto.source_url
+
+        console.log(instaPhoto.source_url)
+
+        document.querySelector(".theInstagram").appendChild(cloneInstaTemp);
+    });
+
+    //        cloneInstaTemp.querySelector(".imgInstagramCarousel").src = instaPhoto.source_url
+
 }
