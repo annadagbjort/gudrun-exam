@@ -5,13 +5,15 @@
 
 // cat id = 6 : about the album
 
-fetch("http://designhavn.dk/5Wordpress/wp-json/wp/v2/posts?_embed")
-    .then(res => res.json())
-    .then(handlePostData)
 
 fetch("http://designhavn.dk/5Wordpress/wp-json/wp/v2/youtube_link")
     .then(res => res.json())
     .then(handleYoutubeLinkData)
+
+
+fetch("http://designhavn.dk/5Wordpress/wp-json/wp/v2/posts?_embed")
+    .then(res => res.json())
+    .then(handlePostData)
 
 function handlePostData(frontpagePostHandled) {
 
@@ -35,8 +37,8 @@ function handlePostData(frontpagePostHandled) {
                 document.querySelector(".newsletter-updates .fp-header").textContent = theHeader;
 
                 document.querySelector(".text-about-newsletter").innerHTML = theContent;
-
             }
+
         });
     });
 }
