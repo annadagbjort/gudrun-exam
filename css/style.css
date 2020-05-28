@@ -25,15 +25,19 @@ body {
     color: var(--black);
 }
 
-h1,h2,h3 {
+h1,
+h2,
+h3 {
     font-family: "crimson pro", serif;
     color: var(--text-red);
-    font-weight:500;
+    font-weight: 500;
 }
 
 h1 {
     text-transform: uppercase;
-    }
+    font-size: 2.3em;
+    text-align: center;
+}
 
 
 p {
@@ -69,21 +73,38 @@ button {
     color: var(--white);
     padding: .5rem 2rem;
     font-size: 22px;
-    border:none;
+    border: none;
 }
 
 .grey-button {
- background-color: var(--grey);
+    background-color: var(--grey);
     padding: .5rem 2rem;
     font-size: 22px;
-    border:none;
+    border: none;
 }
 
 .red-text {
     color: var(--text-red);
 }
 
-/*FOOTER*/
+
+/*    FRONT PAGE   */
+
+main.front-page-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+}
+
+iframe.front-page-youtube {
+    width: 50vw;
+    height: 25em;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+
+}
+
+/* FOOTER */
 
 footer{
     width: 100%;
@@ -92,7 +113,7 @@ footer{
 }
 
 .inner-footer{
-    width: 70%;
+    width: 95%;
     margin: auto;
     padding: 30px 10px;
     display: flex;
@@ -101,34 +122,22 @@ footer{
 }
 
 .footer-items{
-    width: 50%;
+    width: 48%;
     padding: 10px 10px;
     box-sizing: border-box;
-
 }
 
 .footer-border{
-    width: 30%;
+    width: 100px;
     height: 1.5px;
     background: white;
 }
 
-footer h2{
+.footer-items h2{
     color: white;
 }
 
-footer p{
-    color: white;
+.footer-items img{
+    width: 10%
 }
-
-footer img{
-    width: 12%;
-    margin-top: 10px;
-}
-
-/*FOOTER END*/
-
-
-
-
 
