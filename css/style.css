@@ -110,18 +110,20 @@ footer{
     width: 100%;
     background: #D44456;
     display: block;
+
 }
 
 .inner-footer{
-    width: 95%;
+    width: 70%;
     margin: auto;
     padding: 30px 10px;
     display: flex;
     flex-wrap: wrap;
     box-sizing: border-box;
+    justify-content: center;
 }
 
-.footer-items{
+.footer-items-contact{
     width: 48%;
     padding: 10px 10px;
     box-sizing: border-box;
@@ -129,15 +131,20 @@ footer{
 
 .footer-border{
     width: 100px;
-    height: 1.5px;
+    height: 1.6px;
     background: white;
 }
 
-.footer-items h2{
+.footer-items-contact h2{
     color: white;
 }
 
-.footer-items img{
-    width: 10%
+.footer-items-contact p{
+    color: white;
+    font-style: italic;
+}
+
+.footer-items-contact img{
+    width: 14%
 }
 
