@@ -10,10 +10,10 @@ fetch("https://designhavn.dk/5Wordpress/wp-json/wp/v2/contact?_embed")
 
 function showInfo(jsonData){
     jsonData.forEach(showInfo)
-}
 
-function showInfo(contact)
-const template = document.querySelector("template").content;
+
+function showInfo(contact){
+const template = document.querySelector("#myTemplateFooter").content;
 const clone = template.cloneNode(true);
 
 clone.querySelector(".contact-name").textContent = contact.full_name;
@@ -25,3 +25,10 @@ clone.querySelector(".contact-phone").textContent = contact.phone_number;
 clone.querySelector(".contact-location").textContent = contact.location;
 
 document.querySelector(".footer-items-contact").appendChild(clone);
+
+}
+}
+
+
+
+
