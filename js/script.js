@@ -23,6 +23,7 @@ function handlePostData(frontpagePostHandled) {
 
         var theHeader = item.title.rendered;
         var theContent = item.content.rendered;
+        var theExcerpt = item.excerpt.rendered;
 
 
         item.categories.forEach(categor => {
@@ -31,12 +32,14 @@ function handlePostData(frontpagePostHandled) {
             if (categor == 6) {
                 document.querySelector(".debut-album .fp-header").textContent = theHeader;
 
-                document.querySelector(".text-about-album").innerHTML = theContent;
+                document.querySelector(".text-about-album").innerHTML = theExcerpt;
+
+
             }
 
             // Newsletter
             if (categor == 7) {
-                document.querySelector(".newsletter-updates .fp-header").textContent = theHeader;
+//                document.querySelector(".newsletter-updates .fp-header").textContent = theHeader;
 
                 document.querySelector(".text-about-newsletter").innerHTML = theContent;
             }
