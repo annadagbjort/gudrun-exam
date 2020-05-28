@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -12,50 +13,54 @@
 <body>
 
     <main>
-        <h1>ABout me</h1>
-        <p>
-            Soprano Gudrun Ingimars was born in Iceland and began her vocal studies at the Reykjavik Voice Academy. She continued her studies in London at the Mayer- Lismann Opera Centre and was a student of Prof. Vera Rozsa. At the music conservatory in Stuttgart, Germany, she studied with Professor Sylvia Geszty and completed the Opera School there. She has attended masterclasses with Elly Ameling, Janet Perry, Robin Bowman and Siegfried Lorenz, among others. She also attended the Bayerische Theater Academy.
-
-            Her opera credits are many and varied. Some of her roles have included Romilda in „Xerxes“ under the conductor Sir Charles Farncombe, Gretel in „Hänsel und Gretel“, Fanny in „La Camiale di Matrimonino“, Despina in „Cosi fan tutte“, Blonde in „Die Entführung aus dem Serail“, Queen of the Night in „Die Zauberflöte“, Adele in „Die Fledermaus, Coraline in „Le Toreador“ , Kurfürstin in „Der Vogelhändler and Titania in „The Fairy Queen“. She is a well known concert singer and has performed as a soloist in many countries in Europe with many different orchestras. These performances have included Fauré´s „Requiem“ in London, Switzerland, Portugal and Germany; „Carmina Burana“ in Spain, Germany and Turkey; „Exultate Jubilate“ in many cities in Italy and Germany.
-
-            Ms. Ingimars has also performed more than sixty operetta concerts around Germany and Austria and is a frequent guest soloist with the Johann Strauss Orchestra Wiesbaden and the Alt-Wiener Strauss Ensemble in Stuttgart. She has sung in the Bavarian Opera, the Stuttgart Opera and Markgräfliches Opera House in Bayreuth.
-
-            Ms. Ingimars received a special recognition at the International Erika Köth Competition. In her home country, Iceland, she has received recognitions from various cultural institutions.
-        </p>
-        <button class="red-button"> Read More</button>
-        <div class="grey-bg">
-            <h1>Vocal Coaching</h1>
-            <p>Text about the very nice vocal coaching Gudrun Ingimars provides. Will probably be this long.Text about the very nice vocal coaching Gudrun Ingimars provides. Will probably be this long. Text about the very nice vocal coaching Gudrun Ingimars provides. Will probably be this long. Text about the very nice vocal coaching Gudrun Ingimars provides. Will probably be this long.</p>
-        </div>
-        <div class="slideshow-container">
-            <div class="mySlides">
-                <q>Gudrun is so nice to work with</q>
-                <p class="author">Anna Dagbjört</p>
+        <div>
+            <div class="about-wrapper">
+                <h1 class="about-header">About me</h1>
+                <p class="about-text">
+                    Insert text about Gudrun here
+                </p>
             </div>
 
-            <div class="mySlides">
-                <q>Wow, Gudrun is sweet!</q>
-                <p class="author">Esther Kakai</p>
+            <button class="red-button"> Read More</button>
+            <div class="grey-bg">
+                <h1 class="center-title">Vocal Coaching</h1>
+                <p class="center-paragraph">Text about the very nice vocal coaching Gudrun Ingimars provides. Will probably be this long.Text about the very nice vocal coaching Gudrun Ingimars provides. Will probably be this long. Text about the very nice vocal coaching Gudrun Ingimars provides. Will probably be this long. Text about the very nice vocal coaching Gudrun Ingimars provides. Will probably be this long.</p>
+            </div>
+            <div class="slideshow-container">
+                <template>
+                    <div class="mySlides">
+                        <q class="quote">Gudrun is so nice to work with</q>
+                        <p class="author">Anna Dagbjört</p>
+                    </div>
+                </template>
+
+                <div class="mySlides">
+                    <q>Wow, Gudrun is sweet!</q>
+                    <p class="author">Esther Kakai</p>
+                </div>
+
+                <div class="mySlides">
+                    <q>Very professional</q>
+                    <p class="author">Karoline Rosenfeldt</p>
+                </div>
+                <div class="mySlides">
+                    <q>Coolest person ever!</q>
+                    <p class="author">Marcelina Jankowska</p>
+                </div>
+
+                <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                <a class="next" onclick="plusSlides(1)">&#10095;</a>
             </div>
 
-            <div class="mySlides">
-                <q>Very professional</q>
-                <p class="author">Karoline Rosenfeldt</p>
+            <!--        Dot indicators-->
+            <div class="dot-container">
+                <span class="dot" onclick="currentSlide(1)"></span>
+                <span class="dot" onclick="currentSlide(2)"></span>
+                <span class="dot" onclick="currentSlide(3)"></span>
+                <span class="dot" onclick="currentSlide(4)"></span>
             </div>
 
-            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-            <a class="next" onclick="plusSlides(1)">&#10095;</a>
-        </div>
-
-        <!--        Dot indicators-->
-        <div class="dot-container">
-            <span class="dot" onclick="currentSlede(1)"></span>
-            <span class="dot" onclick="currentSlede(2)"></span>
-            <span class="dot" onclick="currentSlede(3)"></span>
-            <span class="dot" onclick="currentSlede(4)"></span>
-
-        </div>
-
+            <button class="red-button">Book Lessons</button>
 
 
 
@@ -69,4 +74,6 @@
 
 
     <script src="../js/script.js"></script>
-</body></html>
+</body>
+
+</html>
