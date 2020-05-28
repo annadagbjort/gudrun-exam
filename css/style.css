@@ -107,7 +107,12 @@ button {
 .mySlides {
     display: none;
     padding: 80px;
-    text-align: center;
+    text-align:center;
+    margin: 0 463px;
+}
+
+.slideshow-container:first-child {
+    display: block;
 }
 
 /*Next and previous buttons */
@@ -117,8 +122,8 @@ button {
     top: 50%;
     width: auto;
     margin-top: -30px;
-    margin-left: 250px;
-    margin-right: 250px;
+    margin-left: 350px;
+    margin-right: 350px;
     padding: 16px;
     border-radius: 0 3px 3px 0;
     user-select: none;
@@ -157,7 +162,7 @@ button {
     background-color: var(--text-red);
 }
 
-q{
+.quote{
     font-style: italic;
 }
 
