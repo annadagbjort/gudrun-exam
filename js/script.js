@@ -2,7 +2,7 @@
 
 fetch("https://designhavn.dk/5Wordpress/wp-json/wp/v2/contact?_embed")
 .then(function (response){
-    reeturn response.json()
+    return response.json()
 })
 .then(function (data){
     showInfo(data)
