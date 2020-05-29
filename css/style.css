@@ -42,6 +42,8 @@ h3 {
 
 h1 {
     text-transform: uppercase;
+    font-size: 2.3em;
+    text-align: center;
 }
 
 
@@ -125,6 +127,22 @@ button:focus {
 
 .red-text {
     color: var(--text-red);
+}
+
+/*    FRONT PAGE   */
+
+main.front-page-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+}
+
+iframe.front-page-youtube {
+    width: 50vw;
+    height: 25em;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+
 }
 
 /* FOOTER */
