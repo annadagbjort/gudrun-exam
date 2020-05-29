@@ -87,6 +87,9 @@ button {
 .red-text {
     color: var(--text-red);
 }
+.grey-text {
+    color: var(--text-grey);
+}
 
 
 /*    FRONT PAGE   */
@@ -227,7 +230,6 @@ article.newsletter-updates {
     margin-top: 1em;
 }
 
-.gudruns-gallery {}
 
 .theInstagram {
     display: flex;
@@ -265,24 +267,25 @@ article.newsletter-updates {
 
 
 @media only screen and (max-width:800px) {
-/*
+    /*
     .gudrun-live {
     background: var(--grey);
     padding-bottom: 25px;
 }
 */
 
-iframe.front-page-youtube {
-    width: 90vw;
-    height: 60vw;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-}
+    iframe.front-page-youtube {
+        width: 90vw;
+        height: 60vw;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+    }
 
-.the-video-title-fetched {
-    text-align: center;
-}
+    .the-video-title-fetched {
+        text-align: center;
+    }
+
     .debut-album {
         grid-template-columns: 1fr;
     }
@@ -291,79 +294,190 @@ iframe.front-page-youtube {
         grid-row: 2;
         margin-left: auto;
         margin-right: auto;
-
     }
 
-    .fp-album-cover{
-         width:50vw;
+    .fp-album-cover {
+        width: 50vw;
     }
 
     .about-album {
         grid-row: 3;
         margin-left: auto;
         margin-right: auto;
-        width:50vw;
-        padding:0;
-
+        width: 50vw;
+        padding: 0;
     }
-article.newsletter-updates {
-   background-position: -200px;
-}
+
+    article.newsletter-updates {
+        background-position: -200px;
+    }
+
     .transparent-backg {
-    /*    background: rgba(var(--grey-rgb), 0.7);*/
-    background: rgba(255, 255, 255, 0.7);
-    width: 100vw;
-    /*    display: flex;*/
-    /*    flex-direction: row;*/
-    margin-left: auto;
-    margin-right: auto;
-    /*    margin-top: -20px;*/
-    padding-top: 20px;
-    padding-bottom: 20px;
-}
-
-.newsletter-updates .fp-header {
-    /*    text-align: left;*/
-}
-
-.text-about-newsletter {
-    width: 50vw;
-    padding-left: 0;
+        /*    background: rgba(var(--grey-rgb), 0.7);*/
+        background: rgba(255, 255, 255, 0.7);
+        width: 100vw;
+        /*    display: flex;*/
+        /*    flex-direction: row;*/
         margin-left: auto;
         margin-right: auto;
-}
+        /*    margin-top: -20px;*/
+        padding-top: 20px;
+        padding-bottom: 20px;
+    }
+
+    .newsletter-updates .fp-header {
+        /*    text-align: left;*/
+    }
+
+    .text-about-newsletter {
+        width: 50vw;
+        padding-left: 0;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
     .text-about-newsletter {
         text-align: center;
     }
-.newsletter-signup-form {
-    /*display:flex;*/
-    padding: 2vw;
-    margin-right: auto;
-    /*    text-align: center;*/
+
+    .newsletter-signup-form {
+        /*display:flex;*/
+        padding: 2vw;
+        margin-right: auto;
+        /*    text-align: center;*/
+    }
+
+    .fp-newsletter {
+        /*    display: flex;*/
+        background: var(--grey);
+        border: none;
+        color: var(--text-grey);
+        padding: .6em 1em;
+        font-size: 14px;
+        width: 30vw;
+        margin-bottom: 1.7em;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .newsletter-signup-form > .red-button {
+        margin-top: .2em;
+        /*        margin-right: auto;*/
+        text-align: center;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+
 }
 
-.fp-newsletter {
-    /*    display: flex;*/
-    background: var(--grey);
-    border: none;
-    color: var(--text-grey);
-    padding: .6em 1em;
-    font-size: 14px;
-    width: 30vw;
-    margin-bottom: 1.7em;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
+
+article.press {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, 250px);
+    grid-gap: 5em;
+    justify-content: center;
+    margin: 5vw
 }
 
-.newsletter-signup-form > .red-button {
-    margin-top: .2em;
-    /*        margin-right: auto;*/
+.pressHeader{
+grid-column: 1/-1
+    order: -1;
+}
+.pressFigure {
+    width: 20em;
+    margin: 0px;
+
+}
+
+.pressImg {
+
+    height: 10em;
+    width: 17em;
+    object-fit: cover;
+}
+
+h4.pressTitle {
+    margin-bottom: 0px;
+        text-align: center;
+
+
+}
+
+p.websiteName{
     text-align: center;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
+    margin:0px;
+    font-style: italic;
+
 }
 
 
+
+
+
+
+
+
+
+
+
+
+
+.prev,
+.next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    margin-top: -30px;
+    margin-left: 350px;
+    margin-right: 350px;
+    padding: 16px;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+}
+
+/*Positioning the "next button" to the right*/
+.next {
+    position: absolute;
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+
+/*add see-through bg color on hover */
+.prev:hover,
+.next:hover {
+    background-color: var(--grey);
+}
+
+/*dots */
+.dot-container {
+    text-align: center;
+    padding: 20px;
+}
+
+.dot {
+    cursor: pointer;
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: var(--black);
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+}
+
+.active,
+.dot:hover {
+    background-color: var(--text-red);
+}
+
+.quote {
+    font-style: italic;
+}
+
+.author {
+    color: var(--text-red);
 }
