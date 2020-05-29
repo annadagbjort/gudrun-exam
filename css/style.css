@@ -227,7 +227,7 @@ no longer included on page
 
 /*album section*/
 
-.album-info-grid {
+.album-info-container {
     display: grid;
     justify-content: center;
     grid-template-columns: repeat(auto-fit, minmax(600px, 1fr));
@@ -389,89 +389,24 @@ no longer included on page
 
 /*media queiries - incomplete*/
 
-/*tablet*/
-
-@media screen and (min-width: 770px) and (max-width: 1200px) {
 
 
-    .album-info-grid {
+
+
+
+/*mobile- extra small screens*/
+
+@media only screen and (max-width: 600px) {
+
+    body {
+        background-color: darkseagreen;
+    }
+
+
+    .album-info-container {
         display: flex;
         align-items: center;
-        justify-content: center flex-direction: column-reverse;
-        padding: 60px;
-    }
-
-    /*spotify player*/
-    .album-col1 {
-        padding: 0;
-
-    }
-
-    /*album description*/
-    .album-col2 {
-        padding: 40px;
-        margin: 0;
-        column-count: 2;
-        column-gap: 40px;
-
-    }
-
-    p {
-        font-size: 1em;
-        padding-top: 10px;
-    }
-}
-
-
-
-}
-
-/*(min-width: 600px) and */
-/*landscape mobile*/
-
-@media screen and (max-width: 770px) {
-
-
-    .album-info-grid {
-        display: flex;
-        align-items: center;
-        /*  justify-content: center*/
-        flex-direction: column;
-    }
-
-    /*spotify player*/
-    .album-col1 {
-        padding: 0;
-
-    }
-
-    /*album description*/
-    .album-col2 {
-        padding: 40px;
-        margin: 0;
-        column-count: 2;
-        column-gap: 40px;
-
-    }
-
-    p {
-        font-size: 1em;
-        padding-top: 10px;
-    }
-}
-
-
-
-
-/*mobile*/
-
-@media screen and (max-width: 600px) {
-
-
-    .album-info-grid {
-        display: flex;
-        align-items: center;
-        /*  justify-content: center*/
+/*          justify-content: center;*/
         flex-direction: column;
     }
 
@@ -518,3 +453,166 @@ no longer included on page
     }
 
 }
+
+/*mobile view*/
+
+@media only screen and (min-width: 600px) and (max-width: 767px) {
+
+
+    .album-info-container {
+        display: flex;
+        align-items: center;
+        /*  justify-content: center*/
+        flex-direction: column;
+    }
+
+    /*spotify player*/
+    .album-col1 {
+        padding: 0;
+
+    }
+
+    /*album description*/
+    .album-col2 {
+
+        padding: 40px;
+        margin: 0;
+        column-count: 2;
+    }
+
+
+    /*buy icons*/
+
+    .buy-icons {
+        display: inline-block;
+        padding: 40px;
+
+    }
+
+    .amazon-icon {
+        width: 60px;
+        height: 60px;
+          background-color: var(--grey);
+        border-radius: 30%
+    }
+
+    .apple-icon {
+        width: 60px;
+        height: 60px;
+         background-color: var(--grey);
+        border-radius: 30%
+    }
+
+
+    .live-performances-videos {
+      justify-content: center;
+    }
+
+
+
+    /*font styling*/
+    p {
+        font-size: 1em;
+        padding-top: 10px;
+    }
+
+}
+
+
+
+
+
+
+
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) and (max-width: 1199px){
+  body {background-color:darkmagenta;}
+
+
+
+.album-info-container {
+    display: grid;
+    grid-template-columns: repeat(2, 400px);
+    grid-gap: 30px;
+}
+
+
+.album-section-header {
+/*    grid-column: 1/-1;*/
+    text-align: center;
+    padding: 40px;
+    border: solid yellow;
+}
+
+
+    /*spotify player*/
+     .album-col.album-col1 {
+        padding: 0;
+/*        flex: 1;*/
+/*        order: 1;*/
+         width: auto;
+
+    }
+
+    /*album description*/
+   .album-col.album-col2 {
+/*        flex: 1;*/
+/*        order: 2;*/
+        width: auto;
+        padding: 0px;
+        margin: 0;
+
+        border: solid  yellow;
+
+
+    }
+
+
+/*    buy icons div*/
+
+
+    .call-to-action-buy{
+        width: auto;
+    }
+
+    /*buy icons*/
+
+    .buy-icons {
+        display: inline-block;
+        padding: 20px 40px;
+
+    }
+
+    .amazon-icon {
+        width: 60px;
+        height: 60px;
+          background-color: var(--grey);
+        border-radius: 30%
+    }
+
+    .apple-icon {
+        width: 60px;
+        height: 60px;
+         background-color: var(--grey);
+        border-radius: 30%
+    }
+
+    /*font styling*/
+    p {
+        font-size: 1em;
+        padding-top: 10px;
+        margin-right: 20px;
+    }
+
+    h4 {
+        text-align: center;
+        padding-bottom: 10px;
+    }
+}
+
+
+
+
+
+
