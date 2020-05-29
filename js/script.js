@@ -43,11 +43,18 @@ function showQuotes (quotes) {
 
 
     document.querySelector(".slideshow-container").appendChild(copy);
+
+    const oneSlide = document.querySelector(".mySlides");
+    oneSlide.style.display = "block";
+
+    const firstDot = document.querySelector(".dot");
+    firstDot.classList.add("active");
 }
 
 
-//window.addEventListener("DOMContentLoaded", init);
 //For quote slideshow
+
+
 
 var slideIndex = 1;
 showSlides(slideIndex);
@@ -83,9 +90,14 @@ function showSlides(n) {
 
 
 
-
-
-
+//
+//To do fredag:
+//
+//    - fetch lesson Text
+//    - ændre citater til rigtige i stedet for fiktiv
+//    - lav responisve design
+//    - Knnapper - hvor skal de føre hen?
+//
 
 
 
