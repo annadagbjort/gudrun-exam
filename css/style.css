@@ -20,20 +20,31 @@
 
 
 /*  B A S I C S T Y L I N G    */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+
+
 body {
     font-family: "crimson text", serif;
     color: var(--black);
 }
 
-h1,h2,h3 {
+h1,
+h2,
+h3 {
     font-family: "crimson pro", serif;
     color: var(--text-red);
-    font-weight:500;
+    font-weight: 500;
+    text-transform: uppercase;
 }
 
-h1 {
-    text-transform: uppercase;
-    }
+h2 {
+    color: var(--text-red);
+}
 
 
 p {
@@ -69,17 +80,441 @@ button {
     color: var(--white);
     padding: .5rem 2rem;
     font-size: 22px;
-    border:none;
+    border: none;
 }
 
 .grey-button {
- background-color: var(--grey);
+    background-color: var(--grey);
     padding: .5rem 2rem;
     font-size: 22px;
-    border:none;
+    border: none;
 }
 
 .red-text {
     color: var(--text-red);
 }
 
+/*esther styling*/
+
+
+/*grid area structure*/
+
+.main-album-wrapper {
+
+    margin: auto;
+}
+
+.main-content-area {
+    max-width: 100%;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat: (1200px, auto);
+    grid-template-areas:
+        "albumSection"
+        "imageSection"
+        "videoSection"
+
+}
+
+.album-section {
+    grid-area: albumSection;
+}
+
+.album-image-section {
+    grid-area: imageSection;
+}
+
+.live-performances-videos {
+    grid-area: videoSection;
+    background-color: var(--grey);
+}
+
+
+/*
+no longer included on page
+.live-performance-desc {
+    grid-area: performanceDescription;
+}
+*/
+
+
+.unstyled-footer {
+    background-color: forestgreen;
+}
+
+
+
+
+/*header section*/
+
+.header-section {
+    background: url("../images/music-banner3.jpg");
+    height: 300px;
+}
+
+/*transparent grey background*/
+
+.logo-nav-wrapper {
+    background-color: rgba(255, 255, 255, 0.5);
+    padding-top: 10px;
+}
+
+/*logo*/
+.top-logo {
+    max-width: 15em;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+/*nav*/
+
+.top-nav {
+    padding: 0;
+    display: flex;
+    justify-content: center;
+}
+
+.top-nav li {
+    display: inline-block;
+    text-transform: uppercase;
+    padding: 0;
+    margin: 0;
+}
+
+.nav-item {
+    display: block;
+}
+
+.top-nav a {
+
+    color: black;
+    text-decoration: none;
+    margin: 10px 30px;
+}
+
+.top-nav a:hover {
+    color: white;
+}
+
+.top-nav a:active {
+    color: #C10009;
+}
+
+
+/*nav drop down - no longer using feature*/
+
+/*
+.nav-content {
+    display: none;
+    position: absolute;
+    overflow: hidden;
+    top: 130px;
+    background-color: rgba(255, 255, 255, 0.5);
+}
+
+.nav-item:focus {
+    background-color: #444;
+}
+
+.nav-item:focus ~ .nav-content {
+    max-height: 300px;
+}
+*/
+
+
+
+/*album section*/
+
+.album-info-grid {
+    display: grid;
+    justify-content: center;
+    grid-template-columns: repeat(auto-fit, minmax(600px, 1fr));
+}
+
+.album-section-header {
+    grid-column: 1/-1;
+    text-align: center;
+    padding: 40px;
+}
+
+.album-col {
+    padding: 40px;
+}
+
+/*spotify player section*/
+
+.album-col1 {
+    justify-self: end;
+    padding: 40px 20px 40px 40px;
+}
+
+
+.album-col2 {
+    padding: 40px 200px 40px 20px;
+}
+
+
+.album-header2 {
+    padding-bottom: 20px;
+}
+
+/*purchase buttons*/
+
+.call-to-action-buy {
+    padding: 20px;
+    justify-content: center;
+    grid-column: 1/-1;
+}
+
+.buy-section {
+    padding: 0;
+    display: flex;
+    justify-content: center;
+}
+
+.buy-now-header {
+
+    text-align: center;
+}
+
+/*icons*/
+.buy-icons {
+    display: inline-block;
+    padding: 20px;
+}
+
+.amazon-icon {
+    width: 40px;
+    height: 40px;
+}
+
+.apple-icon {
+    width: 40px;
+    height: 40px;
+}
+
+.amazon-icon:hover {
+   background-color: var(--grey);
+    border-radius: 30%;
+}
+
+.apple-icon:hover {
+    background-color: var(--grey);
+    border-radius: 30%;
+}
+
+
+
+/*image section*/
+.album-image-section {
+    background-image: url("../images/Elegie%20mit%20Kira-cropped.jpg");
+    position: relative;
+    height: 400px;
+    text-align: left;
+    z-index: 1;
+    /*    parallax feature*/
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+}
+
+
+.performance-des {
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.5);
+    padding: 20px;
+}
+
+
+
+/*performance videos*/
+
+/*section header */
+.video-header {
+    text-align: center;
+    padding: 40px;
+    background-color: #F2F1F0;
+}
+
+/*video parent container*/
+.live-performances-videos {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding: 20px;
+}
+
+.live-performances-videos div {
+    border: solid thin black;
+}
+
+.youtubeVideosIframe {
+    padding: 20px;
+    flex-basis: 100%;
+}
+
+/*individual videos*/
+.video-placement {
+    flex-basis: auto;
+}
+
+
+/*performance description - no longer using*/
+
+/*
+.performance-style-desc {
+    padding: 0 200px 40px;
+}
+
+.performance-style-section {
+    column-count: 2;
+    column-gap: 40px;
+}
+*/
+
+
+
+
+
+
+
+
+
+
+/*media queiries - incomplete*/
+
+/*tablet*/
+
+@media screen and (min-width: 770px) and (max-width: 1200px) {
+
+
+    .album-info-grid {
+        display: flex;
+        align-items: center;
+        justify-content: center flex-direction: column-reverse;
+        padding: 60px;
+    }
+
+    /*spotify player*/
+    .album-col1 {
+        padding: 0;
+
+    }
+
+    /*album description*/
+    .album-col2 {
+        padding: 40px;
+        margin: 0;
+        column-count: 2;
+        column-gap: 40px;
+
+    }
+
+    p {
+        font-size: 1em;
+        padding-top: 10px;
+    }
+}
+
+
+
+}
+
+/*(min-width: 600px) and */
+/*landscape mobile*/
+
+@media screen and (max-width: 770px) {
+
+
+    .album-info-grid {
+        display: flex;
+        align-items: center;
+        /*  justify-content: center*/
+        flex-direction: column;
+    }
+
+    /*spotify player*/
+    .album-col1 {
+        padding: 0;
+
+    }
+
+    /*album description*/
+    .album-col2 {
+        padding: 40px;
+        margin: 0;
+        column-count: 2;
+        column-gap: 40px;
+
+    }
+
+    p {
+        font-size: 1em;
+        padding-top: 10px;
+    }
+}
+
+
+
+
+/*mobile*/
+
+@media screen and (max-width: 600px) {
+
+
+    .album-info-grid {
+        display: flex;
+        align-items: center;
+        /*  justify-content: center*/
+        flex-direction: column;
+    }
+
+    /*spotify player*/
+    .album-col1 {
+        padding: 0;
+
+    }
+
+    /*album description*/
+    .album-col2 {
+
+        padding: 40px;
+        margin: 0;
+    }
+
+
+    /*buy icons*/
+
+    .buy-icons {
+        display: inline-block;
+        padding: 40px;
+
+    }
+
+    .amazon-icon {
+        width: 60px;
+        height: 60px;
+          background-color: var(--grey);
+        border-radius: 30%
+    }
+
+    .apple-icon {
+        width: 60px;
+        height: 60px;
+         background-color: var(--grey);
+        border-radius: 30%
+    }
+
+    /*font styling*/
+    p {
+        font-size: 1em;
+        padding-top: 10px;
+    }
+
+}
