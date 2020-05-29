@@ -20,9 +20,16 @@
 
 
 /*  B A S I C S T Y L I N G    */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
 body {
     font-family: "crimson text", serif;
     color: var(--black);
+    margin: 0 50px;
 }
 
 h1,
@@ -63,6 +70,41 @@ ul {
 button {
     cursor: pointer;
     font-family: "crimson text", serif;
+
+}
+
+button:focus {
+    outline: 0;
+}
+
+/* fade in effect */
+.fade-in {
+    animation: fadeIn ease-in 0.5s;
+
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+.fade-out {
+    animation: fadeOut ease-in 0.5s;
+}
+
+@keyframes fadeOut {
+    0% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+    }
 }
 
 /*  S T Y L I N G   */
@@ -87,7 +129,6 @@ button {
     color: var(--text-red);
 }
 
-
 /*    FRONT PAGE   */
 
 main.front-page-grid {
@@ -103,3 +144,516 @@ iframe.front-page-youtube {
     margin-right: auto;
 
 }
+
+/* FOOTER */
+
+footer {
+    width: 100%;
+    background: #D44456;
+    display: block;
+
+}
+
+.inner-footer {
+    width: 70%;
+    margin: auto;
+    padding: 30px 10px;
+    display: flex;
+    flex-wrap: wrap;
+    box-sizing: border-box;
+    justify-content: center;
+}
+
+.footer-items-contact {
+    width: 48%;
+    padding: 10px 10px;
+    box-sizing: border-box;
+}
+
+.footer-border {
+    width: 120px;
+    height: 1.6px;
+    background: white;
+}
+
+.footer-items-contact h2 {
+    color: white;
+}
+
+.footer-items-contact p {
+    color: white;
+    font-family: "crimson pro", serif;
+    font-style: italic;
+    padding: 0.2rem;
+    font-size: 22px;
+}
+
+.footer-items-contact img {
+    width: 80px;
+}
+
+/* FOOTER MEDIA QUERIES */
+
+@media only screen and (max-width: 680px) {
+    .inner-footer {
+        width: 100%;
+        justify-content: center;
+
+        display: grid;
+        grid-auto-flow: row;
+    }
+
+    .footer-items-contact {
+        width: 100%;
+
+    }
+
+
+}
+
+/* REPERTORIE SUBPAGE */
+
+.rep-img-header {
+    height: 45vh;
+    background-image: url("../images/repertoire_header_big.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+
+}
+
+.repertoire-header {
+    text-align: center;
+    margin: 3rem;
+    font-size: 45px;
+}
+
+/*BUTTON GRID*/
+
+.repertoire-button-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(30px, 250px));
+    justify-content: center;
+}
+
+
+.repertoire-button-container > button {
+    margin: .5rem;
+    transition: all .5s;
+
+}
+
+.repertoire-button-container > button:focus {
+    outline: 0;
+}
+
+/*CONTAINER WITH THE CONTENT*/
+
+.repertoire-all-container {
+    background-color: var(--grey);
+    width: 60vw;
+    margin: 2rem auto;
+    padding: 3.5rem;
+    font-size: 24px;
+    font-family: "crimson pro", serif;
+}
+
+/*.repertoire-all-container > div {
+    transition: all .7s;
+}*/
+
+
+.repertoire-one-opera,
+.repertoire-one-music {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(200px, 1fr));
+}
+
+.repertoire-one-oratorio {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(200px, 1fr));
+
+}
+
+.repertoire-one-opera div,
+.repertoire-one-oratorio div,
+.repertoire-one-music div,
+.repertoire-one-opera p,
+.repertoire-one-oratorio p,
+.repertoire-one-music p {
+    padding: 1rem;
+}
+
+
+.thick {
+    font-weight: 600;
+}
+
+.active-rep-button {
+    background-color: var(--button-red);
+    color: var(--white);
+}
+
+/* REPERTOIRE MEDIA QUERIES */
+
+@media only screen and (max-width: 1100px) and (min-width: 910px) {
+    .repertoire-all-container {
+        width: 70vw;
+
+    }
+
+}
+
+
+@media only screen and (max-width: 910px) {
+    .repertoire-all-container {
+        width: 80vw;
+    }
+
+    .repertoire-one-opera,
+    .repertoire-one-music,
+    .repertoire-one-oratorio {
+        grid-template-columns: repeat(1, 1fr);
+        border-bottom: 1px solid black;
+    }
+
+    /*    .repertoire-one-oratorio {
+        grid-template-columns: repeat(1, 1fr);
+        border-bottom: 1px solid black;
+
+    }*/
+
+
+    .repertoire-header {
+        margin: 2rem 1rem;
+    }
+
+}
+
+@media only screen and (max-width: 450px) {
+    .repertoire-all-container {
+        padding: 1rem;
+        width: 90vw;
+    }
+
+    body {
+        margin: 0 15px;
+    }
+
+}
+
+
+/* SCHEDULE SUBPAGE STYLING */
+
+.schedule-img-header {
+    height: 45vh;
+    background-image: url("../images/classical-music-1838390_1920.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+
+}
+
+
+
+.schedule-main-heading {
+    margin: 3rem auto;
+    font-size: 45px;
+    text-align: center;
+
+}
+
+.schedule-container {
+    margin: 2rem auto;
+    width: 75vw;
+    justify-content: center;
+}
+
+.one-event {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(200px, 1fr));
+    font-size: 24px;
+    font-family: "crimson pro", serif;
+    padding: 1rem 0;
+}
+
+.one-event p,
+.one-event > div {
+    padding: 0.5rem;
+}
+
+.schedule-btn-wrapper {
+    margin: auto;
+    justify-self: center;
+}
+
+.schedule-btn-wrapper > button {
+    color: var(--text-red);
+}
+
+.schedule-date {
+    background-color: var(--grey);
+}
+
+.schedule-expand {
+    margin: 2rem;
+
+}
+
+.one-event .schedule-date {
+    text-align: right;
+    padding: 2rem;
+}
+
+.schedule-wrapper {
+    text-align: center;
+}
+
+.booking-container {
+    height: 55vh;
+    background-image: url("../images/chicago-94510_1920.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    margin-bottom: 2rem;
+    position: relative;
+    z-index: 1;
+    width: 100%;
+}
+
+.booking-buttons-wrap {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    position: absolute;
+    z-index: 10;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 150px;
+    background-color: rgba(255, 255, 255, 0.7);
+}
+
+.booking-buttons-wrap div:first-child {
+    grid-column-end: span 2;
+    margin: auto;
+    font-family: "crimson pro", serif;
+    font-size: 22px;
+    padding: 1rem;
+}
+
+.btn-to-repertoire-wrap,
+.btn-to-contact-wrap {
+    margin: auto;
+    justify-self: center;
+}
+
+/* MEDIA QUERIES FOR SCHEDULE */
+
+@media only screen and (max-width: 910px) {
+    .schedule-container {
+        width: 85vw;
+    }
+}
+
+@media only screen and (max-width: 800px) {
+    .one-event {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        grid-template-rows: repeat(3);
+        border-bottom: 1px solid black;
+    }
+
+    .schedule-date {
+        background: transparent;
+    }
+
+    .schedule-container {
+        width: 100%;
+    }
+
+    .schedule-main-heading {
+        font-size: 35px;
+    }
+
+    .one-event p,
+    .one-event > div {
+        text-align: left;
+    }
+
+    .one-event .schedule-date {
+        text-align: left;
+        padding: 0.5rem;
+        color: var(--text-red);
+    }
+
+}
+
+@media only screen and (max-width: 500px) {
+
+    .booking-buttons-wrap {
+        grid-template-columns: repeat(1, 1fr);
+        grid-template-rows: repeat(3, 1fr);
+        height: 300px;
+        grid-auto-flow: row;
+    }
+
+    .booking-buttons-wrap div:first-child {
+        grid-column-end: span 1;
+    }
+
+    .btn-to-repertoire-wrap > button,
+    .btn-to-contact-wrap > button {
+        margin-top: 2rem;
+        margin-bottom: 1rem;
+    }
+
+    .booking-container {
+        height: 90vh;
+    }
+
+}
+
+/* CONTACT SUBPAGE STYLING */
+
+.contact-img-header {
+    height: 45vh;
+    background-color: aquamarine;
+}
+
+.contact-main-wrapper {
+    margin: 3rem 0 3rem 0;
+    font-size: 24px;
+    font-family: "crimson pro", serif;
+}
+
+.contact-info-wrapper {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.contact-side-img {
+    background-image: url(../images/contact.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.contact-info-det {
+    margin: 4rem auto 0 auto;
+    width: 50%;
+
+}
+
+.contact-info-det > p,
+.contact-info-det > h1 {
+
+    margin: auto;
+    padding: 0.5rem;
+
+}
+
+.email-form {
+    width: 50%;
+    margin: 7rem auto 3rem auto;
+}
+
+.email-form span {
+    display: block;
+    padding: 0.5rem 0 0.2rem 0;
+}
+
+.email-form textarea {
+    width: 90%;
+}
+
+.email-form p {
+    padding: 0.5rem 0;
+}
+
+.bl {
+    display: block;
+}
+
+.email-form button {
+    margin-top: 1rem;
+}
+
+/* CONTACT SUBPAGE MEDIA QUERIES */
+
+@media only screen and (max-width: 1100px) and (min-width: 880px) {
+
+    .contact-info-det > p,
+    .contact-info-det > h1 {
+        width: 100%;
+
+
+    }
+
+    .email-form,
+    .contact-info-det {
+        width: 100%;
+        margin-top: 7rem;
+
+    }
+
+}
+
+@media only screen and (max-width: 880px) {
+    .contact-info-wrapper {
+        grid-template-columns: repeat(1, 1fr);
+        grid-template-rows: repeat(2, auto-fit);
+    }
+
+    .contact-info-wrapper div:nth-child(2) {
+        grid-row: 1/1;
+    }
+
+    .contact-side-img {
+        height: 45vh;
+    }
+
+    /*
+    .contact-info-det > p,
+    .contact-info-det > h1 {
+        width: 70%;
+    }*/
+
+    .email-form,
+    .contact-info-det {
+        margin: 1rem auto;
+        width: 70%;
+
+
+    }
+
+}
+
+@media only screen and (max-width: 880px) and (min-width: 540px) {
+
+    .contact-side-img {
+        background-image: url(../images/contact2.jpg);
+
+    }
+
+}
+
+@media only screen and (max-width: 540px) {
+
+
+    .email-form,
+    .contact-info-det {
+        width: 100%;
+        margin: auto;
+
+
+    }
+
+
+    .contact-info-det > p,
+    .contact-info-det > h1 {
+        width: 100%;
+    }
+
+}
+
+
