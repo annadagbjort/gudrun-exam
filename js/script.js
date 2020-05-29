@@ -1,11 +1,9 @@
-
-
-var checkForElement = document.querySelector(".repertoire-header");
+const checkForElement = document.querySelector(".repertoire-header");
 // run the functions only if the element exists on the page
 if (checkForElement) {
     // fetching for repertoire subpage
 
-//fetching operas
+    //fetching operas
 
     const operasLink = "http://designhavn.dk/5Wordpress/wp-json/wp/v2/opera?_embed";
     fetch(operasLink)
@@ -17,8 +15,6 @@ if (checkForElement) {
         })
 
     function showData(showOperas) {
-        console.log(showOperas);
-
 
         showOperas.forEach(showOneOpera);
 
@@ -166,90 +162,157 @@ if (checkForElement) {
 
 var checkForElement2 = document.querySelector(".schedule-main-heading");
 if (checkForElement2) {
-// fetching for the schedule subpage
-//fetching events
+    // fetching for the schedule subpage
+    //fetching events
 
-const eventsLink = "http://designhavn.dk/5Wordpress/wp-json/wp/v2/event";
-fetch(eventsLink)
-    .then(function (response) {
-        return response.json()
-    })
-    .then(function (data4) {
-        showData4(data4)
-    })
+    const eventsLink = "http://designhavn.dk/5Wordpress/wp-json/wp/v2/event";
+    fetch(eventsLink)
+        .then(function (response) {
+            return response.json()
+        })
+        .then(function (data4) {
+            showData4(data4)
+        })
 
-function showData4(showEvents) {
-    /*console.log(showOperas);*/
-
-
-    /*showMusic.forEach(showOneMusic);*/
-
-    showEvents.forEach(showOneEvent);
+    function showData4(showEvents) {
+        /*console.log(showOperas);*/
 
 
-    function showOneEvent(oneEvent) {
-        const templateEvents = document.querySelector(".schedule-temp").content;
-        const clone = templateEvents.cloneNode(true);
-        clone.querySelector(".schedule-date").textContent = oneEvent.event_date;
-        console.log(oneEvent.event_date)
-        clone.querySelector(".schedule-perf-name").textContent = oneEvent.event_name;
-        clone.querySelector(".schedule-perf-location").textContent = oneEvent.event_location;
-        const elemBtn = document.createElement("button");
-        elemBtn.textContent = "More information";
-        elemBtn.addEventListener("click", windowOpen);
-        function windowOpen() {
-       window.open("http://www.gudrun-ingimars.com/", "_blank", "width=800, height=600");
+        /*showMusic.forEach(showOneMusic);*/
+
+        showEvents.forEach(showOneEvent);
+
+
+        function showOneEvent(oneEvent) {
+            const templateEvents = document.querySelector(".schedule-temp").content;
+            const clone = templateEvents.cloneNode(true);
+            clone.querySelector(".schedule-date").textContent = oneEvent.event_date;
+            console.log(oneEvent.event_date)
+            clone.querySelector(".schedule-perf-name").textContent = oneEvent.event_name;
+            clone.querySelector(".schedule-perf-location").textContent = oneEvent.event_location;
+            const elemBtn = document.createElement("button");
+            elemBtn.textContent = "More information";
+            elemBtn.addEventListener("click", windowOpen);
+
+            function windowOpen() {
+                window.open("http://www.gudrun-ingimars.com/", "_blank", "width=800, height=600");
+            }
+            elemBtn.classList.add("grey-button");
+            clone.querySelector(".schedule-btn-wrapper").appendChild(elemBtn);
+            var childNumber = document.querySelector(".upcoming-container").childElementCount;
+            if (childNumber < 5) {
+                document.querySelector(".upcoming-container").appendChild(clone);
+            } else {
+                document.querySelector(".upcoming-container2").appendChild(clone);
+            }
         }
-        elemBtn.classList.add("grey-button");
-        clone.querySelector(".schedule-btn-wrapper").appendChild(elemBtn);
-        var childNumber = document.querySelector(".upcoming-container").childElementCount;
-        if (childNumber < 5) {
-            document.querySelector(".upcoming-container").appendChild(clone);
+    }
+
+
+    const buttonExpand = document.querySelector(".schedule-expand");
+    const firstContainer = document.querySelector(".upcoming-container");
+    const secondContainer = document.querySelector(".upcoming-container2");
+    secondContainer.style.display = "none";
+
+    buttonExpand.addEventListener("click", showMore);
+
+    function showMore() {
+        if (secondContainer.style.display === "none") {
+            secondContainer.style.display = "block";
+            secondContainer.classList.add("fade-in");
+            secondContainer.classList.remove("fade-out");
+            buttonExpand.innerHTML = "Show less"
         } else {
-            document.querySelector(".upcoming-container2").appendChild(clone);
+            setTimeout(function () {
+                secondContainer.style.display = "none";
+                buttonExpand.innerHTML = "Show more";
+            }, 450);
+            secondContainer.classList.remove("fade-in");
+            secondContainer.classList.add("fade-out");
+
+
         }
-    }
-}
-
-
-const buttonExpand = document.querySelector(".schedule-expand");
-const firstContainer = document.querySelector(".upcoming-container");
-const secondContainer = document.querySelector(".upcoming-container2");
-secondContainer.style.display = "none";
-
-buttonExpand.addEventListener("click", showMore);
-
-function showMore() {
-    if (secondContainer.style.display === "none") {
-        secondContainer.style.display = "block";
-        secondContainer.classList.add("fade-in");
-        secondContainer.classList.remove("fade-out");
-        buttonExpand.innerHTML = "Show less"
-    } else {
-        setTimeout(function () {
-            secondContainer.style.display = "none";
-            buttonExpand.innerHTML = "Show more";
-        }, 450);
-        secondContainer.classList.remove("fade-in");
-        secondContainer.classList.add("fade-out");
-
 
     }
 
+    document.querySelector(".btn-to-repertoire").addEventListener("click", goToRepertoire)
+
+    function goToRepertoire() {
+        window.location.replace("repertoire.html");
+    }
+
+    document.querySelector(".btn-to-contact").addEventListener("click", goToContact)
+
+    function goToContact() {
+        window.location.replace("contact.html");
+    }
+}
+// check if the page contains specific HTML element - in order to prevent running code meant for different subpages and errors
+var checkForElement3 = document.querySelector(".contact-main-wrapper");
+
+if (checkForElement3) {
+    //fetching info for contact page
+    const contactLink = "http://designhavn.dk/5Wordpress/wp-json/wp/v2/contact";
+    fetch(contactLink)
+        .then(function (response) {
+            return response.json()
+        })
+        .then(function (data6) {
+            showData6(data6)
+        })
+
+    function showData6(showContactInf) {
+        /*console.log(showOperas);*/
+
+
+        /*showMusic.forEach(showOneMusic);*/
+
+      /*  showContactInf.forEach(contactInf);*/
+        showContactInf.forEach(showContactDetails);
+
+        function showContactDetails(oneContactInf) {
+            const templateContactInf = document.querySelector(".contact-inf-temp").content;
+            const clone = templateContactInf.cloneNode(true);
+            clone.querySelector(".fullname-d").textContent = oneContactInf.full_name;
+            clone.querySelector(".email-d").textContent = oneContactInf.email_address;
+            clone.querySelector(".phone-d").textContent = oneContactInf.phone_number;
+            clone.querySelector(".address-d").textContent = oneContactInf.location;
+            document.querySelector(".contact-info-det").appendChild(clone);
+        }
+
+
+    }
+
 }
 
-document.querySelector(".btn-to-repertoire").addEventListener("click", goToRepertoire)
+/* FETCHING FOOTER */
 
-function goToRepertoire(){
-     window.location.replace("repertoire.html");
+fetch("https://designhavn.dk/5Wordpress/wp-json/wp/v2/contact?_embed")
+.then(function (response){
+    return response.json()
+})
+.then(function (data){
+    showInfo(data)
+})
+
+function showInfo(jsonData){
+    jsonData.forEach(showInfo)
+
+
+function showInfo(contact){
+const template = document.querySelector("#myTemplateFooter").content;
+const clone = template.cloneNode(true);
+
+clone.querySelector(".contact-name").textContent = contact.full_name;
+
+clone.querySelector(".contact-email").textContent = contact.email_address;
+
+clone.querySelector(".contact-phone").textContent = contact.phone_number;
+
+clone.querySelector(".contact-location").textContent = contact.location;
+
+document.querySelector(".footer-items-contact").appendChild(clone);
+
 }
-
-document.querySelector(".btn-to-contact").addEventListener("click", goToContact)
-
-function goToContact(){
-    window.location.replace("contact.html");
 }
-}
-
-
 

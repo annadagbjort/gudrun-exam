@@ -127,6 +127,71 @@ button:focus {
     color: var(--text-red);
 }
 
+/* FOOTER */
+
+footer{
+    width: 100%;
+    background: #D44456;
+    display: block;
+
+}
+
+.inner-footer{
+    width: 70%;
+    margin: auto;
+    padding: 30px 10px;
+    display: flex;
+    flex-wrap: wrap;
+    box-sizing: border-box;
+    justify-content: center;
+}
+
+.footer-items-contact{
+    width: 48%;
+    padding: 10px 10px;
+    box-sizing: border-box;
+}
+
+.footer-border{
+    width: 120px;
+    height: 1.6px;
+    background: white;
+}
+
+.footer-items-contact h2{
+    color: white;
+}
+
+.footer-items-contact p{
+    color: white;
+    font-family: "crimson pro",serif;
+    font-style: italic;
+    padding: 0.2rem;
+    font-size: 22px;
+}
+
+.footer-items-contact img{
+    width: 80px;
+}
+
+/* FOOTER MEDIA QUERIES */
+
+@media only screen and (max-width: 680px) {
+    .inner-footer{
+    width: 100%;
+    justify-content: center;
+
+    display: grid;
+    grid-auto-flow: row;
+}
+    .footer-items-contact{
+    width:100%;
+
+}
+
+
+}
+
 /* REPERTORIE SUBPAGE */
 
 .rep-img-header {
@@ -227,18 +292,16 @@ button:focus {
     }
 
     .repertoire-one-opera,
-    .repertoire-one-music {
+    .repertoire-one-music, .repertoire-one-oratorio {
         grid-template-columns: repeat(1, 1fr);
-        grid-template-rows: repeat(3);
         border-bottom: 1px solid black;
     }
 
-    .repertoire-one-oratorio {
+/*    .repertoire-one-oratorio {
         grid-template-columns: repeat(1, 1fr);
-        grid-template-rows: repeat(2);
         border-bottom: 1px solid black;
 
-    }
+    }*/
 
 
     .repertoire-header {
@@ -350,6 +413,14 @@ button:focus {
     background-color: rgba(255, 255, 255, 0.7);
 }
 
+.booking-buttons-wrap div:first-child {
+    grid-column-end: span 2;
+    margin: auto;
+    font-family: "crimson pro", serif;
+    font-size: 22px;
+    padding: 1rem;
+}
+
 .btn-to-repertoire-wrap,
 .btn-to-contact-wrap {
     margin: auto;
@@ -401,9 +472,14 @@ button:focus {
 
     .booking-buttons-wrap {
         grid-template-columns: repeat(1, 1fr);
-        grid-template-rows: repeat(2, 1fr);
-        height: 220px;
+        grid-template-rows: repeat(3, 1fr);
+        height: 300px;
+        grid-auto-flow: row;
     }
+
+    .booking-buttons-wrap div:first-child {
+    grid-column-end: span 1;
+}
 
     .btn-to-repertoire-wrap > button,
     .btn-to-contact-wrap > button {
@@ -413,6 +489,148 @@ button:focus {
 
     .booking-container {
         height: 90vh;
+    }
+
+}
+
+/* CONTACT SUBPAGE STYLING */
+
+.contact-img-header {
+    height: 45vh;
+    background-color: aquamarine;
+}
+
+.contact-main-wrapper {
+    margin: 3rem 0 3rem 0;
+    font-size: 24px;
+    font-family: "crimson pro", serif;
+}
+
+.contact-info-wrapper {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.contact-side-img {
+    background-image: url(../images/contact.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.contact-info-det {
+    margin: 4rem auto 0 auto;
+    width: 50%;
+
+}
+
+.contact-info-det > p,
+.contact-info-det > h1 {
+
+    margin: auto;
+    padding: 0.5rem;
+
+}
+
+.email-form {
+    width: 50%;
+    margin: 7rem auto 3rem auto;
+}
+
+.email-form span {
+    display: block;
+    padding: 0.5rem 0 0.2rem 0;
+}
+
+.email-form textarea {
+    width: 90%;
+}
+
+.email-form p {
+    padding: 0.5rem 0;
+}
+
+.bl {
+    display: block;
+}
+
+.email-form button {
+    margin-top: 1rem;
+}
+
+/* CONTACT SUBPAGE MEDIA QUERIES */
+
+@media only screen and (max-width: 1100px) and (min-width: 880px) {
+
+    .contact-info-det > p,
+    .contact-info-det > h1 {
+        width: 100%;
+
+
+    }
+
+    .email-form,
+    .contact-info-det {
+        width: 100%;
+        margin-top: 7rem;
+
+    }
+
+}
+
+@media only screen and (max-width: 880px) {
+       .contact-info-wrapper {
+        grid-template-columns: repeat(1, 1fr);
+        grid-template-rows: repeat(2, auto-fit);
+    }
+
+    .contact-info-wrapper div:nth-child(2) {
+        grid-row: 1/1;
+    }
+
+    .contact-side-img {
+        height: 45vh;
+    }
+/*
+    .contact-info-det > p,
+    .contact-info-det > h1 {
+        width: 70%;
+    }*/
+
+    .email-form,
+    .contact-info-det {
+        margin: 1rem auto;
+        width: 70%;
+
+
+    }
+
+}
+
+@media only screen and (max-width: 880px) and (min-width: 540px) {
+
+    .contact-side-img {
+        background-image: url(../images/contact2.jpg);
+
+    }
+
+}
+
+@media only screen and (max-width: 540px) {
+
+
+    .email-form,
+    .contact-info-det {
+        width: 100%;
+        margin: auto;
+
+
+    }
+
+
+    .contact-info-det > p,
+    .contact-info-det > h1 {
+        width: 100%;
     }
 
 }
