@@ -18,6 +18,12 @@ function handlePostData(frontpagePostHandled) {
 
                 document.querySelector(".about-wrapper .about-text").innerHTML = theContent;
             }
+//            Vocal coaching
+            if (categor == 10) {
+                document.querySelector(".vocal-coaching-wrapper .vocal-coaching-header").textContent = theHeader;
+
+                document.querySelector(".vocal-coaching-wrapper .vocal-coaching-paragraph").innerHTML = theContent;
+            }
         });
     });
 }
