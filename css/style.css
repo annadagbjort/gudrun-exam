@@ -43,7 +43,12 @@ h1 {
 
 p {
     color: var(--black);
+    font-size:18px;
+}
 
+q {
+    font-style: italic;
+       font-size:18px;
 }
 
 /*  B A S I C  S T U F F  */
@@ -370,8 +375,25 @@ article.newsletter-updates {
         margin-right: auto;
     }
 
-
+    article.quotes {
+    text-align: center;
+    margin: 1em 4em;
 }
+}
+
+
+article.quotes {
+    text-align: center;
+    margin: 1em 6em;
+}
+
+
+.thePressQuoteDiv {
+    margin: 3em;
+}
+
+
+
 
 
 article.press {
