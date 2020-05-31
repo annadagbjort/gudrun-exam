@@ -11,13 +11,48 @@
 
 <body>
 <h1></h1>
-<article class="quotes"></article>
+<article class="quotes">
+    <div class="slideshow-container-press">
+
+           <h1>Reviews</h1>
+
+       <div class="containerPressQuotes"></div>
+
+            <template class="pressQuotesTemp">
+       <div class="myPressSlides">
+        <q class=thePressQuote>the quote</q>
+
+        <span>"</span><p class="quotedPerson">Anna</p>
+        </div>
+    </template>
+
+            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+            <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+                    <div class="dot-container">
+            <span class="pressDot" onclick="currentSlide(1)"></span>
+            <span class="pressDot" onclick="currentSlide(2)"></span>
+            <span class="pressDot" onclick="currentSlide(3)"></span>
+            <span class="pressDot" onclick="currentSlide(4)"></span>
+            <span class="pressDot" onclick="currentSlide(5)"></span>
+            <span class="pressDot" onclick="currentSlide(6)"></span>
+        </div>
+
+        </div>
+
+<!--                Dot indicators-->
+
+
+
+</article>
+<!--
     <template class="pressQuotesTemp">
        <div class="thePressQuoteDiv">
         <q class=thePressQuote>the quote</q>
         <p class="quotedPerson">Anna</p>
         </div>
     </template>
+-->
 
 
 
@@ -27,14 +62,13 @@
 <!--    The template is appended in here-->
 </article>
 
-
 <template class="pressArticles">
-
 <a href="" class="theArticleLink" target="_blank">
+<div class="articleContainer">
 <figure class="pressFigure"><img src="" alt="" class="pressImg"></figure>
 <h4 class="pressTitle"></h4>
 <p class="websiteName grey-text"></p>
-
+</div>
 </a>
 
 </template>
@@ -43,27 +77,6 @@
 
 
 
-<!--
-    <div class="slideshow-container">
-            <template class="quote-template">
-                <div class="mySlides">
-                    <q class="quote">Insert quote here</q>
-                    <p class="author">Insert author here</p>
-                </div>
-            </template>
-
-            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-            <a class="next" onclick="plusSlides(1)">&#10095;</a>
-        </div>
-
-                Dot indicators
-        <div class="dot-container">
-            <span class="dot" onclick="currentSlide(1)"></span>
-            <span class="dot" onclick="currentSlide(2)"></span>
-            <span class="dot" onclick="currentSlide(3)"></span>
-        </div>
-
--->
 
 
     <script src="../js/script.js"></script>
