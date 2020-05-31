@@ -97,11 +97,6 @@ button {
     color: var(--text-grey);
 }
 
-header.frontPageHeader {
-    background-image: url(../assets/img/large-img/red-dress-nocrop-l.png);
-    height: 50vw;
-}
-
 header.header-section {
     /*    max-height: 90vh;*/
     /*    min-width:70em;*/
@@ -114,6 +109,29 @@ header.header-section {
     /*    padding-top: 100px;*/
     /*    background-size: auto 100%;*/
 }
+
+header.frontPageHeader {
+    background-image: url(../assets/img/large-img/red-dress-l.png);
+    height: 50vw;
+}
+
+ header.musicHeader {
+        background-image: url(../assets/img/large-img/rastrelli-and-gudrun-l.png);
+        height: 40vw;
+    }
+
+    header.scheduleHeader {
+        background-image: url(../assets/img/large-img/frohlich-pfals-l.png);
+        height: 32vw;
+        background-position: center;
+    }
+
+    header.repertoireHeader {
+        background-image: url(../assets/img/large-img/konigin-der-nacht-l.png);
+        height: 38vw;
+    }
+
+
 
 
 
@@ -496,18 +514,35 @@ p.websiteName {
     padding-bottom: 25px;
 }
 */
-
+    .header-section {
+        background-position: top;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
 
     header.frontPageHeader {
         background-image: url(../assets/img/medium-img/red-dress-m.png);
         height: 52vw;
     }
 
-    .header-section {
-        background-position: top;
-        background-repeat: no-repeat;
-        background-size: cover;
+     header.musicHeader {
+        background-image: url(../assets/img/medium-img/rastrelli-and-gudrun-m.png);
+        height: 40vw;
+         background-position: top;
     }
+
+    header.scheduleHeader {
+        background-image: url(../assets/img/medium-img/frohlich-pfals-m.png);
+        height: 35vw;
+        background-position: center;
+    }
+
+    header.repertoireHeader {
+        background-image: url(../assets/img/medium-img/konigin-der-nacht-m.png);
+        height: 40vw;
+    }
+
+
 
 
 
@@ -765,16 +800,34 @@ p.websiteName {
 
 @media only screen and (max-width:450px) {
 
+        header.header-section {
+        background-position: top;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+
     header.frontPageHeader {
         background-image: url(../assets/img/small-img/red-dress-s.png);
         height: 60vw;
     }
 
-    header.header-section {
-        background-position: top;
-        background-repeat: no-repeat;
-        background-size: cover;
+    header.musicHeader {
+        background-image: url(../assets/img/small-img/rastrelli-and-gudrun-s.png);
+        height: 40vw;
     }
+
+    header.scheduleHeader {
+        background-image: url(../assets/img/small-img/frohlich-pfals-s.png);
+        height: 37vw;
+        background-position: center;
+    }
+
+    header.repertoireHeader {
+        background-image: url(../assets/img/small-img/konigin-der-nacht-s.png);
+        height: 40vw;
+        background-position:top;
+    }
+
 
     .top-logo {
         max-width: 11em;
