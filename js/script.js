@@ -1,9 +1,13 @@
-// Front page category = 5 (parent)
-// http://designhavn.dk/5Wordpress/wp-json/wp/v2/categories?parent=5
+const menuIcon = document.querySelector('.burgerMenu');
 
-//http://designhavn.dk/5Wordpress/wp-json/wp/v2/posts?_embed
+const navbar = document.querySelector('.top-nav')
 
-// cat id = 6 : about the album
+menuIcon.addEventListener('click',() => {
+    navbar.classList.toggle("change");
+})
+
+//burger menu code from: https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_menu_icon_js
+
 fetch("http://designhavn.dk/5Wordpress/wp-json/wp/v2/media?_embed")
     .then(res => res.json())
     .then(handleInstagramPhotosData)
@@ -237,3 +241,18 @@ function showSlides(n) {
     slides[slideIndex - 1].style.display = "block";
     dots[slideIndex - 1].className += " active";
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
