@@ -98,17 +98,22 @@ button {
 }
 
 header.frontPageHeader {
-    background-image: url(../assets/img/large-img/red-dress-l.png);
-    height: 40em;
-
-    /* Create the parallax scrolling effect */
-    /*  background-attachment: fixed;*/
-    background-position:top;
-    background-repeat: no-repeat;
-    background-size: cover;
+    background-image: url(../assets/img/large-img/red-dress-nocrop-l.png);
+    height: 50vw;
 }
 
+header.header-section {
+    /*    max-height: 90vh;*/
+    /*    min-width:70em;*/
 
+    /* Create the parallax scrolling effect */
+    background-attachment: scroll;
+    background-position: 100% 10%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    /*    padding-top: 100px;*/
+    /*    background-size: auto 100%;*/
+}
 
 
 
@@ -437,7 +442,7 @@ p.websiteName {
 
 .logo-nav-wrapper {
     background-color: rgba(255, 255, 255, 0.7);
-    padding-top: 10px;
+    padding-top: 15px;
     box-shadow: 0px 0px 9px 10px rgba(255, 255, 255, 0.7);
 }
 
@@ -472,7 +477,7 @@ p.websiteName {
 .top-nav a {
     color: black;
     text-decoration: none;
-    margin: 10px 30px;
+    margin: 0px 30px 0px 30px;
 }
 
 .top-nav a:hover {
@@ -484,13 +489,27 @@ p.websiteName {
 }
 
 
-@media only screen and (max-width:800px) {
+@media only screen and (max-width:850px) {
     /*
     .gudrun-live {
     background: var(--grey);
     padding-bottom: 25px;
 }
 */
+
+
+    header.frontPageHeader {
+        background-image: url(../assets/img/medium-img/red-dress-m.png);
+        height: 52vw;
+    }
+
+    .header-section {
+        background-position: top;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+
+
 
     iframe.front-page-youtube {
         width: 90vw;
@@ -651,20 +670,16 @@ p.websiteName {
 
 
 
-    .top-nav {
-    }
+    .top-nav {}
 
     .top-nav li {
-        display:flex;
-/*        text-transform: uppercase;*/
+        display: flex;
+        /*        text-transform: uppercase;*/
         padding: 0;
         margin: 0;
     }
 
-    .nav-item {
-
-
-    }
+    .nav-item {}
 
     .top-nav a {
         color: black;
@@ -674,11 +689,11 @@ p.websiteName {
 
 
     .top-nav {
-/*        z-index: 999;*/
+        /*        z-index: 999;*/
         width: 200px;
         background-color: var(--white);
         position: fixed;
-/*        position: absolute;*/
+        /*        position: absolute;*/
         top: 70px;
         padding: 20px 50px 10px 0px;
         right: -300px;
@@ -687,15 +702,15 @@ p.websiteName {
 
         /* slide effect */
         margin-right: -30px;
-/*        display: flex;*/
+        /*        display: flex;*/
         /*            justify-content: center;*/
     }
 
-.top-logo {
-    max-width: 15em;
-    display: block;
-    margin-bottom: 15px;
-}
+    .top-logo {
+        max-width: 14em;
+        display: block;
+        margin-bottom: 15px;
+    }
 
 
     /* when burgerm. is clicked js adds this class to navbar */
@@ -704,7 +719,7 @@ p.websiteName {
         /* the menu appears */
     }
 
-    .change .burgerMenu{
+    .change .burgerMenu {
         background: white;
         padding: 0px 44px 10px;
         margin: 0 -50px 0 0;
@@ -750,34 +765,55 @@ p.websiteName {
 
 @media only screen and (max-width:450px) {
 
-   .burgerMenu {
+    header.frontPageHeader {
+        background-image: url(../assets/img/small-img/red-dress-s.png);
+        height: 60vw;
+    }
+
+    header.header-section {
+        background-position: top;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+
+    .top-logo {
+        max-width: 11em;
+    }
+
+    .logo-nav-wrapper {
+        background-color: rgba(255, 255, 255, 0.7);
+        padding-top: 10px;
+        box-shadow: 0px 0px 4px 3px rgba(255, 255, 255, 0.7);
+    }
+
+    .burgerMenu {
         top: 30px;
         right: 25px;
+        margin-top: -6px;
     }
 
     .top-nav {
         width: 100%;
         height: 100%;
-        padding: 20v;
+        margin-top: -70px;
+        padding-top: 70px;
         right: -120%;
-/*        margin-top: -30px;*/
+        /*        margin-top: -30px;*/
         background: var(--white);
-
-
     }
 
     .change {
         right: 0;
     }
 
-     .change .burgerMenu{
+    .change .burgerMenu {
         background: none;
-        margin:0;
-         padding: 0;
+        margin: 0;
+        padding: 0;
 
     }
 
-        .bar1,
+    .bar1,
     .bar2,
     .bar3 {
         width: 25px;
@@ -787,11 +823,11 @@ p.websiteName {
         transition: 0.4s;
     }
 
-   .top-nav li {
-       justify-content: center;
-       padding: 8px;
-/*       background: var(--white);*/
-/*        box-shadow: 0px 0px 103px 70px var(--white);*/
+    .top-nav li {
+        justify-content: center;
+        padding: 8px;
+        /*       background: var(--white);*/
+        /*        box-shadow: 0px 0px 103px 70px var(--white);*/
     }
 
 
@@ -810,6 +846,7 @@ p.websiteName {
     }
 
 }
+
 /*
 
     .navItem {
