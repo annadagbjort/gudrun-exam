@@ -36,7 +36,6 @@ if (checkForElementQuotes) {
                 //Press Quotes
                 if (quoteCategory == 13) {
 
-
                     const pressQuoteTemp = document.querySelector(".pressQuotesTemp").content;
 
                     const clonePressQuoteTemp = pressQuoteTemp.cloneNode(true);
@@ -260,6 +259,32 @@ function handlePostData(PostDataHandled) {
                     // document.querySelector(".newsletter-updates .fp-header").textContent = theHeader;
 
                     document.querySelector(".text-about-newsletter").innerHTML = theContent;
+                }
+            }
+
+
+            //About Gudrun short text
+            if (categor == 2) {
+                if(AboutPage){
+                document.querySelector(".about-wrapper .about-header").textContent = theHeader;
+
+                document.querySelector(".about-wrapper .about-text").innerHTML = theContent;
+                    }
+            }
+
+            //About Gudrun longer text
+            if (categor == 11) {
+                if(AboutPage){
+                document.querySelector(".about-wrapper .about-see-more").innerHTML = theContent;
+                }
+            }
+
+            //            Vocal coaching
+            if (categor == 10) {
+                if(AboutPage){
+                document.querySelector(".vocal-coaching-wrapper .vocal-coaching-header").textContent = theHeader;
+
+                document.querySelector(".vocal-coaching-wrapper .vocal-coaching-paragraph").innerHTML = theContent;
                 }
             }
 
