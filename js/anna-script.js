@@ -1,3 +1,4 @@
+// BURGER MENU
 const menuIcon = document.querySelector('.burgerMenu');
 
 const navbar = document.querySelector('.top-nav');
@@ -5,6 +6,14 @@ const navbar = document.querySelector('.top-nav');
 menuIcon.addEventListener('click', () => {
     navbar.classList.toggle("change");
 })
+
+
+const FrontPage = document.querySelector(".FrontPage");
+const MusicPage = document.querySelector(".MusicPage");
+const SchedulePage = document.querySelector(".SchedulePage");
+const RepertoirePage = document.querySelector(".RepertoirePage");
+const AboutPage = document.querySelector(".AboutPage");
+const ContactPage = document.querySelector(".ContactPage");
 
 
 const checkForElementQuotes = document.querySelector(".quotes");
@@ -25,7 +34,8 @@ if (checkForElementQuotes) {
             oneQuote.categories.forEach(quoteCategory => {
 
                 //Press Quotes
-                if (quoteCategory == 13 && document.querySelector(".pressQuotesTemp")) {
+                if (quoteCategory == 13) {
+
 
                     const pressQuoteTemp = document.querySelector(".pressQuotesTemp").content;
 
@@ -96,9 +106,8 @@ if (checkForElementQuotes) {
     }
 }
 
-
+//Fetching for Instagram gallery
 const checkForElementGallery = document.querySelector(".gudruns-gallery");
-
 if (checkForElementGallery) {
     fetch("http://designhavn.dk/5Wordpress/wp-json/wp/v2/media?_embed")
         .then(res => res.json())
@@ -107,21 +116,22 @@ if (checkForElementGallery) {
     function handleInstagramPhotosData(InstagramPhotos) {
 
         InstagramPhotos.forEach(instaPhoto => {
-            //        cloneInstaTemp.instaPhoto
-            const instagramTemplate = document.querySelector(".instagramTemplate").content;
-            const cloneInstaTemp = instagramTemplate.cloneNode(true);
 
-            cloneInstaTemp.querySelector(".imgInstagramCarousel").src = instaPhoto.source_url
+            if (FrontPage) {
+                const instagramTemplate = document.querySelector(".instagramTemplate").content;
+                const cloneInstaTemp = instagramTemplate.cloneNode(true);
 
-            console.log(instaPhoto.source_url)
+                cloneInstaTemp.querySelector(".imgInstagramCarousel").src = instaPhoto.source_url
+                document.querySelector(".theInstagram").appendChild(cloneInstaTemp);
+            }
 
-            document.querySelector(".theInstagram").appendChild(cloneInstaTemp);
         });
+
+
 
         //        cloneInstaTemp.querySelector(".imgInstagramCarousel").src = instaPhoto.source_url
     }
 }
-
 
 const checkForElementYoutube = document.querySelector(".youtube");
 if (checkForElementYoutube) {
@@ -130,7 +140,6 @@ if (checkForElementYoutube) {
         .then(handleYoutubeLinkData)
     //has comments √
     function handleYoutubeLinkData(youtubeLinks) {
-
         //Have an array of all links > need to look into each >>
         youtubeLinks.forEach(TheYoutubeLink => {
 
@@ -140,29 +149,25 @@ if (checkForElementYoutube) {
             var theHeader = TheYoutubeLink.title.rendered;
             var theVideo = TheYoutubeLink.video_link;
 
+            if (MusicPage) {
+                if (document.querySelector(".performanceVideosTemplate")) {
+                    const performanceVideosTemplate = document.querySelector(".performanceVideosTemplate").content;
+
+                    const cloneYoutubeTemp = performanceVideosTemplate.cloneNode(true);
+                    cloneYoutubeTemp.querySelector(".youtubeVideosIframe").src = performanceVideo.video_link;
+
+                    //        console.log(performanceVideo.video_link)
+
+                    //        show  more videos
+                    if (document.querySelector(".live-performances-videos").childElementCount < 3) {
+                        document.querySelector(".live-performances-videos").appendChild(cloneYoutubeTemp);
+                    } else {
+                        document.querySelector(".readMoreVideos").appendChild(cloneYoutubeTemp);
+                    }
 
 
-if (document.querySelector(".performanceVideosTemplate") {
-
-            const performanceVideosTemplate = document.querySelector(".performanceVideosTemplate").content;
-
-            const cloneYoutubeTemp = performanceVideosTemplate.cloneNode(true);
-            cloneYoutubeTemp.querySelector(".youtubeVideosIframe").src = performanceVideo.video_link;
-
-
-            //        show  more videos
-            if (document.querySelector(".live-performances-videos").childElementCount < 3) {
-                document.querySelector(".live-performances-videos").appendChild(cloneYoutubeTemp);
-            } else {
-                document.querySelector(".readMoreVideos").appendChild(cloneYoutubeTemp);
+                }
             }
-            }
-
-
-
-
-
-
 
 
 
@@ -181,25 +186,23 @@ if (document.querySelector(".performanceVideosTemplate") {
             });
         });
     }
+    if (MusicPage) {
+        const buttonExpand = document.querySelector(".videos-button");
+        const secondContainer = document.querySelector(".readMoreVideos");
+        secondContainer.style.display = "none";
 
+        buttonExpand.addEventListener("click", showMoreVideos);
 
+        function showMoreVideos() {
+            if (secondContainer.style.display === "none") {
+                secondContainer.style.display = "flex";
 
-    const buttonExpand = document.querySelector(".videos-button");
-    const secondContainer = document.querySelector(".readMoreVideos");
-    secondContainer.style.display = "none";
-
-    buttonExpand.addEventListener("click", showMoreVideos);
-
-    function showMoreVideos() {
-        if (secondContainer.style.display === "none") {
-            secondContainer.style.display = "flex";
-
-            buttonExpand.innerHTML = "Show less"
-        } else {
-            secondContainer.style.display = "none";
-            buttonExpand.innerHTML = "Show more";
+                buttonExpand.innerHTML = "Show less"
+            } else {
+                secondContainer.style.display = "none";
+                buttonExpand.innerHTML = "Show more";
+            }
         }
-
     }
 }
 
@@ -210,11 +213,11 @@ if (checkForElementPost) {
         .then(handlePostData)
 
     //has comments √
-    function handlePostData(frontpagePostHandled) {
+    function handlePostData(PostDataHandled) {
 
         // Now we have an array with all the posts
         // We need to "look into" the array to see each post "individually"
-        frontpagePostHandled.forEach(item => {
+        PostDataHandled.forEach(item => {
 
             // Find everything I want to fetch from the json and give it a name (put it into a var)
             var theHeader = item.title.rendered;
@@ -229,19 +232,24 @@ if (checkForElementPost) {
                 // So now we look through each post and if the category is 6 we add the content we need to html
                 if (categor == 6) {
 
-                    //We choose where to display the content we need
-                    //By selecting elements(by class) in the html document
-                    document.querySelector(".debut-album .fp-header").textContent = theHeader;
+                    //Here I'm choosing where to append it on the front page
+                    if (FrontPage) {
+                        //We choose where to display the content we need
+                        document.querySelector(".debut-album .fp-header").textContent = theHeader;
 
-                    //Since in this case wordpress gives us "marked up" text we need to use .innerHTML
-                    document.querySelector(".text-about-album").innerHTML = theExcerpt;
+                        //Since in this case wordpress gives us "marked up" text we need to use .innerHTML
+                        document.querySelector(".text-about-album").innerHTML = theExcerpt;
+                    }
                 }
 
                 // Newsletter > the category for the Newsletter is 7
                 if (categor == 7) {
+
+                    if(FrontPage){
                     // document.querySelector(".newsletter-updates .fp-header").textContent = theHeader;
 
                     document.querySelector(".text-about-newsletter").innerHTML = theContent;
+                        }
                 }
 
             });
