@@ -644,42 +644,17 @@ p.websiteName {
         left: 2em;
     }
 
-
     article.quotes {
         text-align: center;
         padding: 0;
         margin: 0;
     }
 
-    /*  Articles  */
-/*
-    .pressHeader {
-        grid-column: 1/-1 order: -1;
-        padding-top: 1em;
-    }
-
-    .pressFigure {
-        width: 150px;
-        margin: 0px;
-
-    }
-
-    .pressImg {
-        height: 5em;
-        width: 150px;
-        object-fit: cover;
-    }
-
-    .articleContainer {
-        width: 50px;
-    }
-*/
-
-
 }
 
 @media only screen and (max-width:450px) {
 
+/*    HEADER  PHOTO     */
     header.header-section {
         background-position: top;
         background-repeat: no-repeat;
@@ -719,15 +694,14 @@ p.websiteName {
         background-position: bottom;
     }
 
-
+/*     NAV - BURGER MENU   */
     .top-logo {
         max-width: 11em;
     }
 
     .logo-nav-wrapper {
-        background-color: rgba(255, 255, 255, 0.7);
         padding-top: 10px;
-        box-shadow: 0px 0px 4px 3px rgba(255, 255, 255, 0.7);
+        box-shadow: 0px 0px 4px 3px rgba(var(--white-rgba), 0.7);
     }
 
     .burgerMenu {
@@ -742,7 +716,6 @@ p.websiteName {
         margin-top: -70px;
         padding-top: 70px;
         right: -120%;
-        /*        margin-top: -30px;*/
         background: var(--white);
     }
 
@@ -754,7 +727,6 @@ p.websiteName {
         background: none;
         margin: 0;
         padding: 0;
-
     }
 
     .bar1,
@@ -763,24 +735,16 @@ p.websiteName {
         width: 25px;
         height: 2px;
         margin: 6px 0;
-        transition: 0.4s;
     }
 
     .top-nav li {
         justify-content: center;
         padding: 8px;
-        /*       background: var(--white);*/
-        /*        box-shadow: 0px 0px 103px 70px var(--white);*/
     }
-
 
     .change .bar1 {
         -webkit-transform: rotate(-45deg) translate(-4px, 5px);
         transform: rotate(-45deg) translate(-4px, 5px);
-    }
-
-    .change .bar2 {
-        opacity: 0;
     }
 
     .change .bar3 {
