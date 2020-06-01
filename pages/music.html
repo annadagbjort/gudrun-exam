@@ -11,8 +11,7 @@
 </head>
 
 <body>
-
-<header class="header-section musicHeader">
+    <header class="header-section musicHeader">
 
 
         <div class="logo-nav-wrapper">
@@ -42,14 +41,14 @@
     </header>
 
 
-    <main class="main-album-wrapper">
+    <main class="main-album-wrapper fetchPost youtube">
         <div class="main-content-area">
             <div class="album-info">
                 <article class="album-info-container">
                     <h1 class="album-section-header"></h1>
                     <div class="album-col album-col1">
 
-                        <iframe  class="spotify-player" src="https://open.spotify.com/embed/album/3e5bsIeJhYkm3VEkxoxgVx" width="300" height="380" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
+                        <iframe class="spotify-player" src="https://open.spotify.com/embed/album/3e5bsIeJhYkm3VEkxoxgVx" width="300" height="380" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
                     </div>
 
                     <div class="album-col album-col2"></div>
@@ -58,12 +57,13 @@
                         <h3 class="buy-now-header">Buy digital version here</h3>
                         <ul class="buy-section">
                             <li class="buy-icons">
-                               <h4>Amazon</h4>
+                                <h4>Amazon</h4>
                                 <a class="buy-icons-link" href="https://www.amazon.com/Nor%C3%B0urlj%C3%B3s-Lieder-Norden-Nordic-Songs/dp/B074JSW3HC/ref=sr_1_1?dchild=1&keywords=Nordurlj%C3%B3s+von+Gudrun+Ingimars&qid=1590569278&sr=8-1" target="_blank">
                                     <img class="amazon-icon" border="0" alt="Amazon Purchase" src="../images/icons8-amazon-48.png" width="100" height="100">
-                                </a></li>
+                                </a>
+                            </li>
                             <li class="buy-icons">
-<h4>iTunes</h4>
+                                <h4>iTunes</h4>
                                 <a class="buy-icons-link" href="https://music.apple.com/us/album/nor%C3%B0urlj%C3%B3s-lieder-aus-dem-norden-nordic-songs/1268640994?l=es" target="_blank">
                                     <img class="apple-icon" border="0" alt="iTunes Purchase" src="../images/icons8-itunes-48.png" width="100" height="100">
                                 </a>
@@ -76,7 +76,7 @@
                 </article>
             </div>
             <div class="album-image-section">
-               <img class="performanceImage" alt="Gudrun Performance Image" src="../images/Elegie%20mit%20Kira.jpg" >
+                <img class="performanceImage" alt="Gudrun Performance Image" src="../images/Elegie%20mit%20Kira.jpg">
                 <div class="performance-des">
                     <p>description about the performance</p>
                 </div>
@@ -85,64 +85,64 @@
 
             <!--youtube video section-->
 
-            <div class="vdeo-section-wrapper">
-            <h2 class="video-header">Live Performances</h2>
-            <div class="live-performances-videos">
+            <div class="vdeo-section-wrapper youtube">
+                <h2 class="video-header">Live Performances</h2>
+                <div class="live-performances-videos">
 
 
-                <template class="performanceVideosTemplate">
+                    <template class="performanceVideosTemplate">
 
-                <div class="video-placement">
-                    <iframe src="" class="youtubeVideosIframe" SameSite=None frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        <div class="video-placement">
+                            <iframe src="" class="youtubeVideosIframe" SameSite=None frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
-                    </div>
-                </template>
-            </div>
+                        </div>
+                    </template>
+                </div>
 
-            <div class="readMoreVideos">
+                <div class="readMoreVideos">
 
-            </div>
-            <div class="videoButtonContainer">
-                <button class="red-button videos-button" >More</button> </div>
+                </div>
+                <div class="videoButtonContainer">
+                    <button class="red-button videos-button">More</button> </div>
             </div>
         </div>
 
     </main>
 
+    <footer>
 
-<footer>
+        <div class="inner-footer">
+            <div class="footer-items-contact">
+                <h2>Contact</h2>
+                <div class="footer-border"></div>
 
-<div class="inner-footer">
-   <div class="footer-items-contact">
-       <h2>Contact</h2>
-       <div class="footer-border"></div>
+                <template id="myTemplateFooter">
 
-       <template id="myTemplateFooter">
+                    <p class="contact-name">Name</p>
 
-       <p class="contact-name">Name</p>
+                    <p class="contact-email">Email</p>
 
-       <p class="contact-email">Email</p>
+                    <p class="contact-phone">Phone</p>
 
-       <p class="contact-phone">Phone</p>
+                    <p class="contact-location">Location</p>
 
-       <p class="contact-location">Location</p>
+                </template>
+            </div>
 
-       </template>
-   </div>
+            <div class="footer-items-contact">
+                <h2>Social Media</h2>
+                <div class="footer-border"></div>
+                <img src="../icons/icons_all-07.png">
 
-   <div class="footer-items-contact">
-       <h2>Social Media</h2>
-       <div class="footer-border"></div>
-        <img src="../icons/icons_all-07.png">
+                <img src="../icons/icons_all-02.png">
+            </div>
 
-       <img src="../icons/icons_all-02.png">
-   </div>
-
-</div>
+        </div>
 
 
-</footer>
-    <script src="../js/esther_script.js"></script>
+    </footer>
+
+    <script src="../js/anna-script.js"></script>
 </body>
 
 </html>

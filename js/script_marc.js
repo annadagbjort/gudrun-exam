@@ -1,6 +1,6 @@
-const checkForElement = document.querySelector(".repertoire-header");
+const checkForElementRepertoire = document.querySelector(".repertoireHeader");
 // run the functions only if the element exists on the page
-if (checkForElement) {
+if (checkForElementRepertoire) {
     // fetching for repertoire subpage
 
     //fetching operas
@@ -160,8 +160,8 @@ if (checkForElement) {
 }
 
 
-var checkForElement2 = document.querySelector(".schedule-main-heading");
-if (checkForElement2) {
+var checkForElementScedule = document.querySelector(".schedule-main-heading");
+if (checkForElementScedule) {
     // fetching for the schedule subpage
     //fetching events
 
@@ -247,10 +247,11 @@ if (checkForElement2) {
         window.location.replace("contact.html");
     }
 }
-// check if the page contains specific HTML element - in order to prevent running code meant for different subpages and errors
-var checkForElement3 = document.querySelector(".contact-main-wrapper");
 
-if (checkForElement3) {
+// check if the page contains specific HTML element - in order to prevent running code meant for different subpages and errors
+var checkForElementContact = document.querySelector(".contact-main-wrapper");
+
+if (checkForElementContact) {
     //fetching info for contact page
     const contactLink = "http://designhavn.dk/5Wordpress/wp-json/wp/v2/contact";
     fetch(contactLink)
@@ -285,8 +286,9 @@ if (checkForElement3) {
 
 }
 
-/* FETCHING FOOTER */
 
+
+/* FETCHING FOOTER */
 fetch("https://designhavn.dk/5Wordpress/wp-json/wp/v2/contact?_embed")
 .then(function (response){
     return response.json()
