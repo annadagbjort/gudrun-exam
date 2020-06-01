@@ -99,17 +99,18 @@ button {
     color: var(--text-grey);
 }
 
-.header-section {
-    /*    max-height: 90vh;*/
-    /*    min-width:70em;*/
+.text-right {
+    text-align: right;
+}
 
-    /* Create the parallax scrolling effect */
-    background-attachment: scroll;
+
+
+/*    H E A D E R    */
+
+header.header-section {
     background-position: 100% 10%;
     background-repeat: no-repeat;
     background-size: cover;
-    /*    padding-top: 100px;*/
-    /*    background-size: auto 100%;*/
 }
 
 header.frontPageHeader {
@@ -136,7 +137,6 @@ header.repertoireHeader {
 header.aboutHeader {
     background-image: url(../assets/img/large-img/marmorsaal-trommel-l.png);
     height: 38vw;
-    /*        background-position: top;*/
 }
 
 header.contactHeader {
@@ -147,334 +147,9 @@ header.contactHeader {
 
 
 
-
-
-/*    FRONT PAGE   */
-
-main.front-page-grid {
-    display: grid;
-    grid-template-columns: 1fr;
-}
-
-.fp-header {
-    grid-column: 1/3;
-    padding-top: 1.2em;
-}
-
-.gudrun-live {
-    background: var(--grey);
-    padding-bottom: 25px;
-}
-
-iframe.front-page-youtube {
-    width: 50vw;
-    height: 33vw;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-.the-video-title-fetched {
-    text-align: center;
-}
-
-
-
-
-article.newsletter-updates {
-    background-image: url(../assets/img/large-img/blue-smile-large.png);
-    height: 100%;
-
-    /* Create the parallax scrolling effect */
-    /*  background-attachment: fixed;*/
-    background-position: -100px;
-    background-repeat: no-repeat;
-    background-size: cover;
-
-
-    /*
-
-    display:grid;
-    grid-template-columns: 1fr;
- margin-left:auto;
-*/
-    /*    padding-left: 45vw;*/
-
-}
-
-.transparent-backg {
-    /*    background: rgba(var(--grey-rgb), 0.7);*/
-    background: rgba(255, 255, 255, 0.7);
-    width: 40vw;
-    /*    display: flex;*/
-    /*    flex-direction: row;*/
-    margin-left: auto;
-    margin-right: 10vw;
-    /*    margin-top: -20px;*/
-    padding-top: 20px;
-    padding-bottom: 20px;
-    box-shadow: 0px 0px 33px 30px rgba(255, 255, 255, 0.7);
-}
-
-.newsletter-updates .fp-header {
-    /*    text-align: left;*/
-}
-
-.text-about-newsletter {
-    width: 30vw;
-    padding-left: 6vw;
-    /*    margin-left: auto;*/
-}
-
-.newsletter-signup-form {
-    /*display:flex;*/
-    padding: 2vw;
-    margin-right: auto;
-    /*    text-align: center;*/
-}
-
-.fp-newsletter {
-    /*    display: flex;*/
-    background: var(--grey);
-    border: none;
-    color: var(--text-grey);
-    padding: .6em 1em;
-    font-size: 14px;
-    width: 20vw;
-    margin-bottom: 1.7em;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-.newsletter-signup-form > .red-button {
-    margin-top: .2em;
-    /*        margin-right: auto;*/
-    text-align: center;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-
-
-.debut-album {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    background: var(--grey);
-    margin-top: 0em;
-    padding-bottom: 2em;
-}
-
-.fp-album-cover {
-    width: 20em;
-    padding: 0em 2em;
-    display: block;
-    margin-left: auto;
-}
-
-.about-album {
-    width: 30vw;
-    padding: 0em 3em;
-    display: block;
-    margin-right: auto;
-    /*    text-align: center;*/
-}
-
-.about-album > button {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 1em;
-}
-
-
-.theInstagram {
-    display: flex;
-    justify-content: center;
-}
-
-.instagramCarousel {
-    /*    height: 50px;*/
-
-}
-
-.instagramFigure {
-    width: 23vw;
-    margin: 2px;
-}
-
-.instagramFigure:hover {
-    opacity: 0.5;
-}
-
-.imgInstagramCarousel {
-    padding: 0px;
-    height: 23vw;
-    width: 23vw;
-    object-fit: cover;
-    /*
-    max-width: 100%;
-    max-height: 100%;
-*/
-    /*    object-fit:cover;*/
-
-
-}
-
-.text-right {
-    text-align: right;
-}
-
-
-article.quotes {
-    text-align: center;
-    margin: 0px;
-    padding: 5em;
-    background: var(--grey);
-    background: rgb(var(--grey-rgb), 0.5);
-}
-
-
-.thePressQuoteDiv {
-    /*    margin: 3em;*/
-}
-
-.slideshow-container-press {
-    background: var(--white);
-    padding: 3em 3em 1em;
-    box-shadow: 0px 0px 13px 0px rgb(230, 230, 230);
-    /*    border: solid .1em var(--text-grey);*/
-}
-
-.myPressSlides {
-    padding: 1em 2em;
-    display: none;
-
-}
-
-
-
-
-
-article.press {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, 250px);
-    grid-gap: 5em;
-    justify-content: center;
-    margin: 5vw
-}
-
-.pressHeader {
-    grid-column: 1/-1 order: -1;
-    padding-top: 1em;
-}
-
-.pressFigure {
-    width: 20em;
-    margin: 0px;
-
-}
-
-.pressImg {
-
-    height: 10em;
-    width: 17em;
-    object-fit: cover;
-}
-
-h4.pressTitle {
-    margin-bottom: 0px;
-    text-align: center;
-
-
-}
-
-p.websiteName {
-    text-align: center;
-    margin: 0px;
-    font-style: italic;
-
-}
-
-
-
-
-.prev,
-.next {
-    cursor: pointer;
-    position: absolute;
-    top: 50%;
-
-    /*    width: auto;*/
-
-    margin-top: -30px;
-    margin-left: 0px;
-    margin-right: 0px;
-
-    /*    padding: 16px;*/
-    border-radius: 0 3px 3px 0;
-    user-select: none;
-}
-
-/*Positioning the "next button" to the right*/
-.next {
-    position: absolute;
-    right: 8em;
-    border-radius: 3px 0 0 3px;
-}
-
-.prev {
-    left: 8em;
-}
-
-/*add see-through bg color on hover */
-.prev:hover,
-.next:hover {
-    background-color: var(--grey);
-}
-
-/*dots */
-.dot-container {
-    text-align: center;
-    padding: 20px;
-
-}
-
-.pressDot {
-    cursor: pointer;
-    height: 3px;
-    width: 15px;
-    margin: 0 2px;
-    background-color: var(--grey);
-    /*    border-radius: 50%;*/
-    display: inline-block;
-    transition: background-color 0.6s ease;
-}
-
-.active,
-.pressDot:hover {
-    background-color: var(--text-red);
-}
-
-.quote {
-    font-style: italic;
-}
-
-.author {
-    color: var(--text-red);
-}
-
-
-
-
-
-
-
-
+/*   N A V   M E N U   */
 
 /*transparent grey background*/
-
 .logo-nav-wrapper {
     background-color: rgba(var(--white-rgba), 0.7);
     padding-top: 15px;
@@ -524,23 +199,267 @@ p.websiteName {
 }
 
 
-@media only screen and (max-width:850px) {
 
-    /*
-    .gudrun-live {
+
+/*    FRONT PAGE   */
+
+main.front-page-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+}
+
+.fp-header {
+    grid-column: 1/3;
+    padding-top: 1.2em;
+}
+
+.gudrun-live {
     background: var(--grey);
     padding-bottom: 25px;
 }
-*/
+
+iframe.front-page-youtube {
+    width: 50vw;
+    height: 33vw;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.the-video-title-fetched {
+    text-align: center;
+}
+
+
+article.newsletter-updates {
+    background-image: url(../assets/img/large-img/blue-smile-large.png);
+    height: 100%;
+
+    background-position: -100px;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.transparent-backg {
+    background: rgba(var(--white-rgba), 0.7);
+    width: 40vw;
+    margin-left: auto;
+    margin-right: 10vw;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    box-shadow: 0px 0px 33px 30px rgba(var(--white-rgba), 0.7);
+}
+
+.text-about-newsletter {
+    width: 30vw;
+    padding-left: 6vw;
+}
+
+.newsletter-signup-form {
+    padding: 2vw;
+    margin-right: auto;
+}
+
+.fp-newsletter {
+    background: var(--grey);
+    border: none;
+    color: var(--text-grey);
+    padding: .6em 1em;
+    font-size: 14px;
+    width: 20vw;
+    margin-bottom: 1.7em;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.newsletter-signup-form > .red-button {
+    margin-top: .2em;
+    /*        margin-right: auto;*/
+    text-align: center;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.debut-album {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    background: var(--grey);
+    margin-top: 0em;
+    padding-bottom: 2em;
+}
+
+.fp-album-cover {
+    width: 20em;
+    padding: 0em 2em;
+    display: block;
+    margin-left: auto;
+}
+
+.about-album {
+    width: 30vw;
+    padding: 0em 3em;
+    display: block;
+    margin-right: auto;
+    /*    text-align: center;*/
+}
+
+.about-album > button {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 1em;
+}
+
+.theInstagram {
+    display: flex;
+    justify-content: center;
+}
+
+.instagramFigure {
+    width: 23vw;
+    margin: 2px;
+}
+
+.instagramFigure:hover {
+    opacity: 0.5;
+}
+
+.imgInstagramCarousel {
+    padding: 0px;
+    height: 23vw;
+    width: 23vw;
+    object-fit: cover;
+}
+
+
+/*    P R E S S     */
+
+article.quotes {
+    text-align: center;
+    margin: 0px;
+    padding: 5em;
+    background: var(--grey);
+    background: rgb(var(--grey-rgb), 0.5);
+}
+
+.slideshow-container-press {
+    background: var(--white);
+    padding: 3em 3em 1em;
+    box-shadow: 0px 0px 13px 0px rgb(230, 230, 230);
+    /*    border: solid .1em var(--text-grey);*/
+}
+
+.myPressSlides {
+    padding: 1em 2em;
+    display: none;
+}
+
+article.press {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, 250px);
+    grid-gap: 5em;
+    justify-content: center;
+    margin: 5vw
+}
+
+.pressHeader {
+    grid-column: 1/-1 order: -1;
+    padding-top: 1em;
+}
+
+.pressFigure {
+    width: 20em;
+    margin: 0px;
+}
+
+.pressImg {
+    height: 10em;
+    width: 17em;
+    object-fit: cover;
+}
+
+h4.pressTitle {
+    margin-bottom: 0px;
+    text-align: center;
+}
+
+p.websiteName {
+    text-align: center;
+    margin: 0px;
+    font-style: italic;
+}
+
+.prevPress,
+.nextPress {
+    cursor: pointer;
+    position: absolute;
+    top: 100%;
+    margin-top: -30px;
+    margin-left: 0px;
+    margin-right: 0px;
+    user-select: none;
+}
+
+/*Positioning the "next button" to the right*/
+.nextPress {
+    right: 8em;
+    border-radius: 3px 0 0 3px;
+}
+
+.prevPress {
+    left: 8em;
+    border-radius: 0 3px 3px 0;
+}
+
+/*add see-through bg color on hover */
+.prevPress:hover,
+.nextPress:hover {
+    background-color: var(--grey);
+}
+
+/*dots */
+.dot-container {
+    text-align: center;
+    padding: 20px;
+}
+
+.pressDot {
+    cursor: pointer;
+    height: 3px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: var(--grey);
+    /*    border-radius: 50%;*/
+    display: inline-block;
+    transition: background-color 0.6s ease;
+}
+
+.active,
+.pressDot:hover {
+    background-color: var(--text-red);
+}
+
+.quote {
+    font-style: italic;
+}
+
+.author {
+    color: var(--text-red);
+}
+
+
+@media only screen and (max-width:850px) {
+
+    /*    HEADER PHOTOS   */
     header.header-section {
         background-position: top;
-        background-repeat: no-repeat;
-        background-size: cover;
     }
 
     header.frontPageHeader {
         background-image: url(../assets/img/medium-img/red-dress-m.png);
-        height: 52vw;
+        height: 53vw;
     }
 
     header.musicHeader {
@@ -563,7 +482,6 @@ p.websiteName {
     header.aboutHeader {
         background-image: url(../assets/img/medium-img/marmorsaal-trommel-m.png);
         height: 40vw;
-        /*        background-position: center;*/
     }
 
     header.contactHeader {
@@ -572,187 +490,23 @@ p.websiteName {
         background-position: bottom;
     }
 
+    /*  NAV MENU  -- BURGER MENU */
 
 
-
-
-    iframe.front-page-youtube {
-        width: 90vw;
-        height: 60vw;
+    .top-logo {
+        max-width: 14em;
         display: block;
-        margin-left: auto;
-        margin-right: auto;
+        margin-bottom: 15px;
     }
-
-    .the-video-title-fetched {
-        text-align: center;
-    }
-
-    .debut-album {
-        grid-template-columns: 1fr;
-    }
-
-    .album-figure {
-        grid-row: 2;
-        margin-left: auto;
-        margin-right: auto;
-    }
-
-    .fp-album-cover {
-        width: 50vw;
-    }
-
-    .about-album {
-        grid-row: 3;
-        margin-left: auto;
-        margin-right: auto;
-        width: 50vw;
-        padding: 0;
-    }
-
-    article.newsletter-updates {
-        background-position: -200px;
-    }
-
-    .transparent-backg {
-        /*    background: rgba(var(--grey-rgb), 0.7);*/
-        background: rgba(var(--white-rgba), 0.7);
-        width: 100vw;
-        /*    display: flex;*/
-        /*    flex-direction: row;*/
-        margin-left: auto;
-        margin-right: auto;
-        /*    margin-top: -20px;*/
-        padding-top: 20px;
-        padding-bottom: 20px;
-    }
-
-    .newsletter-updates .fp-header {
-        /*    text-align: left;*/
-    }
-
-    .text-about-newsletter {
-        width: 50vw;
-        padding-left: 0;
-        margin-left: auto;
-        margin-right: auto;
-    }
-
-    .text-about-newsletter {
-        text-align: center;
-    }
-
-    .newsletter-signup-form {
-        /*display:flex;*/
-        padding: 2vw;
-        margin-right: auto;
-        /*    text-align: center;*/
-    }
-
-    .fp-newsletter {
-        /*    display: flex;*/
-        background: var(--grey);
-        border: none;
-        color: var(--text-grey);
-        padding: .6em 1em;
-        font-size: 14px;
-        width: 30vw;
-        margin-bottom: 1.7em;
-        display: block;
-        margin-left: auto;
-        margin-right: auto;
-    }
-
-    .newsletter-signup-form > .red-button {
-        margin-top: .2em;
-        /*        margin-right: auto;*/
-        text-align: center;
-        display: block;
-        margin-left: auto;
-        margin-right: auto;
-    }
-
-    article.quotes {
-        text-align: center;
-        padding: 0;
-        margin: 0;
-    }
-
-    .slideshow-container-press {
-        /*
-    background: var(--white);
-    padding: 3em 3em 1em;
-     box-shadow: 0px 0px 13px 0px rgb(230,230,230);
-*/
-    }
-
-
-    .next {
-        position: absolute;
-        right: 2em;
-        border-radius: 3px 0 0 3px;
-    }
-
-    .prev {
-        left: 2em;
-    }
-
-
-    /*
-    article.press {
-        display: grid;
-        grid-template-columns: repeat(auto-fill, minmax(150px, 250px);
-                grid-gap: 5em;
-                justify-content: center;
-                margin: 5vw;
-        }
-*/
-
-    .pressHeader {
-        grid-column: 1/-1 order: -1;
-        padding-top: 1em;
-    }
-
-    .pressFigure {
-        width: 150px;
-        margin: 0px;
-
-    }
-
-    .pressImg {
-
-        height: 5em;
-        width: 150px;
-        object-fit: cover;
-    }
-
-    .articleContainer {
-        width: 50px;
-    }
-
-
-
-
-
-
-    .top-nav {}
 
     .top-nav li {
         display: flex;
-        /*        text-transform: uppercase;*/
-        padding: 0;
-        margin: 0;
     }
 
-    .nav-item {}
-
     .top-nav a {
-        color: black;
-        text-decoration: none;
         margin: 10px 30px;
     }
 
-    /*  burger menu  */
     .top-nav {
         width: 200px;
         background-color: rgba(var(--white-rgba), 0.96);
@@ -768,13 +522,6 @@ p.websiteName {
         /* slide effect */
         transition: right .4s;
     }
-
-    .top-logo {
-        max-width: 14em;
-        display: block;
-        margin-bottom: 15px;
-    }
-
 
     /* when burgerm. is clicked js adds this class to navbar */
     .change {
@@ -804,7 +551,7 @@ p.websiteName {
     .bar3 {
         width: 30px;
         height: 2px;
-        background-color: #333;
+        background-color: var(--text-grey);
         margin: 8px 0;
         transition: 0.4s;
     }
@@ -824,6 +571,110 @@ p.websiteName {
     }
 
     /* burger menu finished*/
+
+
+    /*      F R O N T  P A G E     */
+
+    /*    youtube video  */
+    iframe.front-page-youtube {
+        width: 90vw;
+        height: 60vw;
+    }
+
+    /*    newletter section   */
+    article.newsletter-updates {
+        background-position: -200px;
+    }
+
+    .transparent-backg {
+        width: 100vw;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .text-about-newsletter {
+        width: 50vw;
+        padding-left: 0;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .text-about-newsletter {
+        text-align: center;
+    }
+
+    .fp-newsletter {
+        width: 30vw;
+    }
+
+    /*album section*/
+    .debut-album {
+        grid-template-columns: 1fr;
+    }
+
+    .album-figure {
+        grid-row: 2;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .fp-album-cover {
+        width: 50vw;
+    }
+
+    .about-album {
+        grid-row: 3;
+        margin-left: auto;
+        margin-right: auto;
+        width: 50vw;
+        padding: 0;
+    }
+
+
+    /*    P R E S S    */
+
+
+    /*   Quotes   */
+
+    .nextPress {
+        right: 2em;
+    }
+
+    .prevPress {
+        left: 2em;
+    }
+
+
+    article.quotes {
+        text-align: center;
+        padding: 0;
+        margin: 0;
+    }
+
+    /*  Articles  */
+/*
+    .pressHeader {
+        grid-column: 1/-1 order: -1;
+        padding-top: 1em;
+    }
+
+    .pressFigure {
+        width: 150px;
+        margin: 0px;
+
+    }
+
+    .pressImg {
+        height: 5em;
+        width: 150px;
+        object-fit: cover;
+    }
+
+    .articleContainer {
+        width: 50px;
+    }
+*/
+
 
 }
 
@@ -880,9 +731,9 @@ p.websiteName {
     }
 
     .burgerMenu {
-        top: 30px;
-        right: 25px;
-        margin-top: -6px;
+        top: 20px;
+        right: 30px;
+        padding-top: 0px;
     }
 
     .top-nav {
@@ -911,7 +762,6 @@ p.websiteName {
     .bar3 {
         width: 25px;
         height: 2px;
-        background-color: #333;
         margin: 6px 0;
         transition: 0.4s;
     }
@@ -939,11 +789,3 @@ p.websiteName {
     }
 
 }
-
-/*
-
-    .navItem {
-        padding: 20px;
-        text-align: center;
-    }
-*/
