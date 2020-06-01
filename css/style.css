@@ -97,7 +97,7 @@ button {
     color: var(--text-grey);
 }
 
-header.header-section {
+.header-section {
     /*    max-height: 90vh;*/
     /*    min-width:70em;*/
 
@@ -130,7 +130,17 @@ header.frontPageHeader {
         background-image: url(../assets/img/large-img/konigin-der-nacht-l.png);
         height: 38vw;
     }
+   header.aboutHeader {
+        background-image: url(../assets/img/large-img/marmorsaal-trommel-l.png);
+        height: 38vw;
+/*        background-position: top;*/
+    }
 
+  header.contactHeader {
+        background-image: url(../assets/img/large-img/bubbles-l.png);
+        height: 30vw;
+       background-position: bottom;
+    }
 
 
 
@@ -336,6 +346,7 @@ article.quotes {
 
 .myPressSlides {
     padding: 1em 2em;
+    display: none;
 
 }
 
@@ -390,14 +401,14 @@ p.websiteName {
 .next {
     cursor: pointer;
     position: absolute;
-    top: 40%;
+    top: 50%;
 
     /*    width: auto;*/
-    /*
+
     margin-top: -30px;
-    margin-left: 350px;
-    margin-right: 350px;
-*/
+    margin-left: 0px;
+    margin-right: 0px;
+
     /*    padding: 16px;*/
     border-radius: 0 3px 3px 0;
     user-select: none;
@@ -517,7 +528,7 @@ p.websiteName {
     padding-bottom: 25px;
 }
 */
-    .header-section {
+    header.header-section {
         background-position: top;
         background-repeat: no-repeat;
         background-size: cover;
@@ -543,6 +554,17 @@ p.websiteName {
     header.repertoireHeader {
         background-image: url(../assets/img/medium-img/konigin-der-nacht-m.png);
         height: 40vw;
+    }
+
+    header.aboutHeader {
+        background-image: url(../assets/img/medium-img/marmorsaal-trommel-m.png);
+        height: 40vw;
+/*        background-position: center;*/
+    }
+      header.contactHeader {
+        background-image: url(../assets/img/medium-img/bubbles-m.png);
+        height: 30vw;
+       background-position: bottom;
     }
 
 
@@ -829,6 +851,17 @@ p.websiteName {
         background-image: url(../assets/img/small-img/konigin-der-nacht-s.png);
         height: 40vw;
         background-position:top;
+    }
+
+     header.aboutHeader {
+        background-image: url(../assets/img/small-img/marmorsaal-trommel-s.png);
+        height: 40vw;
+    }
+
+       header.contactHeader {
+        background-image: url(../assets/img/small-img/bubbles-s.png);
+        height: 30vw;
+       background-position: bottom;
     }
 
 

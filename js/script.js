@@ -2,7 +2,7 @@ const menuIcon = document.querySelector('.burgerMenu');
 
 const navbar = document.querySelector('.top-nav')
 
-menuIcon.addEventListener('click',() => {
+menuIcon.addEventListener('click', () => {
     navbar.classList.toggle("change");
 })
 
@@ -154,60 +154,44 @@ function handleArticleData(ArticleData) {
 
 function handleQuotes(quotes) {
     quotes.forEach(showQuotes)
+
+
+    function showQuotes(oneQuote) {
+
+        var thePressQuote = oneQuote.quote_content;
+        var quotedPerson = oneQuote.quote_author;
+
+
+        oneQuote.categories.forEach(quoteCat => {
+
+            if (quoteCat == 13) {
+
+                const pressQuoteTemp = document.querySelector(".pressQuotesTemp").content;
+
+                const clonePressQuoteTemp = pressQuoteTemp.cloneNode(true);
+
+                console.log(quotedPerson);
+
+                clonePressQuoteTemp.querySelector(".thePressQuote").textContent = thePressQuote;
+
+                clonePressQuoteTemp.querySelector(".quotedPerson").textContent = quotedPerson;
+
+                document.querySelector(".containerPressQuotes").appendChild(clonePressQuoteTemp);
+
+
+
+            }
+        });
+
+    }
+
+    const oneSlide = document.querySelector(".myPressSlides");
+    oneSlide.style.display = "block";
+
+    const firstDot = document.querySelector(".pressDot");
+    firstDot.classList.add("active");
 }
 
-function showQuotes(oneQuote) {
-
-    var thePressQuote = oneQuote.quote_content;
-    var quotedPerson = oneQuote.quote_author;
-
-
-    oneQuote.categories.forEach(quoteCat => {
-
-        if (quoteCat == 13) {
-
-            const pressQuoteTemp = document.querySelector(".pressQuotesTemp").content;
-
-            const clonePressQuoteTemp = pressQuoteTemp.cloneNode(true);
-
-            console.log(quotedPerson);
-
-            clonePressQuoteTemp.querySelector(".thePressQuote").textContent = thePressQuote;
-
-            clonePressQuoteTemp.querySelector(".quotedPerson").textContent = quotedPerson;
-
-            document.querySelector(".containerPressQuotes").appendChild(clonePressQuoteTemp);
-
-
-            const oneSlide = document.querySelector(".myPressSlides");
-            oneSlide.style.display = "block";
-
-            const firstDot = document.querySelector(".pressDot");
-            firstDot.classList.add("active");
-
-        }
-    });
-}
-
-
-//function showQuotes (quotes) {
-//    console.log(quotes);
-//    const quoteTemp = document.querySelector(".quote-template").content;
-//    const copy = quoteTemp.cloneNode(true);
-//    console.log(quotes.quote_content);
-//
-//    copy.querySelector(".quote").textContent = quotes.quote_content;
-//    copy.querySelector(".author").textContent = quotes.quote_author;
-//
-//
-//    document.querySelector(".slideshow-container").appendChild(copy);
-//
-//    const oneSlide = document.querySelector(".myPressSlides");
-//    oneSlide.style.display = "block";
-//
-//    const firstDot = document.querySelector(".dot");
-//    firstDot.classList.add("active");
-//}
 
 var slideIndex = 1;
 showSlides(slideIndex);
@@ -241,18 +225,3 @@ function showSlides(n) {
     slides[slideIndex - 1].style.display = "block";
     dots[slideIndex - 1].className += " active";
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

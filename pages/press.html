@@ -3,14 +3,14 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="        "/>
+    <meta name="description" content="        " />
 
     <title>Press featuring Gudrun</title>
     <link rel="stylesheet" href="../css/style.css">
 </head>
 
 <body>
-<header class="header-section musicHeader">
+    <header class="header-section musicHeader">
 
 
         <div class="logo-nav-wrapper">
@@ -41,42 +41,45 @@
 
 
 
-<h1></h1>
-<article class="quotes">
-    <div class="slideshow-container-press">
+    <h1></h1>
+    <article class="quotes">
+        <div class="slideshow-container-press">
 
-           <h1>Reviews</h1>
+            <h1>Reviews</h1>
 
-       <div class="containerPressQuotes"></div>
+            <div class="containerPressQuotes">
+                <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                <a class="next" onclick="plusSlides(1)">&#10095;</a>
+            </div>
 
             <template class="pressQuotesTemp">
-       <div class="myPressSlides">
-        <q class=thePressQuote>the quote</q>
+                <div class="myPressSlides">
+                    <q class=thePressQuote>the quote</q>
 
-        <span>"</span><p class="quotedPerson">Anna</p>
+                    <span>"</span>
+                    <p class="quotedPerson">Anna</p>
+                </div>
+            </template>
+
+
+
+            <div class="dot-container">
+                <span class="pressDot" onclick="currentSlide(1)"></span>
+                <span class="pressDot" onclick="currentSlide(2)"></span>
+                <span class="pressDot" onclick="currentSlide(3)"></span>
+                <span class="pressDot" onclick="currentSlide(4)"></span>
+                <span class="pressDot" onclick="currentSlide(5)"></span>
+                <span class="pressDot" onclick="currentSlide(6)"></span>
+            </div>
+
         </div>
-    </template>
 
-            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-            <a class="next" onclick="plusSlides(1)">&#10095;</a>
-
-                    <div class="dot-container">
-            <span class="pressDot" onclick="currentSlide(1)"></span>
-            <span class="pressDot" onclick="currentSlide(2)"></span>
-            <span class="pressDot" onclick="currentSlide(3)"></span>
-            <span class="pressDot" onclick="currentSlide(4)"></span>
-            <span class="pressDot" onclick="currentSlide(5)"></span>
-            <span class="pressDot" onclick="currentSlide(6)"></span>
-        </div>
-
-        </div>
-
-<!--                Dot indicators-->
+        <!--                Dot indicators-->
 
 
 
-</article>
-<!--
+    </article>
+    <!--
     <template class="pressQuotesTemp">
        <div class="thePressQuoteDiv">
         <q class=thePressQuote>the quote</q>
@@ -87,22 +90,22 @@
 
 
 
-<h1 class="pressHeader">Articles Featuring Gudrun</h1>
-<article class="press">
-<!--    <div class="pressArticlesDiv"></div>-->
-<!--    The template is appended in here-->
-</article>
+    <h1 class="pressHeader">Articles Featuring Gudrun</h1>
+    <article class="press">
+        <!--    <div class="pressArticlesDiv"></div>-->
+        <!--    The template is appended in here-->
+    </article>
 
-<template class="pressArticles">
-<a href="" class="theArticleLink" target="_blank">
-<div class="articleContainer">
-<figure class="pressFigure"><img src="" alt="" class="pressImg"></figure>
-<h4 class="pressTitle"></h4>
-<p class="websiteName grey-text"></p>
-</div>
-</a>
+    <template class="pressArticles">
+        <a href="" class="theArticleLink" target="_blank">
+            <div class="articleContainer">
+                <figure class="pressFigure"><img src="" alt="" class="pressImg"></figure>
+                <h4 class="pressTitle"></h4>
+                <p class="websiteName grey-text"></p>
+            </div>
+        </a>
 
-</template>
+    </template>
 
 
 
@@ -111,5 +114,4 @@
 
 
     <script src="../js/script.js"></script>
-</body>
-</html>
+</body></html>
