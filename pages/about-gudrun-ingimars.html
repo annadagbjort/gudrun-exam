@@ -1,9 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="        "/>
+    <meta name="description" content="        " />
 
     <title>About Gudrun Ingimars</title>
     <link rel="stylesheet" href="../css/style.css">
@@ -11,15 +12,52 @@
 
 <body>
 
+    <main>
+
+        <div class="about-wrapper">
+            <h1 class="about-header">About me</h1>
+            <div>
+            <p class="about-text">
+                Insert text about Gudrun here
+            </p>
+            <p class="about-see-more">Insert extra text here</p>
+            <button class="red-button read-more-button about-expand"> Read More</button>
+            </div>
+            <img class="img-grid" src="../images/gudrun-image.jpg" alt="Picture of Gudrun">
+
+        </div>
+
+        <div class="grey-bg vocal-coaching-wrapper">
+            <h1 class="vocal-coaching-header">Vocal Coaching</h1>
+            <p class="vocal-coaching-paragraph">Text about vocal coaching</p>
+        </div>
+        <div class="slideshow-container">
+            <template class="quote-template">
+                <div class="mySlides">
+                    <q class="quote">Insert quote here</q>
+                    <p class="author">Insert author here</p>
+                </div>
+            </template>
+
+            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+            <a class="next" onclick="plusSlides(1)">&#10095;</a>
+        </div>
+
+        <!--        Dot indicators-->
+        <div class="dot-container">
+            <span class="dot" onclick="currentSlide(1)"></span>
+            <span class="dot" onclick="currentSlide(2)"></span>
+            <span class="dot" onclick="currentSlide(3)"></span>
+        </div>
+
+        <button class="red-button book-lessons" onclick="document.location = 'contact-gudrun-ingimars.html'">Book Lessons</button>
 
 
 
-
-
-
-
+    </main>
 
 
     <script src="../js/script.js"></script>
 </body>
+
 </html>
