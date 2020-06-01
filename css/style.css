@@ -21,11 +21,21 @@
 
 /*  B A S I C S T Y L I N G    */
 * {
+<<<<<<< HEAD
     padding: 0;
     margin: 0;
     box-sizing: border-box;
 }
 
+=======
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+
+
+>>>>>>> music-page-tomerge
 body {
     font-family: "crimson text", serif;
     color: var(--black);
@@ -38,12 +48,20 @@ h3 {
     font-family: "crimson pro", serif;
     color: var(--text-red);
     font-weight: 500;
+<<<<<<< HEAD
 }
 
 h1 {
     text-transform: uppercase;
     font-size: 2.3em;
     text-align: center;
+=======
+    text-transform: uppercase;
+}
+
+h2 {
+    color: var(--text-red);
+>>>>>>> music-page-tomerge
 }
 
 
@@ -118,6 +136,8 @@ button:focus {
     border: none;
 }
 
+
+
 .grey-button {
     background-color: var(--grey);
     padding: .5rem 2rem;
@@ -129,6 +149,7 @@ button:focus {
     color: var(--text-red);
 }
 
+<<<<<<< HEAD
 /*    F R O N T   P A G E   */
 
 main.front-page-grid {
@@ -629,3 +650,478 @@ footer {
 }
 
 
+=======
+/*esther styling*/
+
+
+/*grid area structure*/
+
+.main-album-wrapper {
+
+    margin: auto;
+}
+
+.main-content-area {
+    max-width: 100%;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat: (1200px, auto);
+    grid-template-areas:
+        "albumSection"
+        "imageSection"
+        "videoSection"
+
+}
+
+.album-section {
+    grid-area: albumSection;
+}
+
+.album-image-section {
+    grid-area: imageSection;
+}
+
+.live-performances-videos {
+    grid-area: videoSection;
+    background-color: var(--grey);
+}
+
+
+/*
+no longer included on page
+.live-performance-desc {
+    grid-area: performanceDescription;
+}
+*/
+
+/*header section*/
+
+/*
+.header-section {
+    background: url("../images/music-banner3.jpg");
+    height: 300px;
+}
+*/
+
+/*album section*/
+
+.album-info-container {
+    display: grid;
+    justify-content: center;
+    grid-template-columns: repeat(auto-fit, minmax(600px, 1fr));
+}
+
+.album-section-header {
+    grid-column: 1/-1;
+    text-align: center;
+    padding: 40px;
+}
+
+.album-col {
+    padding: 40px;
+}
+
+/*spotify player section*/
+
+.album-col1 {
+    justify-self: end;
+    padding: 40px 20px 40px 40px;
+}
+
+
+.album-col2 {
+    padding: 40px 200px 40px 20px;
+}
+
+
+.album-header2 {
+    padding-bottom: 20px;
+}
+
+/*purchase buttons*/
+
+.call-to-action-buy {
+    padding: 20px;
+    justify-content: center;
+    grid-column: 1/-1;
+}
+
+.buy-section {
+    padding: 0;
+    display: flex;
+    justify-content: center;
+}
+
+.buy-now-header {
+
+    text-align: center;
+}
+
+/*icons*/
+.buy-icons {
+    display: inline-block;
+    padding: 20px;
+}
+
+.amazon-icon {
+    width: 40px;
+    height: 40px;
+}
+
+.apple-icon {
+    width: 40px;
+    height: 40px;
+}
+
+.amazon-icon:hover {
+    background-color: var(--grey);
+    border-radius: 30%;
+}
+
+.apple-icon:hover {
+    background-color: var(--grey);
+    border-radius: 30%;
+}
+
+
+
+/*image section*/
+.album-image-section {
+    position: relative;
+}
+
+
+.performanceImage {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+    object-position: -20% 0;
+
+
+
+    /*    parallax feature*/
+    /*
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+*/
+
+}
+
+
+
+.performance-des {
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.5);
+    padding: 20px;
+    z-index: 1;
+}
+
+
+
+/*performance videos*/
+
+.vdeo-section-wrapper {
+    /*    margin: 0px 200px;*/
+}
+
+
+/*section header */
+.video-header {
+    text-align: center;
+    padding: 40px;
+    background-color: #F2F1F0;
+}
+
+/*video parent container*/
+.live-performances-videos {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding: 20px;
+}
+
+/*
+.live-performances-videos div {
+    border: solid thin green;
+}
+*/
+
+.youtubeVideosIframe {
+    padding: 20px;
+    flex-basis: 100%;
+}
+
+
+/*expanded videos*/
+
+.readMoreVideos {
+      display: flex;
+    justify-content: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding: 20px;
+
+}
+
+
+/*
+.readMoreVideos > .video-placement {
+    border: solid red;
+}
+*/
+
+/*expand vidoes button*/
+
+.videoButtonContainer{
+     display: flex;
+    justify-content: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding: 20px;
+}
+
+
+/*performance description - no longer using*/
+
+/*
+.performance-style-desc {
+    padding: 0 200px 40px;
+}
+
+.performance-style-section {
+    column-count: 2;
+    column-gap: 40px;
+}
+*/
+
+
+
+
+
+
+
+
+
+
+/*media queiries - incomplete*/
+
+
+/*mobile- extra small screens*/
+
+@media only screen and (max-width: 600px) {
+
+
+    .album-info-container {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    /*spotify player*/
+    .album-col1 {
+        padding: 0;
+    }
+
+    /*album description*/
+    .album-col2 {
+
+        padding: 40px;
+        margin: 0;
+    }
+
+
+    /*buy icons*/
+
+    .buy-icons {
+        display: inline-block;
+        padding: 40px;
+    }
+
+    .amazon-icon {
+        width: 60px;
+        height: 60px;
+        background-color: var(--grey);
+        border-radius: 30%;
+    }
+
+    .apple-icon {
+        width: 60px;
+        height: 60px;
+        background-color: var(--grey);
+        border-radius: 30%;
+    }
+
+
+    /*video parent container*/
+    .live-performances-videos {
+        display: flex;
+        justify-content: center;
+        flex-direction: row;
+        flex-wrap: wrap;
+        padding: 20px;
+    }
+
+
+    .youtubeVideosIframe {
+        padding: 20px;
+        flex-basis: 100%;
+    }
+
+
+    /*font styling*/
+    p {
+        font-size: 1em;
+        padding-top: 10px;
+    }
+}
+
+/*mobile view*/
+
+@media only screen and (min-width: 600px) and (max-width: 767px) {
+
+
+    .album-info-container {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    /*spotify player*/
+    .album-col1 {
+        padding: 0;
+    }
+
+    /*album description*/
+    .album-col2 {
+
+        padding: 40px;
+        margin: 0;
+        column-count: 2;
+    }
+
+
+    /*buy icons*/
+
+    .buy-icons {
+        display: inline-block;
+        padding: 40px;
+
+    }
+
+    .amazon-icon {
+        width: 60px;
+        height: 60px;
+        background-color: var(--grey);
+        border-radius: 30%;
+    }
+
+    .apple-icon {
+        width: 60px;
+        height: 60px;
+        background-color: var(--grey);
+        border-radius: 30%;
+    }
+
+
+    /*video parent container*/
+    .live-performances-videos {
+        display: flex;
+        justify-content: center;
+        flex-direction: row;
+        flex-wrap: wrap;
+        padding: 20px;
+    }
+
+
+    .youtubeVideosIframe {
+        padding: 20px;
+        flex-basis: 100%;
+    }
+
+
+    /*font styling*/
+    p {
+        font-size: 1em;
+        padding-top: 10px;
+    }
+}
+
+
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) and (max-width: 1199px) {
+
+
+    .album-info-container {
+        display: grid;
+        grid-template-columns: repeat(2, 400px);
+        grid-gap: 30px;
+    }
+
+
+    .album-section-header {
+
+        text-align: center;
+        padding: 40px;
+    }
+
+    /*spotify player*/
+    .album-col.album-col1 {
+        padding: 0;
+          width: auto;
+    }
+
+    /*album description*/
+    .album-col.album-col2 {
+
+        width: auto;
+        padding: 0px;
+        margin: 0;
+    }
+
+
+    /*    buy icons div*/
+
+    .call-to-action-buy {
+        width: auto;
+    }
+
+    /*buy icons*/
+
+    .buy-icons {
+        display: inline-block;
+        padding: 20px 40px;
+    }
+
+    .amazon-icon {
+        width: 60px;
+        height: 60px;
+        background-color: var(--grey);
+        border-radius: 30%;
+    }
+
+    .apple-icon {
+        width: 60px;
+        height: 60px;
+        background-color: var(--grey);
+        border-radius: 30%;
+    }
+
+    /*font styling*/
+    p {
+        font-size: 1em;
+        padding-top: 10px;
+        margin-right: 20px;
+    }
+
+    h4 {
+        text-align: center;
+        padding-bottom: 10px;
+    }
+}
+>>>>>>> music-page-tomerge
