@@ -289,7 +289,10 @@ article.newsletter-updates {
 .instagramFigure {
     width: 23vw;
     margin: 2px;
+}
 
+.instagramFigure:hover{
+    opacity: 0.5;
 }
 
 .imgInstagramCarousel {
