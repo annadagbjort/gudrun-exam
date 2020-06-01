@@ -129,7 +129,7 @@ button:focus {
     color: var(--text-red);
 }
 
-/*    FRONT PAGE   */
+/*    F R O N T   P A G E   */
 
 main.front-page-grid {
     display: grid;
@@ -145,7 +145,9 @@ iframe.front-page-youtube {
 
 }
 
-/* FOOTER */
+
+
+/*    F O O T E R    */
 
 footer {
     width: 100%;
@@ -205,13 +207,14 @@ footer {
 
     .footer-items-contact {
         width: 100%;
-
     }
-
-
 }
 
-/* REPERTORIE SUBPAGE */
+
+
+
+
+/*        R E P E R T O R I E   S U B P A G E */
 
 .rep-img-header {
     height: 45vh;
@@ -258,11 +261,6 @@ footer {
     font-family: "crimson pro", serif;
 }
 
-/*.repertoire-all-container > div {
-    transition: all .7s;
-}*/
-
-
 .repertoire-one-opera,
 .repertoire-one-music {
     display: grid;
@@ -299,9 +297,7 @@ footer {
 @media only screen and (max-width: 1100px) and (min-width: 910px) {
     .repertoire-all-container {
         width: 70vw;
-
     }
-
 }
 
 
@@ -316,13 +312,6 @@ footer {
         grid-template-columns: repeat(1, 1fr);
         border-bottom: 1px solid black;
     }
-
-    /*    .repertoire-one-oratorio {
-        grid-template-columns: repeat(1, 1fr);
-        border-bottom: 1px solid black;
-
-    }*/
-
 
     .repertoire-header {
         margin: 2rem 1rem;
@@ -339,11 +328,16 @@ footer {
     body {
         margin: 0 15px;
     }
-
 }
 
 
-/* SCHEDULE SUBPAGE STYLING */
+
+
+
+
+
+
+/*      S C H E D U L E     S T Y L I N G */
 
 .schedule-img-header {
     height: 45vh;
@@ -351,16 +345,12 @@ footer {
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
-
 }
-
-
 
 .schedule-main-heading {
     margin: 3rem auto;
     font-size: 45px;
     text-align: center;
-
 }
 
 .schedule-container {
@@ -397,7 +387,6 @@ footer {
 
 .schedule-expand {
     margin: 2rem;
-
 }
 
 .one-event .schedule-date {
@@ -513,7 +502,12 @@ footer {
 
 }
 
-/* CONTACT SUBPAGE STYLING */
+
+
+
+
+
+/*    C O N T A C T   P A G E STYLING */
 
 .contact-img-header {
     height: 45vh;
@@ -541,12 +535,10 @@ footer {
 .contact-info-det {
     margin: 4rem auto 0 auto;
     width: 50%;
-
 }
 
 .contact-info-det > p,
 .contact-info-det > h1 {
-
     margin: auto;
     padding: 0.5rem;
 
@@ -585,8 +577,6 @@ footer {
     .contact-info-det > p,
     .contact-info-det > h1 {
         width: 100%;
-
-
     }
 
     .email-form,
@@ -612,48 +602,30 @@ footer {
         height: 45vh;
     }
 
-    /*
-    .contact-info-det > p,
-    .contact-info-det > h1 {
-        width: 70%;
-    }*/
-
     .email-form,
     .contact-info-det {
         margin: 1rem auto;
         width: 70%;
-
-
     }
-
 }
 
 @media only screen and (max-width: 880px) and (min-width: 540px) {
-
     .contact-side-img {
         background-image: url(../images/contact2.jpg);
-
     }
-
 }
 
 @media only screen and (max-width: 540px) {
-
 
     .email-form,
     .contact-info-det {
         width: 100%;
         margin: auto;
-
-
     }
-
-
     .contact-info-det > p,
     .contact-info-det > h1 {
         width: 100%;
     }
-
 }
 
 
