@@ -1,0 +1,273 @@
+
+
+
+
+/*  B A S I C  S T U F F  */
+
+.hide {
+    display: none;
+}
+
+a {
+    text-decoration: none;
+    color: var(--black);
+}
+
+ul {
+    list-style: none;
+}
+
+button {
+    cursor: pointer;
+    font-family: "crimson text", serif;
+}
+
+/*  S T Y L I N G   */
+
+
+.red-button {
+    background-color: var(--button-red);
+    color: var(--white);
+    padding: .5rem 2rem;
+    font-size: 22px;
+    border: none;
+}
+
+.grey-button {
+    background-color: var(--grey);
+    padding: .5rem 2rem;
+    font-size: 22px;
+    border: none;
+}
+
+.red-text {
+    color: var(--text-red);
+}
+
+/*A B O U T  P A G E */
+
+.grey-bg {
+    background-color: var(--grey);
+    margin: 20px 0;
+    padding: 20px 0;
+}
+
+.vocal-coaching-header {
+    text-align: center;
+}
+
+.vocal-coaching-paragraph {
+    margin: 0 300px 50px 300px;
+}
+
+.about-wrapper {
+    margin: 0 100px;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+    grid-gap: 1rem 10rem;
+}
+
+.about-header {
+    grid-column: 1/-1;
+}
+
+.about-text {
+    padding: 0;
+    margin-top: -13px;
+}
+
+.about-see-more {
+    display: block;
+}
+
+.read-more-button {
+    display: block;
+    /*    width: 200px;*/
+    margin: 0 auto;
+}
+
+.book-lessons {
+    width: 200px;
+    margin: 0 43%;
+}
+
+.img-grid {
+    max-width: 400px;
+    padding-bottom: 100px;
+}
+
+/*Quote slideshow */
+.slideshow-container {
+    position: relative;
+}
+
+.mySlides {
+    display: none;
+    text-align: center;
+    margin: 0 463px;
+}
+
+.slideshow-container:first-child {
+    display: block;
+}
+
+/*Next and previous buttons */
+.prev,
+.next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    margin-top: -30px;
+    margin-left: 350px;
+    margin-right: 350px;
+    padding: 16px;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+}
+
+/*Positioning the "next button" to the right*/
+.next {
+    position: absolute;
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+
+/*add see-through bg color on hover */
+.prev:hover,
+.next:hover {
+    background-color: var(--grey);
+}
+
+/*dots */
+.dot-container {
+    text-align: center;
+    padding: 20px;
+}
+
+.dot {
+    cursor: pointer;
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: var(--black);
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+}
+
+.active,
+.dot:hover {
+    background-color: var(--text-red);
+}
+
+.quote {
+    font-style: italic;
+}
+
+.author {
+    color: var(--text-red);
+}
+
+@media only screen and (max-width: 1174px) {
+    .img-grid {
+        padding-bottom: 50px;
+        margin: 0 auto;
+    }
+
+    .vocal-coaching-paragraph {
+        margin: 0 100px 50px 100px;
+    }
+
+    .mySlides {
+        margin: 0 auto;
+    }
+
+    .quote {
+        margin: 0 auto;
+    }
+
+    .mySlides {
+        width: 400px;
+    }
+
+    .prev,
+    .next {
+        margin-left: 15px;
+        margin-right: 75px;
+    }
+
+    .about-wrapper {
+        grid-template-columns: 1fr;
+    }
+
+    .vocal-coaching-paragraph {
+        margin: 0 auto;
+        padding: 0 50px;
+    }
+
+    .vocal-coaching-wrapper {
+        margin: 0 -48px 0 -10px;
+    }
+
+    .slideshow-container {
+        left: 25px;
+        margin-top: 50px;
+    }
+
+    .dot-container {
+        margin-left: 40px;
+        margin-top: -17px;
+    }
+
+    .book-lessons {
+        margin: 0 40%;
+
+    }
+
+}
+
+@media only screen and (max-width: 650px) {
+    .img-grid {
+        max-width: 300px;
+    }
+
+    .grey-bg {
+        margin: 20px -165px 20px -10px;
+    }
+
+    .mySlides {
+        margin: 0 auto;
+    }
+
+    .quote {
+        margin: 0 auto;
+    }
+
+    .prev,
+    .next {
+        margin-left: -36px;
+        margin-right: -75px;
+    }
+
+    .about-wrapper {
+        grid-template-columns: 1fr;
+    }
+
+    .vocal-coaching-paragraph {
+        margin: 0 auto;
+        padding: 0 50px;
+    }
+
+    .slideshow-container {
+        left: 70px;
+    }
+
+    .dot-container {
+        margin-left: 165px;
+    }
+       .book-lessons {
+        margin: 0 165px;
+
+    }
+}
