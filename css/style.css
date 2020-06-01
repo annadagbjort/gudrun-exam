@@ -1,9 +1,11 @@
 :root {
     --black: #0D0D0D;
+    --white-rgba: 255, 255, 255;
     --white: #fff;
 
     /* grey is for example used as a background, button in schedule and contact form*/
     --grey: #F2F1F0;
+    --grey-rgb: 242, 241, 240;
 
     /* the text in the forms */
     --text-grey: #696969;
@@ -16,6 +18,7 @@
 
     /* the footer background*/
     --footer-red: #D2394C;
+
 }
 
 
@@ -29,7 +32,8 @@
 body {
     font-family: "crimson text", serif;
     color: var(--black);
-    margin: 0 50px;
+/*    margin: 0 50px;*/
+
 }
 
 h1,
@@ -55,7 +59,12 @@ h2 {
 
 p {
     color: var(--black);
+    font-size: 18px;
+}
 
+q {
+    font-style: italic;
+    font-size: 18px;
 }
 
 /*  B A S I C  S T U F F  */
@@ -124,8 +133,6 @@ button:focus {
     border: none;
 }
 
-
-
 .grey-button {
     background-color: var(--grey);
     padding: .5rem 2rem;
@@ -137,19 +144,663 @@ button:focus {
     color: var(--text-red);
 }
 
-/*    F R O N T   P A G E   */
+.grey-text {
+    color: var(--text-grey);
+}
+
+.text-right {
+    text-align: right;
+}
+
+
+
+
+/*    H E A D E R    */
+
+header.header-section {
+    background-position: 100% 10%;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+header.frontPageHeader {
+    background-image: url(../assets/img/large-img/red-dress-l.png);
+    height: 50vw;
+}
+
+header.musicHeader {
+    background-image: url(../assets/img/large-img/rastrelli-and-gudrun-l.png);
+    height: 40vw;
+}
+
+header.scheduleHeader {
+    background-image: url(../assets/img/large-img/frohlich-pfals-l.png);
+    height: 32vw;
+    background-position: center;
+}
+
+header.repertoireHeader {
+    background-image: url(../assets/img/large-img/konigin-der-nacht-l.png);
+    height: 38vw;
+}
+
+header.aboutHeader {
+    background-image: url(../assets/img/large-img/marmorsaal-trommel-l.png);
+    height: 38vw;
+}
+
+header.contactHeader {
+    background-image: url(../assets/img/large-img/bubbles-l.png);
+    height: 30vw;
+    background-position: bottom;
+}
+
+
+
+/*   N A V   M E N U   */
+
+/*transparent grey background*/
+.logo-nav-wrapper {
+    background-color: rgba(var(--white-rgba), 0.7);
+    padding-top: 15px;
+    box-shadow: 0px 0px 9px 10px rgba(var(--white-rgba), 0.7);
+}
+
+/*logo*/
+.top-logo {
+    max-width: 18em;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+/*nav*/
+
+.top-nav {
+    padding: 0;
+    display: flex;
+    justify-content: center;
+}
+
+.top-nav li {
+    display: inline-block;
+    text-transform: uppercase;
+    padding: 0;
+    margin: 0;
+}
+
+.nav-item {
+    display: block;
+}
+
+.top-nav a {
+    color: var(--black);
+    text-decoration: none;
+    margin: 0px 30px 0px 30px;
+}
+
+.top-nav a:hover {
+    color: var(--text-red);
+}
+
+.top-nav a:active {
+    color: var(--text-red);
+}
+
+
+
+
+/*    FRONT PAGE   */
 
 main.front-page-grid {
     display: grid;
     grid-template-columns: 1fr;
 }
 
+.fp-header {
+    grid-column: 1/3;
+    padding-top: 1.2em;
+}
+
+.gudrun-live {
+    background: var(--grey);
+    padding-bottom: 25px;
+}
+
 iframe.front-page-youtube {
     width: 50vw;
-    height: 25em;
+    height: 33vw;
     display: block;
     margin-left: auto;
     margin-right: auto;
+}
+
+.the-video-title-fetched {
+    text-align: center;
+}
+
+
+article.newsletter-updates {
+    background-image: url(../assets/img/large-img/blue-smile-large.png);
+    height: 100%;
+
+    background-position: -100px;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.transparent-backg {
+    background: rgba(var(--white-rgba), 0.7);
+    width: 40vw;
+    margin-left: auto;
+    margin-right: 10vw;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    box-shadow: 0px 0px 33px 30px rgba(var(--white-rgba), 0.7);
+}
+
+.text-about-newsletter {
+    width: 30vw;
+    padding-left: 6vw;
+}
+
+.newsletter-signup-form {
+    padding: 2vw;
+    margin-right: auto;
+}
+
+.fp-newsletter {
+    background: var(--grey);
+    border: none;
+    color: var(--text-grey);
+    padding: .6em 1em;
+    font-size: 14px;
+    width: 20vw;
+    margin-bottom: 1.7em;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.newsletter-signup-form > .red-button {
+    margin-top: .2em;
+    /*        margin-right: auto;*/
+    text-align: center;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.debut-album {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    background: var(--grey);
+    margin-top: 0em;
+    padding-bottom: 2em;
+}
+
+.fp-album-cover {
+    width: 20em;
+    padding: 0em 2em;
+    display: block;
+    margin-left: auto;
+}
+
+.about-album {
+    width: 30vw;
+    padding: 0em 3em;
+    display: block;
+    margin-right: auto;
+    /*    text-align: center;*/
+}
+
+.about-album > button {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 1em;
+}
+
+.theInstagram {
+    display: flex;
+    justify-content: center;
+}
+
+.instagramFigure {
+    width: 23vw;
+    margin: 2px;
+}
+
+.instagramFigure:hover {
+    opacity: 0.5;
+}
+
+.imgInstagramCarousel {
+    padding: 0px;
+    height: 23vw;
+    width: 23vw;
+    object-fit: cover;
+}
+
+
+/*    P R E S S     */
+
+article.quotes {
+    text-align: center;
+    margin: 0px;
+    padding: 5em;
+    background: var(--grey);
+    background: rgb(var(--grey-rgb), 0.5);
+}
+
+.slideshow-container-press {
+    background: var(--white);
+    padding: 3em 3em 1em;
+    box-shadow: 0px 0px 13px 0px rgb(230, 230, 230);
+    /*    border: solid .1em var(--text-grey);*/
+}
+
+.myPressSlides {
+    padding: 1em 2em;
+    display: none;
+}
+
+article.press {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, 250px);
+    grid-gap: 5em;
+    justify-content: center;
+    margin: 5vw
+}
+
+.pressHeader {
+    grid-column: 1/-1 order: -1;
+    padding-top: 1em;
+}
+
+.pressFigure {
+    width: 20em;
+    margin: 0px;
+}
+
+.pressImg {
+    height: 10em;
+    width: 17em;
+    object-fit: cover;
+}
+
+h4.pressTitle {
+    margin-bottom: 0px;
+    text-align: center;
+}
+
+p.websiteName {
+    text-align: center;
+    margin: 0px;
+    font-style: italic;
+}
+
+.prevPress,
+.nextPress {
+    cursor: pointer;
+    position: absolute;
+    top: 100%;
+    margin-top: -30px;
+    margin-left: 0px;
+    margin-right: 0px;
+    user-select: none;
+}
+
+/*Positioning the "next button" to the right*/
+.nextPress {
+    right: 8em;
+    border-radius: 3px 0 0 3px;
+}
+
+.prevPress {
+    left: 8em;
+    border-radius: 0 3px 3px 0;
+}
+
+/*add see-through bg color on hover */
+.prevPress:hover,
+.nextPress:hover {
+    background-color: var(--grey);
+}
+
+/*dots */
+.dot-container {
+    text-align: center;
+    padding: 20px;
+}
+
+.pressDot {
+    cursor: pointer;
+    height: 3px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: var(--grey);
+    /*    border-radius: 50%;*/
+    display: inline-block;
+    transition: background-color 0.6s ease;
+}
+
+.active,
+.pressDot:hover {
+    background-color: var(--text-red);
+}
+
+.quote {
+    font-style: italic;
+}
+
+.author {
+    color: var(--text-red);
+}
+
+
+@media only screen and (max-width:850px) {
+
+    /*    HEADER PHOTOS   */
+    header.header-section {
+        background-position: top;
+    }
+
+    header.frontPageHeader {
+        background-image: url(../assets/img/medium-img/red-dress-m.png);
+        height: 53vw;
+    }
+
+    header.musicHeader {
+        background-image: url(../assets/img/medium-img/rastrelli-and-gudrun-m.png);
+        height: 40vw;
+        background-position: top;
+    }
+
+    header.scheduleHeader {
+        background-image: url(../assets/img/medium-img/frohlich-pfals-m.png);
+        height: 35vw;
+        background-position: center;
+    }
+
+    header.repertoireHeader {
+        background-image: url(../assets/img/medium-img/konigin-der-nacht-m.png);
+        height: 40vw;
+    }
+
+    header.aboutHeader {
+        background-image: url(../assets/img/medium-img/marmorsaal-trommel-m.png);
+        height: 40vw;
+    }
+
+    header.contactHeader {
+        background-image: url(../assets/img/medium-img/bubbles-m.png);
+        height: 30vw;
+        background-position: bottom;
+    }
+
+    /*  NAV MENU  -- BURGER MENU */
+
+
+    .top-logo {
+        max-width: 14em;
+        display: block;
+        margin-bottom: 15px;
+    }
+
+    .top-nav li {
+        display: flex;
+    }
+
+    .top-nav a {
+        margin: 10px 30px;
+    }
+
+    .top-nav {
+        width: 200px;
+        background-color: rgba(var(--white-rgba), 0.96);
+        box-shadow: 0px 0px 9px 7px rgba(var(--white-rgba), 0.96);
+        position: fixed;
+        top: 70px;
+        padding: 20px 50px 10px 0px;
+        margin-right: -30px;
+
+        /* It is positioned outside the screen */
+        right: -300px;
+
+        /* slide effect */
+        transition: right .4s;
+    }
+
+    /* when burgerm. is clicked js adds this class to navbar */
+    .change {
+        right: 30px;
+        /* the menu appears */
+    }
+
+    .change .burgerMenu {
+        background-color: rgba(var(--white-rgba), 0.96);
+        box-shadow: 0px 0px 9px 17px rgba(var(--white-rgba), 0.96);
+        padding: 10px 44px 0px;
+        margin: 0 -50px 0 0;
+    }
+
+    .burgerMenu {
+        cursor: pointer;
+        position: fixed;
+        top: 28px;
+        right: 60px;
+        padding-top: 10px;
+
+    }
+
+    /* burger menu changes to X - this makes it smaller than it was in desktop*/
+    .bar1,
+    .bar2,
+    .bar3 {
+        width: 30px;
+        height: 2px;
+        background-color: var(--text-grey);
+        margin: 8px 0;
+        transition: 0.4s;
+    }
+
+    .change .bar1 {
+        -webkit-transform: rotate(-45deg) translate(-9px, 6px);
+        transform: rotate(-45deg) translate(-9px, 6px);
+    }
+
+    .change .bar2 {
+        opacity: 0;
+    }
+
+    .change .bar3 {
+        -webkit-transform: rotate(45deg) translate(-8px, -5px);
+        transform: rotate(45deg) translate(-8px, -5px);
+    }
+
+    /* burger menu finished*/
+
+
+    /*      F R O N T  P A G E     */
+
+    /*    youtube video  */
+    iframe.front-page-youtube {
+        width: 90vw;
+        height: 60vw;
+    }
+
+    /*    newletter section   */
+    article.newsletter-updates {
+        background-position: -200px;
+    }
+
+    .transparent-backg {
+        width: 100vw;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .text-about-newsletter {
+        width: 50vw;
+        padding-left: 0;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .text-about-newsletter {
+        text-align: center;
+    }
+
+    .fp-newsletter {
+        width: 30vw;
+    }
+
+    /*album section*/
+    .debut-album {
+        grid-template-columns: 1fr;
+    }
+
+    .album-figure {
+        grid-row: 2;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .fp-album-cover {
+        width: 50vw;
+    }
+
+    .about-album {
+        grid-row: 3;
+        margin-left: auto;
+        margin-right: auto;
+        width: 50vw;
+        padding: 0;
+    }
+
+
+    /*    P R E S S    */
+
+
+    /*   Quotes   */
+
+    .nextPress {
+        right: 2em;
+    }
+
+    .prevPress {
+        left: 2em;
+    }
+
+    article.quotes {
+        text-align: center;
+        padding: 0;
+        margin: 0;
+    }
+
+}
+
+@media only screen and (max-width:450px) {
+
+/*    HEADER  PHOTO     */
+    header.header-section {
+        background-position: top;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+
+    header.frontPageHeader {
+        background-image: url(../assets/img/small-img/red-dress-s.png);
+        height: 60vw;
+    }
+
+    header.musicHeader {
+        background-image: url(../assets/img/small-img/rastrelli-and-gudrun-s.png);
+        height: 40vw;
+    }
+
+    header.scheduleHeader {
+        background-image: url(../assets/img/small-img/frohlich-pfals-s.png);
+        height: 37vw;
+        background-position: center;
+    }
+
+    header.repertoireHeader {
+        background-image: url(../assets/img/small-img/konigin-der-nacht-s.png);
+        height: 40vw;
+        background-position: top;
+    }
+
+    header.aboutHeader {
+        background-image: url(../assets/img/small-img/marmorsaal-trommel-s.png);
+        height: 40vw;
+    }
+
+    header.contactHeader {
+        background-image: url(../assets/img/small-img/bubbles-s.png);
+        height: 30vw;
+        background-position: bottom;
+    }
+
+/*     NAV - BURGER MENU   */
+    .top-logo {
+        max-width: 11em;
+    }
+
+    .logo-nav-wrapper {
+        padding-top: 10px;
+        box-shadow: 0px 0px 4px 3px rgba(var(--white-rgba), 0.7);
+    }
+
+    .burgerMenu {
+        top: 20px;
+        right: 30px;
+        padding-top: 0px;
+    }
+
+    .top-nav {
+        width: 100%;
+        height: 100%;
+        margin-top: -70px;
+        padding-top: 70px;
+        right: -120%;
+        background: var(--white);
+    }
+
+    .change {
+        right: 0;
+    }
+
+    .change .burgerMenu {
+        background: none;
+        margin: 0;
+        padding: 0;
+    }
+
+    .bar1,
+    .bar2,
+    .bar3 {
+        width: 25px;
+        height: 2px;
+        margin: 6px 0;
+    }
+
+    .top-nav li {
+        justify-content: center;
+        padding: 8px;
+    }
+
+    .change .bar1 {
+        -webkit-transform: rotate(-45deg) translate(-4px, 5px);
+        transform: rotate(-45deg) translate(-4px, 5px);
+    }
+
+    .change .bar3 {
+        -webkit-transform: rotate(45deg) translate(-6px, -7px);
+        transform: rotate(45deg) translate(-6px, -7px);
+    }
 
 }
 
@@ -673,22 +1324,6 @@ footer {
 }
 
 
-/*
-no longer included on page
-.live-performance-desc {
-    grid-area: performanceDescription;
-}
-*/
-
-/*header section*/
-
-/*
-.header-section {
-    background: url("../images/music-banner3.jpg");
-    height: 300px;
-}
-*/
-
 /*album section*/
 
 .album-info-container {
@@ -831,11 +1466,6 @@ no longer included on page
     padding: 20px;
 }
 
-/*
-.live-performances-videos div {
-    border: solid thin green;
-}
-*/
 
 .youtubeVideosIframe {
     padding: 20px;
@@ -854,13 +1484,6 @@ no longer included on page
 
 }
 
-
-/*
-.readMoreVideos > .video-placement {
-    border: solid red;
-}
-*/
-
 /*expand vidoes button*/
 
 .videoButtonContainer{
@@ -872,29 +1495,6 @@ no longer included on page
 }
 
 
-/*performance description - no longer using*/
-
-/*
-.performance-style-desc {
-    padding: 0 200px 40px;
-}
-
-.performance-style-section {
-    column-count: 2;
-    column-gap: 40px;
-}
-*/
-
-
-
-
-
-
-
-
-
-
-/*media queiries - incomplete*/
 
 
 /*mobile- extra small screens*/
