@@ -21,21 +21,11 @@
 
 /*  B A S I C S T Y L I N G    */
 * {
-<<<<<<< HEAD
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-}
-
-=======
     box-sizing: border-box;
     margin: 0;
     padding: 0;
 }
 
-
-
->>>>>>> music-page-tomerge
 body {
     font-family: "crimson text", serif;
     color: var(--black);
@@ -48,20 +38,17 @@ h3 {
     font-family: "crimson pro", serif;
     color: var(--text-red);
     font-weight: 500;
-<<<<<<< HEAD
 }
 
 h1 {
     text-transform: uppercase;
     font-size: 2.3em;
     text-align: center;
-=======
     text-transform: uppercase;
 }
 
 h2 {
     color: var(--text-red);
->>>>>>> music-page-tomerge
 }
 
 
@@ -149,7 +136,7 @@ button:focus {
     color: var(--text-red);
 }
 
-<<<<<<< HEAD
+
 /*    F R O N T   P A G E   */
 
 main.front-page-grid {
@@ -650,7 +637,6 @@ footer {
 }
 
 
-=======
 /*esther styling*/
 
 
@@ -1124,4 +1110,3 @@ no longer included on page
         padding-bottom: 10px;
     }
 }
->>>>>>> music-page-tomerge
