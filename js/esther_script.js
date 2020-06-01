@@ -32,10 +32,7 @@ function handlePostData(frontpagePostHandled) {
             if (categor == 6) {
                 document.querySelector(".album-section-header").textContent = theHeader;
 
-
-
                 document.querySelector(".album-col2").innerHTML = theContent;
-
             }
 
         });
