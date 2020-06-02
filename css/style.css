@@ -45,9 +45,10 @@ h3 {
 }
 
 h1 {
-    font-size: 2.3em;
+    font-size: 32px;
     text-align: center;
     text-transform: uppercase;
+    padding: 15px;
 }
 
 h2 {
@@ -148,6 +149,7 @@ button:focus {
 
 .text-right {
     text-align: right;
+    padding: 15px;
 }
 
 
@@ -405,8 +407,12 @@ header.contactHeader {
     }
 
     /*album section*/
-    .debut-album {
+ /*   .debut-album-wrapper {
         grid-template-columns: 1fr;
+        grid-auto-flow: row;
+    }*/
+    .fp-header {
+        grid-column: span 1;
     }
 
     .album-figure {
@@ -449,6 +455,8 @@ header.contactHeader {
 
 }
 
+
+
 @media only screen and (max-width:450px) {
 
 /*    HEADER  PHOTO     */
@@ -460,34 +468,35 @@ header.contactHeader {
 
     header.frontPageHeader {
         background-image: url(../assets/img/small-img/red-dress-s.png);
-        height: 60vw;
+        height: 60vh;
+
     }
 
     header.musicHeader {
         background-image: url(../assets/img/small-img/rastrelli-and-gudrun-s.png);
-        height: 40vw;
+        height: 60vh;
     }
 
     header.scheduleHeader {
         background-image: url(../assets/img/small-img/frohlich-pfals-s.png);
-        height: 37vw;
+        height: 60vh;
         background-position: center;
     }
 
     header.repertoireHeader {
         background-image: url(../assets/img/small-img/konigin-der-nacht-s.png);
-        height: 40vw;
+        height: 60vh;
         background-position: top;
     }
 
     header.aboutHeader {
         background-image: url(../assets/img/small-img/marmorsaal-trommel-s.png);
-        height: 40vw;
+        height: 60vw;
     }
 
     header.contactHeader {
         background-image: url(../assets/img/small-img/bubbles-s.png);
-        height: 30vw;
+        height: 60vw;
         background-position: bottom;
     }
 
@@ -549,19 +558,20 @@ header.contactHeader {
         transform: rotate(45deg) translate(-6px, -7px);
     }
 
+
 }
 
 
 
 /*    FRONT PAGE   */
 
-main.front-page-grid {
+/*main.front-page-grid {
     display: grid;
     grid-template-columns: 1fr;
-}
+}*/
 
 .fp-header {
-    grid-column: 1/3;
+    grid-column: span 2;
     padding-top: 1.2em;
 }
 
@@ -576,6 +586,15 @@ iframe.front-page-youtube {
     display: block;
     margin-left: auto;
     margin-right: auto;
+}
+
+@media only screen and (max-width: 700px) {
+    iframe.front-page-youtube {
+    width: 80vw;
+    height: 53vw;
+
+}
+
 }
 
 .the-video-title-fetched {
@@ -634,12 +653,48 @@ article.newsletter-updates {
     margin-right: auto;
 }
 
+@media only screen and (max-width: 650px) {
+    .transparent-backg {
+    background: rgba(var(--white-rgba), 0.7);
+    width: 80vw;
+    margin: auto;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    box-shadow: 0px 0px 33px 30px rgba(var(--white-rgba), 0.7);
+}
+
+    .text-about-newsletter {
+        width: 40vw;
+    }
+
+    .fp-newsletter {
+        width: 40vw;
+    }
+
+}
+
+@media only screen and (max-width: 450px) {
+     .text-about-newsletter {
+        width: 70vw;
+    }
+
+    .fp-newsletter {
+        width: 50vw;
+    }
+
+}
+
 .debut-album {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
+/*    display: grid;
+    grid-template-columns: 1fr 1fr;*/
     background: var(--grey);
     margin-top: 0em;
     padding-bottom: 2em;
+}
+
+.debut-album-wrapper {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
 }
 
 .fp-album-cover {
@@ -650,11 +705,32 @@ article.newsletter-updates {
 }
 
 .about-album {
-    width: 30vw;
+    width: 45vw;
     padding: 0em 3em;
     display: block;
     margin-right: auto;
     /*    text-align: center;*/
+}
+@media only screen and (min-width: 1175px) {
+    .about-album {
+        width: 30vw;
+    }
+}
+@media only screen and (max-width: 700px) {
+    .about-album {
+        width: 80vw;
+        margin: auto;
+        padding: 0em 1em;
+    }
+}
+
+@media only screen and (max-width: 450px) {
+
+
+    .fp-album-cover {
+        width: 18em;
+        padding: 0em 1em;
+    }
 }
 
 .about-album > button {
@@ -664,14 +740,20 @@ article.newsletter-updates {
     margin-top: 1em;
 }
 
+
+
 .theInstagram {
-    display: flex;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, max(300px));
+    grid-gap: 10px;
     justify-content: center;
+    margin: auto;
+   /* padding: 0 15px;*/
 }
 
 .instagramFigure {
-    width: 23vw;
-    margin: 2px;
+    max-width: 100%;
+    margin: auto;
 }
 
 .instagramFigure:hover {
@@ -679,10 +761,7 @@ article.newsletter-updates {
 }
 
 .imgInstagramCarousel {
-    padding: 0px;
-    height: 23vw;
-    width: 23vw;
-    object-fit: cover;
+  width: 100%;
 }
 
 
@@ -1501,6 +1580,8 @@ footer{
     .contact-side-img {
         background-image: url(../images/contact2.jpg);
     }
+
+
 }
 
 @media only screen and (max-width: 540px) {
@@ -1514,6 +1595,8 @@ footer{
     .contact-info-det > h1 {
         width: 100%;
     }
+
+
 }
 
 
