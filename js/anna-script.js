@@ -249,19 +249,21 @@ function handleQuotes(quotes) {
 
             //Press Quotes
             if (quoteCategory == 13) {
+                if (AboutPage) {
+                    const pressQuoteTemp = document.querySelector(".pressQuotesTemp").content;
 
-                const pressQuoteTemp = document.querySelector(".pressQuotesTemp").content;
-
-                const clonePressQuoteTemp = pressQuoteTemp.cloneNode(true);
-                clonePressQuoteTemp.querySelector(".thePressQuote").textContent = thePressQuote;
-                clonePressQuoteTemp.querySelector(".quotedPerson").textContent = quoteAuthor;
-                document.querySelector(".containerPressQuotes").appendChild(clonePressQuoteTemp);
+                    const clonePressQuoteTemp = pressQuoteTemp.cloneNode(true);
+                    clonePressQuoteTemp.querySelector(".thePressQuote").textContent = thePressQuote;
+                    clonePressQuoteTemp.querySelector(".quotedPerson").textContent = quoteAuthor;
+                    document.querySelector(".containerPressQuotes").appendChild(clonePressQuoteTemp);
+                }
 
             }
 
             //vocal coaching quotes
             if (quoteCategory == 14) {
 
+                if (AboutPage) {
                 const aboutQuoteTemp = document.querySelector(".quote-template").content;
 
                 const cloneAboutQuoteTemp = aboutQuoteTemp.cloneNode(true);
@@ -272,9 +274,12 @@ function handleQuotes(quotes) {
                 cloneAboutQuoteTemp.querySelector(".author").textContent = quoteAuthor;
 
                 document.querySelector(".slideshow-container").appendChild(cloneAboutQuoteTemp);
+                }
             }
         });
     }
+
+    if(AboutPage){
     // Press Quotes!
     const onePressSlide = document.querySelector(".myPressSlides");
     onePressSlide.style.display = "block";
@@ -282,11 +287,12 @@ function handleQuotes(quotes) {
     firstPressDot.classList.add("active");
 
     // Vocal Coaching
- const oneSlide = document.querySelector(".mySlides");
+    const oneSlide = document.querySelector(".mySlides");
     oneSlide.style.display = "block";
 
     const firstDot = document.querySelector(".dot");
     firstDot.classList.add("active");
+    }
 }
 
 
@@ -633,9 +639,6 @@ document.querySelector(".myPressSlides").style.display = "block";
 function showPressSlides(n) {
     var i;
     var pressSlides = document.getElementsByClassName("myPressSlides");
-
-        console.log("pressSlides")
-    console.log(pressSlides[slidePressIndex - 1])
 
     var pressDots = document.getElementsByClassName("pressDot");
     if (n > pressSlides.length) {

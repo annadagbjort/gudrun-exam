@@ -247,257 +247,6 @@ header.contactHeader {
 }
 
 
-
-
-/*    FRONT PAGE   */
-
-main.front-page-grid {
-    display: grid;
-    grid-template-columns: 1fr;
-}
-
-.fp-header {
-    grid-column: 1/3;
-    padding-top: 1.2em;
-}
-
-.gudrun-live {
-    background: var(--grey);
-    padding-bottom: 25px;
-}
-
-iframe.front-page-youtube {
-    width: 50vw;
-    height: 33vw;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-.the-video-title-fetched {
-    text-align: center;
-}
-
-
-article.newsletter-updates {
-    background-image: url(../assets/img/large-img/blue-smile-large.png);
-    height: 100%;
-
-    background-position: -100px;
-    background-repeat: no-repeat;
-    background-size: cover;
-}
-
-.transparent-backg {
-    background: rgba(var(--white-rgba), 0.7);
-    width: 40vw;
-    margin-left: auto;
-    margin-right: 10vw;
-    padding-top: 20px;
-    padding-bottom: 20px;
-    box-shadow: 0px 0px 33px 30px rgba(var(--white-rgba), 0.7);
-}
-
-.text-about-newsletter {
-    width: 30vw;
-    padding-left: 6vw;
-}
-
-.newsletter-signup-form {
-    padding: 2vw;
-    margin-right: auto;
-}
-
-.fp-newsletter {
-    background: var(--grey);
-    border: none;
-    color: var(--text-grey);
-    padding: .6em 1em;
-    font-size: 14px;
-    width: 20vw;
-    margin-bottom: 1.7em;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-.newsletter-signup-form > .red-button {
-    margin-top: .2em;
-    /*        margin-right: auto;*/
-    text-align: center;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-.debut-album {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    background: var(--grey);
-    margin-top: 0em;
-    padding-bottom: 2em;
-}
-
-.fp-album-cover {
-    width: 20em;
-    padding: 0em 2em;
-    display: block;
-    margin-left: auto;
-}
-
-.about-album {
-    width: 30vw;
-    padding: 0em 3em;
-    display: block;
-    margin-right: auto;
-    /*    text-align: center;*/
-}
-
-.about-album > button {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 1em;
-}
-
-.theInstagram {
-    display: flex;
-    justify-content: center;
-}
-
-.instagramFigure {
-    width: 23vw;
-    margin: 2px;
-}
-
-.instagramFigure:hover {
-    opacity: 0.5;
-}
-
-.imgInstagramCarousel {
-    padding: 0px;
-    height: 23vw;
-    width: 23vw;
-    object-fit: cover;
-}
-
-
-/*    P R E S S     */
-
-article.quotes {
-    text-align: center;
-    margin: 0px;
-    padding: 5em;
-    background: var(--grey);
-    background: rgb(var(--grey-rgb), 0.5);
-}
-
-.slideshow-container-press {
-    background: var(--white);
-    padding: 3em 3em 1em;
-    box-shadow: 0px 0px 13px 0px rgb(230, 230, 230);
-    /*    border: solid .1em var(--text-grey);*/
-}
-
-.myPressSlides {
-    padding: 1em 2em;
-    display: none;
-}
-
-article.press {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, 250px);
-    grid-gap: 5em;
-    justify-content: center;
-    margin: 5vw
-}
-
-.pressHeader {
-    grid-column: 1/-1 order: -1;
-    padding-top: 1em;
-}
-
-.pressFigure {
-    width: 20em;
-    margin: 0px;
-}
-
-.pressImg {
-    height: 10em;
-    width: 17em;
-    object-fit: cover;
-}
-
-h4.pressTitle {
-    margin-bottom: 0px;
-    text-align: center;
-}
-
-p.websiteName {
-    text-align: center;
-    margin: 0px;
-    font-style: italic;
-}
-
-.prevPress,
-.nextPress {
-    cursor: pointer;
-    position: absolute;
-    top: 100%;
-    margin-top: -30px;
-    margin-left: 0px;
-    margin-right: 0px;
-    user-select: none;
-}
-
-/*Positioning the "next button" to the right*/
-.nextPress {
-    right: 8em;
-    border-radius: 3px 0 0 3px;
-}
-
-.prevPress {
-    left: 8em;
-    border-radius: 0 3px 3px 0;
-}
-
-/*add see-through bg color on hover */
-.prevPress:hover,
-.nextPress:hover {
-    background-color: var(--grey);
-}
-
-/*dots */
-.dot-container-press {
-    text-align: center;
-    padding: 20px;
-}
-
-.pressDot {
-    cursor: pointer;
-    height: 3px;
-    width: 15px;
-    margin: 0 2px;
-    background-color: var(--grey);
-    /*    border-radius: 50%;*/
-    display: inline-block;
-    transition: background-color 0.6s ease;
-}
-
-.active,
-.pressDot:hover {
-    background-color: var(--text-red);
-}
-
-.quote {
-    font-style: italic;
-}
-
-.author {
-    color: var(--text-red);
-}
-
-
 @media only screen and (max-width:850px) {
 
     /*    HEADER PHOTOS   */
@@ -801,6 +550,489 @@ p.websiteName {
     }
 
 }
+
+
+
+/*    FRONT PAGE   */
+
+main.front-page-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+}
+
+.fp-header {
+    grid-column: 1/3;
+    padding-top: 1.2em;
+}
+
+.gudrun-live {
+    background: var(--grey);
+    padding-bottom: 25px;
+}
+
+iframe.front-page-youtube {
+    width: 50vw;
+    height: 33vw;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.the-video-title-fetched {
+    text-align: center;
+}
+
+
+article.newsletter-updates {
+    background-image: url(../assets/img/large-img/blue-smile-large.png);
+    height: 100%;
+
+    background-position: -100px;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.transparent-backg {
+    background: rgba(var(--white-rgba), 0.7);
+    width: 40vw;
+    margin-left: auto;
+    margin-right: 10vw;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    box-shadow: 0px 0px 33px 30px rgba(var(--white-rgba), 0.7);
+}
+
+.text-about-newsletter {
+    width: 30vw;
+    padding-left: 6vw;
+}
+
+.newsletter-signup-form {
+    padding: 2vw;
+    margin-right: auto;
+}
+
+.fp-newsletter {
+    background: var(--grey);
+    border: none;
+    color: var(--text-grey);
+    padding: .6em 1em;
+    font-size: 14px;
+    width: 20vw;
+    margin-bottom: 1.7em;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.newsletter-signup-form > .red-button {
+    margin-top: .2em;
+    /*        margin-right: auto;*/
+    text-align: center;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.debut-album {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    background: var(--grey);
+    margin-top: 0em;
+    padding-bottom: 2em;
+}
+
+.fp-album-cover {
+    width: 20em;
+    padding: 0em 2em;
+    display: block;
+    margin-left: auto;
+}
+
+.about-album {
+    width: 30vw;
+    padding: 0em 3em;
+    display: block;
+    margin-right: auto;
+    /*    text-align: center;*/
+}
+
+.about-album > button {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 1em;
+}
+
+.theInstagram {
+    display: flex;
+    justify-content: center;
+}
+
+.instagramFigure {
+    width: 23vw;
+    margin: 2px;
+}
+
+.instagramFigure:hover {
+    opacity: 0.5;
+}
+
+.imgInstagramCarousel {
+    padding: 0px;
+    height: 23vw;
+    width: 23vw;
+    object-fit: cover;
+}
+
+
+
+/*A B O U T  P A G E */
+
+.grey-bg {
+    background-color: var(--grey);
+    margin: 20px 0;
+    padding: 20px 0;
+}
+
+.vocal-coaching-header {
+    text-align: center;
+}
+
+.vocal-coaching-paragraph {
+    margin: 0 300px 50px 300px;
+}
+
+.about-wrapper {
+    margin: 0 100px;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+    grid-gap: 1rem 10rem;
+}
+
+.about-header {
+    grid-column: 1/-1;
+}
+
+.about-text {
+    padding: 0;
+    margin-top: -13px;
+}
+
+.about-see-more {
+    display: block;
+}
+
+.read-more-button {
+    display: block;
+    /*    width: 200px;*/
+    margin: 0 auto;
+}
+
+.book-lessons {
+    width: 200px;
+    margin: 0 43%;
+}
+
+.img-grid {
+    max-width: 400px;
+    padding-bottom: 100px;
+}
+
+/*Quote slideshow */
+.slideshow-container {
+    position: relative;
+}
+
+.mySlides {
+    display: none;
+    text-align: center;
+    margin: 0 463px;
+}
+
+.slideshow-container:first-child {
+    display: block;
+}
+
+/*Next and previous buttons */
+.prev,
+.next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    margin-top: -30px;
+    margin-left: 350px;
+    margin-right: 350px;
+    padding: 16px;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+}
+
+/*Positioning the "next button" to the right*/
+.next {
+    position: absolute;
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+
+/*add see-through bg color on hover */
+.prev:hover,
+.next:hover {
+    background-color: var(--grey);
+}
+
+/*dots */
+.dot-container {
+    text-align: center;
+    padding: 20px;
+}
+
+
+.dot {
+    cursor: pointer;
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: var(--black);
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+}
+
+.active,
+.dot:hover {
+    background-color: var(--text-red);
+}
+
+.quote {
+    font-style: italic;
+}
+
+.author {
+    color: var(--text-red);
+}
+
+@media only screen and (max-width: 1174px) {
+    .img-grid {
+        padding-bottom: 50px;
+        margin: 0 auto;
+    }
+
+    .vocal-coaching-paragraph {
+        margin: 0 100px 50px 100px;
+    }
+
+    .mySlides {
+        margin: 0 auto;
+    }
+
+    .quote {
+        margin: 0 auto;
+    }
+
+    .mySlides {
+        width: 400px;
+    }
+
+    .prev,
+    .next {
+        margin-left: 15px;
+        margin-right: 75px;
+    }
+
+    .about-wrapper {
+        grid-template-columns: 1fr;
+    }
+
+    .vocal-coaching-paragraph {
+        margin: 0 auto;
+        padding: 0 50px;
+    }
+
+    .vocal-coaching-wrapper {
+        margin: 0 -48px 0 -10px;
+    }
+
+    .slideshow-container {
+        left: 25px;
+        margin-top: 50px;
+    }
+
+    .dot-container {
+        margin-left: 40px;
+        margin-top: -17px;
+    }
+
+    .book-lessons {
+        margin: 0 40%;
+
+    }
+
+}
+
+@media only screen and (max-width: 650px) {
+    .img-grid {
+        max-width: 300px;
+    }
+
+    .grey-bg {
+        margin: 20px -165px 20px -10px;
+    }
+
+    .mySlides {
+        margin: 0 auto;
+    }
+
+    .quote {
+        margin: 0 auto;
+    }
+
+    .prev,
+    .next {
+        margin-left: -36px;
+        margin-right: -75px;
+    }
+
+    .about-wrapper {
+        grid-template-columns: 1fr;
+    }
+
+    .vocal-coaching-paragraph {
+        margin: 0 auto;
+        padding: 0 50px;
+    }
+
+    .slideshow-container {
+        left: 70px;
+    }
+
+    .dot-container {
+        margin-left: 165px;
+    }
+       .book-lessons {
+        margin: 0 165px;
+    }
+}
+
+
+
+/*    P R E S S     */
+
+article.quotes {
+    text-align: center;
+    margin: 0px;
+    padding: 5em;
+    background: var(--grey);
+    background: rgb(var(--grey-rgb), 0.5);
+}
+
+.slideshow-container-press {
+    background: var(--white);
+    padding: 3em 3em 1em;
+    box-shadow: 0px 0px 13px 0px rgb(230, 230, 230);
+    /*    border: solid .1em var(--text-grey);*/
+}
+
+.myPressSlides {
+    padding: 1em 2em;
+    display: none;
+}
+
+article.press {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, 250px);
+    grid-gap: 5em;
+    justify-content: center;
+    margin: 5vw
+}
+
+.pressHeader {
+    grid-column: 1/-1 order: -1;
+    padding-top: 1em;
+}
+
+.pressFigure {
+    width: 20em;
+    margin: 0px;
+}
+
+.pressImg {
+    height: 10em;
+    width: 17em;
+    object-fit: cover;
+}
+
+h4.pressTitle {
+    margin-bottom: 0px;
+    text-align: center;
+}
+
+p.websiteName {
+    text-align: center;
+    margin: 0px;
+    font-style: italic;
+}
+
+.prevPress,
+.nextPress {
+    cursor: pointer;
+    position: absolute;
+    top: 100%;
+    margin-top: -30px;
+    margin-left: 0px;
+    margin-right: 0px;
+    user-select: none;
+}
+
+/*Positioning the "next button" to the right*/
+.nextPress {
+    right: 8em;
+    border-radius: 3px 0 0 3px;
+}
+
+.prevPress {
+    left: 8em;
+    border-radius: 0 3px 3px 0;
+}
+
+/*add see-through bg color on hover */
+.prevPress:hover,
+.nextPress:hover {
+    background-color: var(--grey);
+}
+
+/*dots */
+.dot-container-press {
+    text-align: center;
+    padding: 20px;
+}
+
+.pressDot {
+    cursor: pointer;
+    height: 3px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: var(--grey);
+    /*    border-radius: 50%;*/
+    display: inline-block;
+    transition: background-color 0.6s ease;
+}
+
+.active,
+.pressDot:hover {
+    background-color: var(--text-red);
+}
+
+.quote {
+    font-style: italic;
+}
+
+.author {
+    color: var(--text-red);
+}
+
+
 
 
 
@@ -1707,233 +1939,7 @@ footer {
         text-align: center;
         padding-bottom: 10px;}
 
-/*A B O U T  P A G E */
 
-.grey-bg {
-    background-color: var(--grey);
-    margin: 20px 0;
-    padding: 20px 0;
-}
-
-.vocal-coaching-header {
-    text-align: center;
-}
-
-.vocal-coaching-paragraph {
-    margin: 0 300px 50px 300px;
-}
-
-.about-wrapper {
-    margin: 0 100px;
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
-    grid-gap: 1rem 10rem;
-}
-
-.about-header {
-    grid-column: 1/-1;
-}
-
-.about-text {
-    padding: 0;
-    margin-top: -13px;
-}
-
-.about-see-more {
-    display: block;
-}
-
-.read-more-button {
-    display: block;
-    /*    width: 200px;*/
-    margin: 0 auto;
-}
-
-.book-lessons {
-    width: 200px;
-    margin: 0 43%;
-}
-
-.img-grid {
-    max-width: 400px;
-    padding-bottom: 100px;
-}
-
-/*Quote slideshow */
-.slideshow-container {
-    position: relative;
-}
-
-.mySlides {
-    display: none;
-    text-align: center;
-    margin: 0 463px;
-}
-
-.slideshow-container:first-child {
-    display: block;
-}
-
-/*Next and previous buttons */
-.prev,
-.next {
-    cursor: pointer;
-    position: absolute;
-    top: 50%;
-    width: auto;
-    margin-top: -30px;
-    margin-left: 350px;
-    margin-right: 350px;
-    padding: 16px;
-    border-radius: 0 3px 3px 0;
-    user-select: none;
-}
-
-/*Positioning the "next button" to the right*/
-.next {
-    position: absolute;
-    right: 0;
-    border-radius: 3px 0 0 3px;
-}
-
-/*add see-through bg color on hover */
-.prev:hover,
-.next:hover {
-    background-color: var(--grey);
-}
-
-/*dots */
-.dot-container {
-    text-align: center;
-    padding: 20px;
-}
-
-
-.dot {
-    cursor: pointer;
-    height: 15px;
-    width: 15px;
-    margin: 0 2px;
-    background-color: var(--black);
-    border-radius: 50%;
-    display: inline-block;
-    transition: background-color 0.6s ease;
-}
-
-.active,
-.dot:hover {
-    background-color: var(--text-red);
-}
-
-.quote {
-    font-style: italic;
-}
-
-.author {
-    color: var(--text-red);
-}
-
-@media only screen and (max-width: 1174px) {
-    .img-grid {
-        padding-bottom: 50px;
-        margin: 0 auto;
-    }
-
-    .vocal-coaching-paragraph {
-        margin: 0 100px 50px 100px;
-    }
-
-    .mySlides {
-        margin: 0 auto;
-    }
-
-    .quote {
-        margin: 0 auto;
-    }
-
-    .mySlides {
-        width: 400px;
-    }
-
-    .prev,
-    .next {
-        margin-left: 15px;
-        margin-right: 75px;
-    }
-
-    .about-wrapper {
-        grid-template-columns: 1fr;
-    }
-
-    .vocal-coaching-paragraph {
-        margin: 0 auto;
-        padding: 0 50px;
-    }
-
-    .vocal-coaching-wrapper {
-        margin: 0 -48px 0 -10px;
-    }
-
-    .slideshow-container {
-        left: 25px;
-        margin-top: 50px;
-    }
-
-    .dot-container {
-        margin-left: 40px;
-        margin-top: -17px;
-    }
-
-    .book-lessons {
-        margin: 0 40%;
-
-    }
-
-}
-
-@media only screen and (max-width: 650px) {
-    .img-grid {
-        max-width: 300px;
-    }
-
-    .grey-bg {
-        margin: 20px -165px 20px -10px;
-    }
-
-    .mySlides {
-        margin: 0 auto;
-    }
-
-    .quote {
-        margin: 0 auto;
-    }
-
-    .prev,
-    .next {
-        margin-left: -36px;
-        margin-right: -75px;
-    }
-
-    .about-wrapper {
-        grid-template-columns: 1fr;
-    }
-
-    .vocal-coaching-paragraph {
-        margin: 0 auto;
-        padding: 0 50px;
-    }
-
-    .slideshow-container {
-        left: 70px;
-    }
-
-    .dot-container {
-        margin-left: 165px;
-    }
-       .book-lessons {
-        margin: 0 165px;
-    }
-}
 
 
 
