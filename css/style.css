@@ -1038,14 +1038,16 @@ p.websiteName {
 
 /*    F O O T E R    */
 
-footer {
+/* FOOTER */
+
+footer{
     width: 100%;
     background: #D44456;
     display: block;
 
 }
 
-.inner-footer {
+.inner-footer{
     width: 70%;
     margin: auto;
     padding: 30px 10px;
@@ -1055,32 +1057,29 @@ footer {
     justify-content: center;
 }
 
-.footer-items-contact {
+.footer-items-contact{
     width: 48%;
     padding: 10px 10px;
     box-sizing: border-box;
 }
 
-.footer-border {
+.footer-border{
     width: 120px;
     height: 1.6px;
     background: white;
 }
 
-.footer-items-contact h2 {
+.footer-items-contact h2{
     color: white;
 }
 
-.footer-items-contact p {
+.footer-items-contact p{
     color: white;
-    font-family: "crimson pro", serif;
     font-style: italic;
-    padding: 0.2rem;
-    font-size: 22px;
 }
 
-.footer-items-contact img {
-    width: 80px;
+.footer-items-contact img{
+    width: 14%;
 }
 
 /* FOOTER MEDIA QUERIES */

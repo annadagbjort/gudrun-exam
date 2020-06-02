@@ -193,6 +193,30 @@ function handlePostData(PostDataHandled) {
         });
     });
 }
+if (AboutPage) {
+    const seeMoreExpand = document.querySelector(".about-expand");
+    const shortAbout = document.querySelector("about-wrapper");
+    const longAbout = document.querySelector(".about-see-more");
+    longAbout.style.display = "none";
+
+    seeMoreExpand.addEventListener("click", showMoreAbout);
+
+    function showMoreAbout() {
+        if (longAbout.style.display === "none") {
+            longAbout.style.display = "block";
+            longAbout.classList.add("fade-in");
+            longAbout.classList.remove("fade-out");
+            seeMoreExpand.innerHTML = "Show Less"
+        } else {
+            setTimeout(function () {
+                longAbout.style.display = "none";
+                seeMoreExpand.innerHTML = "Show More";
+            }, 100);
+            longAbout.classList.remove("fade-in");
+            longAbout.classList.add("fade-out");
+        }
+    }
+}
 
 
 // ****** Fetching Article "links" ******
@@ -264,34 +288,34 @@ function handleQuotes(quotes) {
             if (quoteCategory == 14) {
 
                 if (AboutPage) {
-                const aboutQuoteTemp = document.querySelector(".quote-template").content;
+                    const aboutQuoteTemp = document.querySelector(".quote-template").content;
 
-                const cloneAboutQuoteTemp = aboutQuoteTemp.cloneNode(true);
-                console.log(quoteAuthor);
+                    const cloneAboutQuoteTemp = aboutQuoteTemp.cloneNode(true);
+                    console.log(quoteAuthor);
 
-                cloneAboutQuoteTemp.querySelector(".quote").textContent = thePressQuote;
+                    cloneAboutQuoteTemp.querySelector(".quote").textContent = thePressQuote;
 
-                cloneAboutQuoteTemp.querySelector(".author").textContent = quoteAuthor;
+                    cloneAboutQuoteTemp.querySelector(".author").textContent = quoteAuthor;
 
-                document.querySelector(".slideshow-container").appendChild(cloneAboutQuoteTemp);
+                    document.querySelector(".slideshow-container").appendChild(cloneAboutQuoteTemp);
                 }
             }
         });
     }
 
-    if(AboutPage){
-    // Press Quotes!
-    const onePressSlide = document.querySelector(".myPressSlides");
-    onePressSlide.style.display = "block";
-    const firstPressDot = document.querySelector(".pressDot");
-    firstPressDot.classList.add("active");
+    if (AboutPage) {
+        // Press Quotes!
+        const onePressSlide = document.querySelector(".myPressSlides");
+        onePressSlide.style.display = "block";
+        const firstPressDot = document.querySelector(".pressDot");
+        firstPressDot.classList.add("active");
 
-    // Vocal Coaching
-    const oneSlide = document.querySelector(".mySlides");
-    oneSlide.style.display = "block";
+        // Vocal Coaching
+        const oneSlide = document.querySelector(".mySlides");
+        oneSlide.style.display = "block";
 
-    const firstDot = document.querySelector(".dot");
-    firstDot.classList.add("active");
+        const firstDot = document.querySelector(".dot");
+        firstDot.classList.add("active");
     }
 }
 
