@@ -25,6 +25,7 @@ function handleInstagramPhotosData(InstagramPhotos) {
     InstagramPhotos.forEach(instaPhoto => {
 
         if (FrontPage) {
+            document.querySelector(".home-a-link").classList.add("active-nav");
             const instagramTemplate = document.querySelector(".instagramTemplate").content;
             const cloneInstaTemp = instagramTemplate.cloneNode(true);
 
@@ -51,6 +52,7 @@ function handleYoutubeLinkData(youtubeLinks) {
         var theVideo = TheYoutubeLink.video_link;
 
         if (MusicPage) {
+            document.querySelector(".music-a-link").classList.add("active-nav");
             if (document.querySelector(".performanceVideosTemplate")) {
 
                 const performanceVideosTemplate = document.querySelector(".performanceVideosTemplate").content;
@@ -168,6 +170,7 @@ function handlePostData(PostDataHandled) {
             //About Gudrun short text
             if (categor == 2) {
                 if (AboutPage) {
+                    document.querySelector(".about-a-link").classList.add("active-nav");
                     document.querySelector(".about-wrapper .about-header").textContent = theHeader;
 
                     document.querySelector(".about-wrapper .about-text").innerHTML = theContent;
@@ -329,6 +332,7 @@ if (checkForElementRepertoire) {
     // fetching for repertoire subpage
 
     //fetching operas
+    document.querySelector(".repertoire-a-link").classList.add("active-nav");
 
     const operasLink = "http://designhavn.dk/5Wordpress/wp-json/wp/v2/opera?_embed";
     fetch(operasLink)
@@ -489,6 +493,7 @@ var checkForElementScedule = document.querySelector(".schedule-main-heading");
 if (checkForElementScedule) {
     // fetching for the schedule subpage
     //fetching events
+    document.querySelector(".schedule-a-link").classList.add("active-nav");
 
     const eventsLink = "http://designhavn.dk/5Wordpress/wp-json/wp/v2/event";
     fetch(eventsLink)
@@ -577,6 +582,7 @@ if (checkForElementScedule) {
 var checkForElementContact = document.querySelector(".contact-main-wrapper");
 
 if (checkForElementContact) {
+    document.querySelector(".contact-a-link").classList.add("active-nav");
     //fetching info for contact page
     const contactLink = "http://designhavn.dk/5Wordpress/wp-json/wp/v2/contact";
     fetch(contactLink)
