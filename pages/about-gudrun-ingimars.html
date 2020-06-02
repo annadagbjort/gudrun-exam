@@ -43,16 +43,16 @@
 
     <main>
 
-        <div class="about-wrapper">
+ <div class="about-wrapper">
             <h1 class="about-header">About me</h1>
             <div>
-                <p class="about-text">
-                    Insert text about Gudrun here
-                </p>
-                <p class="about-see-more">Insert extra text here</p>
-                <button class="red-button read-more-button about-expand"> Read More</button>
+            <p class="about-text">
+                Insert text about Gudrun here
+            </p>
+            <p class="about-see-more">Insert extra text here</p>
+            <button class="red-button read-more-button about-expand"> Read More</button>
             </div>
-<!--            <img class="img-grid" src="../images/gudrun-image.jpg" alt="Picture of Gudrun">-->
+            <img class="img-grid" src="../images/gudrun-image.jpg" alt="Picture of Gudrun">
 
         </div>
 
@@ -60,7 +60,7 @@
             <h1 class="vocal-coaching-header">Vocal Coaching</h1>
             <p class="vocal-coaching-paragraph">Text about vocal coaching</p>
         </div>
-        <div class="slideshow-container quotes">
+        <div class="slideshow-container">
             <template class="quote-template">
                 <div class="mySlides">
                     <q class="quote">Insert quote here</q>
@@ -80,7 +80,6 @@
         </div>
 
         <button class="red-button book-lessons" onclick="document.location = 'contact-gudrun-ingimars.html'">Book Lessons</button>
-
 
 
 
@@ -108,8 +107,8 @@
             <h1>Reviews</h1>
 
             <div class="containerPressQuotes">
-                <a class="prevPress" onclick="plusSlides(-1)">&#10094;</a>
-                <a class="nextPress" onclick="plusSlides(1)">&#10095;</a>
+                <a class="prevPress" onclick="plusPressSlides(-1)">&#10094;</a>
+                <a class="nextPress" onclick="plusPressSlides(1)">&#10095;</a>
             </div>
 
             <template class="pressQuotesTemp">
@@ -121,25 +120,51 @@
                 </div>
             </template>
 
-
-
-            <div class="dot-container">
-                <span class="pressDot" onclick="currentSlide(1)"></span>
-                <span class="pressDot" onclick="currentSlide(2)"></span>
-                <span class="pressDot" onclick="currentSlide(3)"></span>
-                <span class="pressDot" onclick="currentSlide(4)"></span>
-                <span class="pressDot" onclick="currentSlide(5)"></span>
-                <span class="pressDot" onclick="currentSlide(6)"></span>
+            <div class="dot-container-press">
+                <span class="pressDot" onclick="currentPressSlide(1)"></span>
+                <span class="pressDot" onclick="currentPressSlide(2)"></span>
+                <span class="pressDot" onclick="currentPressSlide(3)"></span>
+                <span class="pressDot" onclick="currentPressSlide(4)"></span>
+                <span class="pressDot" onclick="currentPressSlide(5)"></span>
+                <span class="pressDot" onclick="currentPressSlide(6)"></span>
             </div>
         </div>
     </article>
 
-
-
-
     </main>
 
+    <footer>
 
+<div class="inner-footer">
+   <div class="footer-items-contact">
+       <h2>Contact</h2>
+       <div class="footer-border"></div>
+
+       <template id="myTemplateFooter">
+
+       <p class="contact-name">Name</p>
+
+       <p class="contact-email">Email</p>
+
+       <p class="contact-phone">Phone</p>
+
+       <p class="contact-location">Location</p>
+
+       </template>
+   </div>
+
+   <div class="footer-items-contact">
+       <h2>Social Media</h2>
+       <div class="footer-border"></div>
+        <img src="../icons/icons_all-07.png">
+
+       <img src="../icons/icons_all-02.png">
+   </div>
+
+</div>
+
+
+</footer>
 
 
     <script src="../js/anna-script.js"></script>

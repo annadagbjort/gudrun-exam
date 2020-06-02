@@ -16,120 +16,22 @@ const AboutPage = document.querySelector(".AboutPage");
 const ContactPage = document.querySelector(".ContactPage");
 
 
-const checkForElementQuotes = document.querySelector(".quotes");
-
-if (checkForElementQuotes) {
-    fetch("http://designhavn.dk/5Wordpress/wp-json/wp/v2/quote?_embed&per_page=100")
-        .then(res => res.json())
-        .then(handleQuotes)
-
-    function handleQuotes(quotes) {
-        quotes.forEach(showQuotes)
-
-        function showQuotes(oneQuote) {
-
-            var thePressQuote = oneQuote.quote_content;
-            var quoteAuthor = oneQuote.quote_author;
-
-            oneQuote.categories.forEach(quoteCategory => {
-
-                //Press Quotes
-                if (quoteCategory == 13) {
-
-                    const pressQuoteTemp = document.querySelector(".pressQuotesTemp").content;
-
-                    const clonePressQuoteTemp = pressQuoteTemp.cloneNode(true);
-
-                    console.log(quoteAuthor);
-                    clonePressQuoteTemp.querySelector(".thePressQuote").textContent = thePressQuote;
-                    clonePressQuoteTemp.querySelector(".quotedPerson").textContent = quoteAuthor;
-                    document.querySelector(".containerPressQuotes").appendChild(clonePressQuoteTemp);
-
-                }
-
-                //vocal coaching quotes
-                if (quoteCategory == 14 && document.querySelector(".quote-template")) {
-
-                    const aboutQuoteTemp = document.querySelector(".quote-template").content;
-
-                    const cloneAboutQuoteTemp = aboutQuoteTemp.cloneNode(true);
-                    console.log(quoteAuthor);
-
-                    cloneAboutQuoteTemp.querySelector(".quote").textContent = thePressQuote;
-
-                    cloneAboutQuoteTemp.querySelector(".author").textContent = quoteAuthor;
-
-                    document.querySelector(".slideshow-container").appendChild(cloneAboutQuoteTemp);
-                }
-            });
-        }
-
-        const oneSlide = document.querySelector(".myPressSlides");
-        oneSlide.style.display = "block";
-
-        const firstDot = document.querySelector(".pressDot");
-        firstDot.classList.add("active");
-    }
-
-    var slideIndex = 1;
-    showSlides(slideIndex);
-
-    function plusSlides(n) {
-        showSlides(slideIndex += n);
-    }
-
-    function currentSlide(n) {
-        showSlides(slideIndex = n);
-    }
-
-    document.querySelector(".myPressSlides").style.display = "block";
-
-    function showSlides(n) {
-        var i;
-        var slides = document.getElementsByClassName("myPressSlides");
-        var dots = document.getElementsByClassName("pressDot");
-        if (n > slides.length) {
-            slideIndex = 1
-        }
-        if (n < 1) {
-            slideIndex = slides.length
-        }
-        for (i = 0; i < slides.length; i++) {
-            slides[i].style.display = "none";
-        }
-        for (i = 0; i < dots.length; i++) {
-            dots[i].className = dots[i].className.replace(" active", "");
-        }
-        slides[slideIndex - 1].style.display = "block";
-        dots[slideIndex - 1].className += " active";
-    }
-}
-
 //Fetching for Instagram gallery
-const checkForElementGallery = document.querySelector(".gudruns-gallery");
-if (checkForElementGallery) {
-    fetch("http://designhavn.dk/5Wordpress/wp-json/wp/v2/media?_embed")
-        .then(res => res.json())
-        .then(handleInstagramPhotosData)
+fetch("http://designhavn.dk/5Wordpress/wp-json/wp/v2/media?_embed")
+    .then(res => res.json())
+    .then(handleInstagramPhotosData)
 
-    function handleInstagramPhotosData(InstagramPhotos) {
+function handleInstagramPhotosData(InstagramPhotos) {
+    InstagramPhotos.forEach(instaPhoto => {
 
-        InstagramPhotos.forEach(instaPhoto => {
+        if (FrontPage) {
+            const instagramTemplate = document.querySelector(".instagramTemplate").content;
+            const cloneInstaTemp = instagramTemplate.cloneNode(true);
 
-            if (FrontPage) {
-                const instagramTemplate = document.querySelector(".instagramTemplate").content;
-                const cloneInstaTemp = instagramTemplate.cloneNode(true);
-
-                cloneInstaTemp.querySelector(".imgInstagramCarousel").src = instaPhoto.source_url
-                document.querySelector(".theInstagram").appendChild(cloneInstaTemp);
-            }
-
-        });
-
-
-
-        //        cloneInstaTemp.querySelector(".imgInstagramCarousel").src = instaPhoto.source_url
-    }
+            cloneInstaTemp.querySelector(".imgInstagramCarousel").src = instaPhoto.source_url
+            document.querySelector(".theInstagram").appendChild(cloneInstaTemp);
+        }
+    });
 }
 
 
@@ -265,26 +167,26 @@ function handlePostData(PostDataHandled) {
 
             //About Gudrun short text
             if (categor == 2) {
-                if(AboutPage){
-                document.querySelector(".about-wrapper .about-header").textContent = theHeader;
+                if (AboutPage) {
+                    document.querySelector(".about-wrapper .about-header").textContent = theHeader;
 
-                document.querySelector(".about-wrapper .about-text").innerHTML = theContent;
-                    }
+                    document.querySelector(".about-wrapper .about-text").innerHTML = theContent;
+                }
             }
 
             //About Gudrun longer text
             if (categor == 11) {
-                if(AboutPage){
-                document.querySelector(".about-wrapper .about-see-more").innerHTML = theContent;
+                if (AboutPage) {
+                    document.querySelector(".about-wrapper .about-see-more").innerHTML = theContent;
                 }
             }
 
             //            Vocal coaching
             if (categor == 10) {
-                if(AboutPage){
-                document.querySelector(".vocal-coaching-wrapper .vocal-coaching-header").textContent = theHeader;
+                if (AboutPage) {
+                    document.querySelector(".vocal-coaching-wrapper .vocal-coaching-header").textContent = theHeader;
 
-                document.querySelector(".vocal-coaching-wrapper .vocal-coaching-paragraph").innerHTML = theContent;
+                    document.querySelector(".vocal-coaching-wrapper .vocal-coaching-paragraph").innerHTML = theContent;
                 }
             }
 
@@ -329,6 +231,63 @@ function handleArticleData(ArticleData) {
 
 
 
+
+
+fetch("http://designhavn.dk/5Wordpress/wp-json/wp/v2/quote?_embed&per_page=100")
+    .then(res => res.json())
+    .then(handleQuotes)
+
+function handleQuotes(quotes) {
+    quotes.forEach(showQuotes)
+
+    function showQuotes(oneQuote) {
+
+        var thePressQuote = oneQuote.quote_content;
+        var quoteAuthor = oneQuote.quote_author;
+
+        oneQuote.categories.forEach(quoteCategory => {
+
+            //Press Quotes
+            if (quoteCategory == 13) {
+
+                const pressQuoteTemp = document.querySelector(".pressQuotesTemp").content;
+
+                const clonePressQuoteTemp = pressQuoteTemp.cloneNode(true);
+                clonePressQuoteTemp.querySelector(".thePressQuote").textContent = thePressQuote;
+                clonePressQuoteTemp.querySelector(".quotedPerson").textContent = quoteAuthor;
+                document.querySelector(".containerPressQuotes").appendChild(clonePressQuoteTemp);
+
+            }
+
+            //vocal coaching quotes
+            if (quoteCategory == 14) {
+
+                const aboutQuoteTemp = document.querySelector(".quote-template").content;
+
+                const cloneAboutQuoteTemp = aboutQuoteTemp.cloneNode(true);
+                console.log(quoteAuthor);
+
+                cloneAboutQuoteTemp.querySelector(".quote").textContent = thePressQuote;
+
+                cloneAboutQuoteTemp.querySelector(".author").textContent = quoteAuthor;
+
+                document.querySelector(".slideshow-container").appendChild(cloneAboutQuoteTemp);
+            }
+        });
+    }
+    // Press Quotes!
+    const onePressSlide = document.querySelector(".myPressSlides");
+    onePressSlide.style.display = "block";
+    const firstPressDot = document.querySelector(".pressDot");
+    firstPressDot.classList.add("active");
+
+    // Vocal Coaching
+ const oneSlide = document.querySelector(".mySlides");
+    oneSlide.style.display = "block";
+
+    const firstDot = document.querySelector(".dot");
+    firstDot.classList.add("active");
+}
 
 
 
@@ -655,6 +614,90 @@ function showInfo(jsonData) {
 }
 
 
+
+
+//Press Quotes!
+var slidePressIndex = 1;
+showPressSlides(slidePressIndex);
+
+function plusPressSlides(n) {
+    showPressSlides(slidePressIndex += n);
+}
+
+function currentPressSlide(n) {
+    showPressSlides(slidePressIndex = n);
+}
+
+document.querySelector(".myPressSlides").style.display = "block";
+
+function showPressSlides(n) {
+    var i;
+    var pressSlides = document.getElementsByClassName("myPressSlides");
+
+        console.log("pressSlides")
+    console.log(pressSlides[slidePressIndex - 1])
+
+    var pressDots = document.getElementsByClassName("pressDot");
+    if (n > pressSlides.length) {
+        slidePressIndex = 1
+    }
+    if (n < 1) {
+        slidePressIndex = pressSlides.length
+    }
+    for (i = 0; i < pressSlides.length; i++) {
+        pressSlides[i].style.display = "none";
+    }
+    for (i = 0; i < pressDots.length; i++) {
+        pressDots[i].className = pressDots[i].className.replace(" active", "");
+    }
+    pressSlides[slidePressIndex - 1].style.display = "block";
+
+    pressDots[slidePressIndex - 1].className += " active";
+
+}
+
+
+
+
+
+
+
+
+
+//Vocal Quotes!
+
+var slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+    showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+    showSlides(slideIndex = n);
+}
+
+document.querySelector(".mySlides").style.display = "block";
+
+function showSlides(n) {
+    var i;
+    var slides = document.getElementsByClassName("mySlides");
+    var dots = document.getElementsByClassName("dot");
+    if (n > slides.length) {
+        slideIndex = 1
+    }
+    if (n < 1) {
+        slideIndex = slides.length
+    }
+    for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
+    }
+    for (i = 0; i < dots.length; i++) {
+        dots[i].className = dots[i].className.replace(" active", "");
+    }
+    slides[slideIndex - 1].style.display = "block";
+    dots[slideIndex - 1].className += " active";
+}
 
 
 

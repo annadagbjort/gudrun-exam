@@ -468,7 +468,7 @@ p.websiteName {
 }
 
 /*dots */
-.dot-container {
+.dot-container-press {
     text-align: center;
     padding: 20px;
 }
@@ -1808,6 +1808,7 @@ footer {
     padding: 20px;
 }
 
+
 .dot {
     cursor: pointer;
     height: 15px;
@@ -1933,4 +1934,9 @@ footer {
         margin: 0 165px;
     }
 }
+
+
+
+
+/*    SLIDES */
 
