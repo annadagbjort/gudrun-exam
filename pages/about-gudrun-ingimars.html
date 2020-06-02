@@ -10,11 +10,40 @@
     <link rel="stylesheet" href="../css/style.css">
 </head>
 
-<body>
+<body class="AboutPage">
+    <header class="header-section aboutHeader">
+
+
+        <div class="logo-nav-wrapper">
+
+            <img class="top-logo" src="../assets/img/svg/main-logo.svg" alt="GudrunLogo">
+
+            <nav class="top-nav">
+                <div class="burgerMenu">
+                    <!--                   these are the lines-->
+                    <div class="bar1"></div>
+                    <div class="bar2"></div>
+                    <div class="bar3"></div>
+                </div>
+
+                <ul>
+                    <li class="navLi"><a class="nav-item" href="../index.html">Home</a></li>
+                    <li class="navLi"> <a class="nav-item" href="music.html" class="selected">Music</a> </li>
+                    <li class="navLi"><a class="nav-item" href="schedule.html">Schedule</a></li>
+                    <li class="navLi"><a class="nav-item" href="repertoire.html">Repertoire</a></li>
+                    <li class="navLi"> <a class="nav-item" href="about-gudrun-ingimars.html">About</a></li>
+                    <li class="navLi"> <a class="nav-item" href="contact-gudrun-ingimars.html">Contact</a></li>
+                </ul>
+            </nav>
+
+        </div>
+
+    </header>
+
 
     <main>
 
-        <div class="about-wrapper">
+ <div class="about-wrapper">
             <h1 class="about-header">About me</h1>
             <div>
             <p class="about-text">
@@ -54,10 +83,89 @@
 
 
 
+
+
+     <h1 class="pressHeader">Articles Featuring Gudrun</h1>
+    <article class="press">
+        <!--    The template is appended in here-->
+    </article>
+
+    <template class="pressArticles">
+        <a href="" class="theArticleLink" target="_blank">
+            <div class="articleContainer">
+                <figure class="pressFigure"><img src="" alt="" class="pressImg"></figure>
+                <h4 class="pressTitle"></h4>
+                <p class="websiteName grey-text"></p>
+            </div>
+        </a>
+    </template>
+
+
+        <article class="quotes">
+        <div class="slideshow-container-press">
+
+            <h1>Reviews</h1>
+
+            <div class="containerPressQuotes">
+
+                 <template class="pressQuotesTemp">
+                <div class="myPressSlides">
+                    <q class=thePressQuote>the quote</q>
+                    <p class="quotedPerson author">Anna</p>
+                </div>
+            </template>
+
+                <a class="prevPress" onclick="plusPressSlides(-1)">&#10094;</a>
+                <a class="nextPress" onclick="plusPressSlides(1)">&#10095;</a>
+            </div>
+
+
+            <div class="dot-container-press">
+                <span class="pressDot" onclick="currentPressSlide(1)"></span>
+                <span class="pressDot" onclick="currentPressSlide(2)"></span>
+                <span class="pressDot" onclick="currentPressSlide(3)"></span>
+                <span class="pressDot" onclick="currentPressSlide(4)"></span>
+                <span class="pressDot" onclick="currentPressSlide(5)"></span>
+                <span class="pressDot" onclick="currentPressSlide(6)"></span>
+            </div>
+        </div>
+    </article>
+
     </main>
 
+    <footer>
 
-    <script src="../js/script.js"></script>
-</body>
+<div class="inner-footer">
+   <div class="footer-items-contact">
+       <h2>Contact</h2>
+       <div class="footer-border"></div>
 
-</html>
+       <template id="myTemplateFooter">
+
+       <p class="contact-name">Name</p>
+
+       <p class="contact-email">Email</p>
+
+       <p class="contact-phone">Phone</p>
+
+       <p class="contact-location">Location</p>
+
+       </template>
+   </div>
+
+   <div class="footer-items-contact">
+       <h2>Social Media</h2>
+       <div class="footer-border"></div>
+        <img src="../icons/icons_all-07.png">
+
+       <img src="../icons/icons_all-02.png">
+   </div>
+
+</div>
+
+
+</footer>
+
+
+    <script src="../js/anna-script.js"></script>
+</body></html>

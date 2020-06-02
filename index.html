@@ -3,30 +3,129 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="        "/>
+    <meta name="description" content="        " />
 
     <title>Gudrun Ingimars</title>
     <link rel="stylesheet" href="css/style.css">
 </head>
 
-<body>
+<body class="FrontPage">
+    <header class="header-section frontPageHeader">
 
-<main class="front-page-grid">
-    <article class="gudrun-live">
-       <h1>Gudrun Live</h1>
-        <iframe width="100%" height="100%" class="front-page-youtube" src="https://www.youtube.com/embed/tgbNymZ7vqY">
-</iframe>
-    </article>
+        <div class="logo-nav-wrapper">
 
-</main>
+            <img class="top-logo" src="assets/img/svg/main-logo.svg" alt="GudrunLogo">
+
+            <nav class="top-nav">
+                <div class="burgerMenu">
+                    <!--                   these are the lines-->
+                    <div class="bar1"></div>
+                    <div class="bar2"></div>
+                    <div class="bar3"></div>
+                </div>
+
+                <ul>
+                    <li class="navLi"><a class="nav-item" href="index.html">Home</a></li>
+                    <li class="navLi"> <a class="nav-item" href="pages/music.html" class="selected">Music</a> </li>
+                    <li class="navLi"><a class="nav-item" href="pages/schedule.html">Schedule</a></li>
+                    <li class="navLi"><a class="nav-item" href="pages/repertoire.html">Repertoire</a></li>
+                    <li class="navLi"> <a class="nav-item" href="pages/about-gudrun-ingimars.html">About</a></li>
+                    <li class="navLi"> <a class="nav-item" href="pages/contact-gudrun-ingimars.html">Contact</a></li>
+                </ul>
+            </nav>
+
+        </div>
+
+    </header>
+    <main class="front-page-grid fetchPost">
+        <article class="gudrun-live youtube">
+            <h1>Gudrun Live</h1>
+
+            <!--            https://www.youtube.com/embed/LlOuoxSLhf4-->
+            <iframe src="" class="front-page-youtube" SameSite=None frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <p class="the-video-title-fetched">The title of the video</p>
+        </article>
+
+        <article class="newsletter-updates">
+            <!--           <figure><img src="assets/img/medium-img/blue-smile-medium-faded.png" alt=""></figure>-->
+            <div class="transparent-backg">
+                <div class="newsletter">
+                    <!--                    <h1 class="fp-header"></h1>-->
+                    <div class="text-about-newsletter">
+                    </div>
+
+                    <div class="newsletter-signup-form">
+                        <form action="">
+                            <input class="fp-newsletter" placeholder="Your Name">
+                            <input class="fp-newsletter" placeholder="Your Email">
+                        </form>
+                        <button class="red-button">Sign Up!</button>
+                    </div>
+                </div>
+            </div>
+        </article>
+
+        <article class="debut-album">
+            <h1 class="fp-header"></h1>
+            <figure class="album-figure">
+                <img src="assets/img/medium-img/nordurljos.jpg" alt="Norðurljós Album cover" class="fp-album-cover">
+            </figure>
+            <div class="about-album">
+                <div class="text-about-album"></div>
+                <button class="red-button">Listen</button>
+            </div>
+
+        </article>
+
+        <article class="gudruns-gallery">
+            <h1 class="fp-header">Gudruns Gallery</h1>
+            <a href="https://www.instagram.com/annadagbjort_/" target="_blank">
+                <div class="theInstagram">
+
+                </div>
+            </a>
+
+            <p class="text-right"><a href="https://www.instagram.com/annadagbjort_/" class="red-text" target="_blank">@gudrun-ingimars</a> on Instagram</p>
+
+        </article>
+        <template class="instagramTemplate">
+            <div class="instagramFigure"><img src="" alt="" class="imgInstagramCarousel">
+            </div>
+        </template>
 
 
+    </main>
+    <footer>
+
+<div class="inner-footer">
+   <div class="footer-items-contact">
+       <h2>Contact</h2>
+       <div class="footer-border"></div>
+
+       <template id="myTemplateFooter">
+
+       <p class="contact-name">Name</p>
+
+       <p class="contact-email">Email</p>
+
+       <p class="contact-phone">Phone</p>
+
+       <p class="contact-location">Location</p>
+
+       </template>
+   </div>
+
+   <div class="footer-items-contact">
+       <h2>Social Media</h2>
+       <div class="footer-border"></div>
+        <img src="../icons/icons_all-07.png">
+
+       <img src="../icons/icons_all-02.png">
+   </div>
+
+</div>
 
 
-
-
-
-
-    <script src="js/script.js"></script>
-</body>
-</html>
+</footer>
+    <script src="js/anna-script.js"></script>
+</body></html>

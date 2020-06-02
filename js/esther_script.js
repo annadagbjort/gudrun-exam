@@ -32,10 +32,7 @@ function handlePostData(frontpagePostHandled) {
             if (categor == 6) {
                 document.querySelector(".album-section-header").textContent = theHeader;
 
-
-
                 document.querySelector(".album-col2").innerHTML = theContent;
-
             }
 
         });
@@ -54,41 +51,40 @@ function handleYoutubePostData(youtubeVideos) {
 
     youtubeVideos.forEach(performanceVideo => {
 
+        const performanceVideosTemplate = document.querySelector(".performanceVideosTemplate").content;
 
-            const performanceVideosTemplate = document.querySelector(".performanceVideosTemplate").content;
+        const cloneYoutubeTemp = performanceVideosTemplate.cloneNode(true);
+        cloneYoutubeTemp.querySelector(".youtubeVideosIframe").src = performanceVideo.video_link;
 
-            const cloneYoutubeTemp = performanceVideosTemplate.cloneNode(true);
+        //        console.log(performanceVideo.video_link)
 
-            cloneYoutubeTemp.querySelector(".youtubeVideosIframe").src = performanceVideo.video_link;
+        //        show  more videos
+        if (document.querySelector(".live-performances-videos").childElementCount < 3) {
+            document.querySelector(".live-performances-videos").appendChild(cloneYoutubeTemp);
+        } else {
+            document.querySelector(".readMoreVideos").appendChild(cloneYoutubeTemp);
+        }
+    })
+}
 
-            //        console.log(performanceVideo.video_link)
+const buttonExpand = document.querySelector(".videos-button");
+const secondContainer = document.querySelector(".readMoreVideos");
+secondContainer.style.display = "none";
 
-            //        show  more videos
-            if (document.querySelector(".live-performances-videos").childElementCount < 3) {
-                document.querySelector(".live-performances-videos").appendChild(cloneYoutubeTemp);
-            } else {
-                document.querySelector(".readMoreVideos").appendChild(cloneYoutubeTemp);
-            }
- })}
+buttonExpand.addEventListener("click", showMoreVideos);
 
-            const buttonExpand = document.querySelector(".videos-button");
-            const secondContainer = document.querySelector(".readMoreVideos");
-            secondContainer.style.display = "none";
+function showMoreVideos() {
+    if (secondContainer.style.display === "none") {
+        secondContainer.style.display = "flex";
 
-            buttonExpand.addEventListener("click", showMoreVideos);
-
-            function showMoreVideos() {
-                if (secondContainer.style.display === "none") {
-                    secondContainer.style.display = "flex";
-
-                    buttonExpand.innerHTML = "Show less"
-                } else {
-                    secondContainer.style.display = "none";
-                    buttonExpand.innerHTML = "Show more";
-                }
-
-
-
-                //        document.querySelector(".live-performances-videos").appendChild(cloneYoutubeTemp);
-
+        buttonExpand.innerHTML = "Show less"
+    } else {
+        secondContainer.style.display = "none";
+        buttonExpand.innerHTML = "Show more";
     }
+
+
+
+    //        document.querySelector(".live-performances-videos").appendChild(cloneYoutubeTemp);
+
+}
