@@ -58,34 +58,34 @@ function showMoreAbout() {
 //For quote slideshow
 
 
-//fetch("http://designhavn.dk/5Wordpress/wp-json/wp/v2/quote?_embed&per_page=100")
-//    .then(res => res.json())
-//    .then(handleQuotes)
+fetch("http://designhavn.dk/5Wordpress/wp-json/wp/v2/quote?_embed&per_page=100")
+    .then(res => res.json())
+    .then(handleQuotes)
 
-//function handleQuotes(quotes) {
-//    console.log(quotes);
-//    quotes.forEach(showQuotes)
-//
-//
-//    function showQuotes(quotesAboutPage) {
-//        var aboutQuote = quotesAboutPage.quote_content;
-//        var quoteAuthorAbout = quotesAboutPage.quote_author;
-//
-//        quotesAboutPage.categories.forEach(quoteCategory => {
-//            if (quoteCategory == 14) {
-//                const aboutQuoteTemp = document.querySelector(".quote-template").content;
-//
-//                const cloneAboutQuoteTemp = aboutQuoteTemp.cloneNode(true);
-//                console.log(quoteAuthorAbout);
-//
-//                cloneAboutQuoteTemp.querySelector(".quote").textContent = aboutQuote;
-//
-//                cloneAboutQuoteTemp.querySelector(".author").textContent = quoteAuthorAbout;
-//
-//                document.querySelector(".slideshow-container").appendChild(cloneAboutQuoteTemp);
-//            }
-//        });
-//    }
+function handleQuotes(quotes) {
+    console.log(quotes);
+    quotes.forEach(showQuotes)
+
+
+    function showQuotes(quotesAboutPage) {
+        var aboutQuote = quotesAboutPage.quote_content;
+        var quoteAuthorAbout = quotesAboutPage.quote_author;
+
+        quotesAboutPage.categories.forEach(quoteCategory => {
+            if (quoteCategory == 14) {
+                const aboutQuoteTemp = document.querySelector(".quote-template").content;
+
+                const cloneAboutQuoteTemp = aboutQuoteTemp.cloneNode(true);
+                console.log(quoteAuthorAbout);
+
+                cloneAboutQuoteTemp.querySelector(".quote").textContent = aboutQuote;
+
+                cloneAboutQuoteTemp.querySelector(".author").textContent = quoteAuthorAbout;
+
+                document.querySelector(".slideshow-container").appendChild(cloneAboutQuoteTemp);
+            }
+        });
+    }
 
     const oneSlide = document.querySelector(".mySlides");
     oneSlide.style.display = "block";
