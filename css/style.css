@@ -978,7 +978,7 @@ p.websiteName {
 .nextPress {
     cursor: pointer;
     position: absolute;
-    top: 100%;
+    top: 50%;
     margin-top: -30px;
     margin-left: 0px;
     margin-right: 0px;
