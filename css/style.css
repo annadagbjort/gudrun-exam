@@ -221,7 +221,8 @@ header.contactHeader {
 .logo-nav-wrapper {
     background-color: rgba(var(--white-rgba), 0.7);
     padding-top: 15px;
-    box-shadow: 0px 0px 9px 10px rgba(var(--white-rgba), 0.7);
+    padding-bottom: 15px;
+    /*box-shadow: 0px 0px 9px 10px rgba(var(--white-rgba), 0.7);*/
 }
 
 /*logo*/
@@ -1540,7 +1541,7 @@ footer {
 
 .booking-container {
     height: 55vh;
-    background-image: url("../images/chicago-94510_1920.jpg");
+    background-image: url("../images/gudrun_schedule.jpg");
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -1622,17 +1623,25 @@ footer {
     .booking-buttons-wrap {
         grid-template-columns: repeat(1, 1fr);
         grid-template-rows: repeat(3, 1fr);
-        height: 300px;
+        height: 250px;
         grid-auto-flow: row;
     }
 
+    .booking-container {
+
+        background-image: url("../images/gudrun_schedule2.jpg");
+
+    }
+
+
     .booking-buttons-wrap div:first-child {
         grid-column-end: span 1;
+        text-align: center;
     }
 
     .btn-to-repertoire-wrap > button,
     .btn-to-contact-wrap > button {
-        margin-top: 2rem;
+        margin-top: 0;
         margin-bottom: 1rem;
     }
 
