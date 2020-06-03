@@ -816,22 +816,22 @@ article.newsletter-updates {
     margin: auto;
 }
 
+
+
  .about-grid-wrapper > img {
     margin-right: auto;
 }
 
-.about-grid-wrapper > div {
-
-}
 
 .about-header {
     grid-column: 1/-1;
+    margin-top: 60px;
 }
 
 .about-text {
     padding-right: 60px;
     padding-top: 30px;
-    width: 50%;
+    width: 65%;
     margin-top: -13px;
     margin-left: auto;
 }
@@ -840,7 +840,7 @@ article.newsletter-updates {
     display: block;
     padding-right: 60px;
     margin-left: auto;
-    width: 50%;
+    width: 65%;
 }
 
 .read-more-button {
@@ -859,6 +859,42 @@ article.newsletter-updates {
 .img-grid {
     max-width: 400px;
     padding-bottom: 100px;
+}
+
+@media only screen and (max-width: 1190px) {
+    .about-grid-wrapper {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-auto-flow: row;
+    margin: auto;
+}
+
+    .about-grid-wrapper > img  {
+        margin: auto;
+        padding-bottom: 20px;
+        padding-right: 0px;
+    }
+
+    .read-more-button {
+        margin: auto;
+        margin-top: 30px;
+        margin-bottom: 40px;
+
+    }
+
+    .about-text, .about-see-more {
+        padding-right: 0;
+        margin: auto;
+    }
+
+
+
+}
+
+@media only screen and (max-width: 675px) {
+    .about-text, .about-see-more {
+        width: 80%;
+    }
 }
 
 /*Quote slideshow */
