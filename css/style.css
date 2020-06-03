@@ -803,11 +803,25 @@ article.newsletter-updates {
     margin: 0 300px 50px 300px;
 }
 
-.about-wrapper {
+/*.about-wrapper {
     margin: 0 100px;
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
     grid-gap: 1rem 10rem;
+}*/
+
+.about-grid-wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin: auto;
+}
+
+ .about-grid-wrapper > img {
+    margin-right: auto;
+}
+
+.about-grid-wrapper > div {
+
 }
 
 .about-header {
@@ -815,18 +829,26 @@ article.newsletter-updates {
 }
 
 .about-text {
-    padding: 0;
+    padding-right: 60px;
+    padding-top: 30px;
+    width: 50%;
     margin-top: -13px;
+    margin-left: auto;
 }
 
 .about-see-more {
     display: block;
+    padding-right: 60px;
+    margin-left: auto;
+    width: 50%;
 }
 
 .read-more-button {
     display: block;
     /*    width: 200px;*/
-    margin: 0 auto;
+    margin-left: auto;
+    margin-right: 60px;
+    margin-top: 20px;
 }
 
 .book-lessons {
@@ -1573,7 +1595,7 @@ footer {
 
     .email-form,
     .contact-info-det {
-        width: 100%;
+        width: 80%;
         margin-top: 7rem;
 
     }
@@ -1613,13 +1635,14 @@ footer {
 
     .email-form,
     .contact-info-det {
-        width: 100%;
+        width: 90%;
         margin: auto;
     }
 
     .contact-info-det > p,
     .contact-info-det > h1 {
         width: 100%;
+        padding: 0.5rem 0;
     }
 
 
