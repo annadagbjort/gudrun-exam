@@ -477,6 +477,13 @@ article.newsletter-updates {
 
 
 
+
+
+
+
+
+
+
 /*A B O U T  P A G E */
 
 .grey-bg {
@@ -490,7 +497,8 @@ article.newsletter-updates {
 }
 
 .vocal-coaching-paragraph {
-    margin: 0 300px 50px 300px;
+/*    margin: 0 300px 50px 300px;*/
+    padding: 0 20vw 50px;
 }
 
 /*.about-wrapper {
@@ -553,7 +561,8 @@ article.newsletter-updates {
 .img-grid {
     /*max-width: 400px;*/
     max-width: 100%;
-    background-image: url("../images/gudrun-image2.jpg");
+/*    background-image: url("../images/gudrun-image2.jpg");*/
+/*    background-repeat: no-repeat;*/
     padding-bottom: 100px;
 }
 
@@ -599,12 +608,13 @@ article.newsletter-updates {
 /*Quote slideshow */
 .slideshow-container {
     position: relative;
+    padding: 20px 30vw 0;
 }
 
 .mySlides {
     display: none;
     text-align: center;
-    margin: 0 463px;
+/*    margin: 0 463px; */
 }
 
 .slideshow-container:first-child {
@@ -619,8 +629,13 @@ article.newsletter-updates {
     top: 50%;
     width: auto;
     margin-top: -30px;
+
+/*
     margin-left: 350px;
     margin-right: 350px;
+*/
+      margin-left: 26vw;
+    margin-right: 26vw;
     padding: 16px;
     border-radius: 0 3px 3px 0;
     user-select: none;
@@ -631,6 +646,9 @@ article.newsletter-updates {
     position: absolute;
     right: 0;
     border-radius: 3px 0 0 3px;
+}
+.prev {
+    left: 0;
 }
 
 /*add see-through bg color on hover */
@@ -670,6 +688,7 @@ article.newsletter-updates {
     color: var(--text-red);
 }
 
+/*
 @media only screen and (max-width: 1174px) {
     .img-grid {
         padding-bottom: 50px;
@@ -722,12 +741,13 @@ article.newsletter-updates {
     }
 
     .book-lessons {
-        margin: 0 40%;
 
     }
 
 }
+*/
 
+/*
 @media only screen and (max-width: 650px) {
     .img-grid {
         max-width: 300px;
@@ -762,6 +782,7 @@ article.newsletter-updates {
 
     .slideshow-container {
         left: 70px;
+        text-align: center;
     }
 
     .dot-container {
@@ -769,9 +790,9 @@ article.newsletter-updates {
     }
 
     .book-lessons {
-        margin: 0 165px;
     }
 }
+*/
 
 
 
@@ -800,9 +821,9 @@ article.quotes {
 article.press {
     display: grid;
     grid-template-columns: repeat(auto-fill, 250px);
-    grid-gap: 5em;
+    grid-gap: 3em;
     justify-content: center;
-    margin: 5vw
+    margin: 5vw;
 }
 
 .pressHeader {
@@ -811,13 +832,13 @@ article.press {
 }
 
 .pressFigure {
-    width: 20em;
+/*    width: 20em;*/
     margin: 0px;
 }
 
 .pressImg {
-    height: 10em;
-    width: 17em;
+    height: 100%;
+    width: 100%;
     object-fit: cover;
 }
 
@@ -890,6 +911,15 @@ p.websiteName {
 .author {
     color: var(--text-red);
 }
+
+
+
+
+
+
+
+
+
 
 
 
@@ -1769,7 +1799,7 @@ footer {
     /*font styling*/
     p {
         font-size: 1em;
-        padding-top: 10px;
+/*        padding-top: 10px;*/
     }
 }
 
@@ -1838,10 +1868,12 @@ footer {
 
 
     /*font styling*/
+/*
     p {
         font-size: 1em;
         padding-top: 10px;
     }
+*/
 }
 
 
@@ -1908,8 +1940,10 @@ footer {
     /*font styling*/
     p {
         font-size: 1em;
+/*
         padding-top: 10px;
         margin-right: 20px;
+*/
     }
 
     h4 {
