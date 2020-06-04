@@ -116,6 +116,7 @@ if (MusicPage) {
 fetch("http://designhavn.dk/5Wordpress/wp-json/wp/v2/posts?_embed")
     .then(res => res.json())
     .then(handlePostData)
+
 //has comments √
 function handlePostData(PostDataHandled) {
 
@@ -130,11 +131,23 @@ function handlePostData(PostDataHandled) {
 
         // Inorder to choose the posts I want to display I look into all the category ids being used
         // Since I don't aways want to display every post
-        item.categories.forEach(categor => {
+        item.categories.forEach(postCategory => {
+
+
+            // Vocal coaching - the vocal coaching category id is 10
+            // So if it is 10 we want to do the following:
+            if (postCategory == 10) {
+                //To
+                if (AboutPage) {
+                    document.querySelector(".vocal-coaching-wrapper .vocal-coaching-header").textContent = theHeader;
+                    document.querySelector(".vocal-coaching-wrapper .vocal-coaching-paragraph").innerHTML = theContent;
+                }
+            }
+
 
             // Her Album > the category for the text about the album is 6
             // So now we look through each post and if the category is 6 we add the content we need to html
-            if (categor == 6) {
+            if (postCategory == 6) {
 
                 //Here I'm choosing where to append it on the front page
                 if (FrontPage) {
@@ -157,7 +170,7 @@ function handlePostData(PostDataHandled) {
             }
 
             // Newsletter > the category for the Newsletter is 7
-            if (categor == 7) {
+            if (postCategory == 7) {
 
                 if (FrontPage) {
                     // document.querySelector(".newsletter-updates .fp-header").textContent = theHeader;
@@ -168,7 +181,7 @@ function handlePostData(PostDataHandled) {
 
 
             //About Gudrun short text
-            if (categor == 2) {
+            if (postCategory == 2) {
                 if (AboutPage) {
                     document.querySelector(".about-a-link").classList.add("active-nav");
                     document.querySelector(".about-wrapper .about-header").textContent = theHeader;
@@ -178,20 +191,13 @@ function handlePostData(PostDataHandled) {
             }
 
             //About Gudrun longer text
-            if (categor == 11) {
+            if (postCategory == 11) {
                 if (AboutPage) {
                     document.querySelector(".about-wrapper .about-see-more").innerHTML = theContent;
                 }
             }
 
-            //            Vocal coaching
-            if (categor == 10) {
-                if (AboutPage) {
-                    document.querySelector(".vocal-coaching-wrapper .vocal-coaching-header").textContent = theHeader;
 
-                    document.querySelector(".vocal-coaching-wrapper .vocal-coaching-paragraph").innerHTML = theContent;
-                }
-            }
 
         });
     });
