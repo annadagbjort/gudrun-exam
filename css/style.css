@@ -59,12 +59,12 @@ h2 {
 
 p {
     color: var(--black);
-    font-size: 18px;
+    /*font-size: 18px;*/
 }
 
 q {
     font-style: italic;
-    font-size: 18px;
+    /*font-size: 18px;*/
 }
 
 /*  B A S I C  S T U F F  */
@@ -221,7 +221,8 @@ header.contactHeader {
 .logo-nav-wrapper {
     background-color: rgba(var(--white-rgba), 0.7);
     padding-top: 15px;
-    box-shadow: 0px 0px 9px 10px rgba(var(--white-rgba), 0.7);
+    padding-bottom: 15px;
+    /*box-shadow: 0px 0px 9px 10px rgba(var(--white-rgba), 0.7);*/
 }
 
 /*logo*/
@@ -818,7 +819,7 @@ article.newsletter-updates {
 
 
 
- .about-grid-wrapper > img {
+.about-grid-wrapper > img {
     margin-right: auto;
 }
 
@@ -857,19 +858,21 @@ article.newsletter-updates {
 }
 
 .img-grid {
-    max-width: 400px;
+    /*max-width: 400px;*/
+    max-width: 100%;
+    background-image: url("../images/gudrun-image2.jpg");
     padding-bottom: 100px;
 }
 
 @media only screen and (max-width: 1190px) {
     .about-grid-wrapper {
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-auto-flow: row;
-    margin: auto;
-}
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-auto-flow: row;
+        margin: auto;
+    }
 
-    .about-grid-wrapper > img  {
+    .about-grid-wrapper > img {
         margin: auto;
         padding-bottom: 20px;
         padding-right: 0px;
@@ -882,7 +885,8 @@ article.newsletter-updates {
 
     }
 
-    .about-text, .about-see-more {
+    .about-text,
+    .about-see-more {
         padding-right: 0;
         margin: auto;
     }
@@ -892,7 +896,9 @@ article.newsletter-updates {
 }
 
 @media only screen and (max-width: 675px) {
-    .about-text, .about-see-more {
+
+    .about-text,
+    .about-see-more {
         width: 80%;
     }
 }
@@ -1207,7 +1213,7 @@ footer {
 }
 
 .inner-footer {
-    width: 70%;
+    width: 85%;
     margin: auto;
     padding: 30px 10px;
     display: flex;
@@ -1216,16 +1222,31 @@ footer {
     justify-content: center;
 }
 
-.footer-items-contact {
-    width: 48%;
+.footer-items-contact:nth-of-type(1) {
+    width: 26%;
     padding: 10px 10px;
     box-sizing: border-box;
 }
+
+
+.footer-items-contact:nth-of-type(2) {
+    width: 30%;
+    padding: 10px 10px;
+    box-sizing: border-box;
+}
+
+.footer-items-contact:nth-of-type(3) {
+    width: 20%;
+    padding: 10px 10px;
+    box-sizing: border-box;
+}
+
 
 .footer-items-contact p {
     padding-top: 10px;
     font-size: 20px;
 }
+
 
 .footer-border {
     width: 120px;
@@ -1247,9 +1268,45 @@ footer {
     height: auto;
 }
 
+.inner-footer .newsletter-signup-form {
+    padding-left: 0;
+    padding-top: 15px;
+}
+
+.inner-footer .newsletter-signup-form .fp-newsletter {
+    margin-right: auto;
+    margin-left: 0;
+}
+
+.newsletter-signup-form > .grey-button {
+    margin-left: 0;
+    color: var(--text-red);
+}
+
+
 /* FOOTER MEDIA QUERIES */
 
-@media only screen and (max-width: 680px) {
+@media only screen and (max-width: 1075px) {
+
+    .footer-items-contact:nth-of-type(3) {
+        width: 28%;
+        padding: 10px 10px;
+        box-sizing: border-box;
+    }
+
+
+}
+
+@media only screen and (max-width: 790px) {
+    .footer-items-contact:nth-of-type(3) {
+        width: 33%;
+        padding: 10px 10px;
+        box-sizing: border-box;
+    }
+
+}
+
+@media only screen and (max-width: 735px) {
     .inner-footer {
         width: 100%;
         justify-content: center;
@@ -1261,6 +1318,40 @@ footer {
     .footer-items-contact {
         width: 100%;
     }
+
+    .footer-items-contact:nth-of-type(1) {
+        width: 100%;
+        padding: 10px 10px;
+        box-sizing: border-box;
+    }
+
+
+    .footer-items-contact:nth-of-type(2) {
+        width: 100%;
+        padding: 10px 10px;
+        box-sizing: border-box;
+    }
+
+    .footer-items-contact:nth-of-type(3) {
+        width: 100%;
+        padding: 10px 10px;
+        box-sizing: border-box;
+    }
+
+    .inner-footer .newsletter-signup-form .fp-newsletter {
+        margin-right: auto;
+        margin-left: 0;
+        width: 45vw;
+
+    }
+}
+
+@media only screen and (max-width: 440px) {
+    .inner-footer .newsletter-signup-form .fp-newsletter {
+        width: 60vw;
+
+    }
+
 }
 
 
@@ -1309,7 +1400,6 @@ footer {
     width: 60vw;
     margin: 2rem auto;
     padding: 3.5rem;
-    font-size: 24px;
     font-family: "crimson pro", serif;
 }
 
@@ -1451,7 +1541,7 @@ footer {
 
 .booking-container {
     height: 55vh;
-    background-image: url("../images/chicago-94510_1920.jpg");
+    background-image: url("../images/gudrun_schedule.jpg");
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -1533,17 +1623,25 @@ footer {
     .booking-buttons-wrap {
         grid-template-columns: repeat(1, 1fr);
         grid-template-rows: repeat(3, 1fr);
-        height: 300px;
+        height: 250px;
         grid-auto-flow: row;
     }
 
+    .booking-container {
+
+        background-image: url("../images/gudrun_schedule2.jpg");
+
+    }
+
+
     .booking-buttons-wrap div:first-child {
         grid-column-end: span 1;
+        text-align: center;
     }
 
     .btn-to-repertoire-wrap > button,
     .btn-to-contact-wrap > button {
-        margin-top: 2rem;
+        margin-top: 0;
         margin-bottom: 1rem;
     }
 
