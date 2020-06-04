@@ -509,44 +509,64 @@ article.newsletter-updates {
 }*/
 
 .about-grid-wrapper {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    margin: auto;
+/*    display: grid;*/
+/*    grid-template-columns: 1fr 1fr;*/
+    background-image: url(../images/gudrun-image.jpg);
+    background-size:50%;
+    background-repeat: no-repeat;
+    background-position: right 30%;
+/*    background-attachment:fixed;*/
+    margin-right: 5vw;
+    margin-left: 10vw;
+/*   padding-top: 30px;*/
+    padding-bottom: 30px;
 }
 
+.backgroundImgAbout{
 
-
-.about-grid-wrapper > img {
+    height: 100px;
+    width: 100px;
+}
+.img-grid {
+/*
     margin-right: auto;
+    margin-left: 6px;
+    height: 50vw;
+    padding-bottom: 100px;
+*/
+
 }
 
 
 .about-header {
     grid-column: 1/-1;
     margin-top: 60px;
+    padding-bottom: 40px;
 }
 
 .about-text {
-    padding-right: 60px;
+    padding-right:30px;
     padding-top: 30px;
-    width: 65%;
+    width: 50%;
+/*
     margin-top: -13px;
-    margin-left: auto;
+    margin-left: 20vw;
+*/
 }
 
 .about-see-more {
     display: block;
-    padding-right: 60px;
-    margin-left: auto;
-    width: 65%;
+    padding-right: 30px;
+/*    margin-left: auto;*/
+    width: 50%;
 }
 
 .read-more-button {
     display: block;
-    /*    width: 200px;*/
+/*        width: 200px;*/
     display: block;
     margin-right: auto;
-    margin-left: auto;
+    margin-left: 15%;
     margin-top: 20px;
 }
 
@@ -558,14 +578,9 @@ article.newsletter-updates {
     margin-left: auto;
 }
 
-.img-grid {
-    /*max-width: 400px;*/
-    max-width: 100%;
-/*    background-image: url("../images/gudrun-image2.jpg");*/
-/*    background-repeat: no-repeat;*/
-    padding-bottom: 100px;
-}
 
+
+/*
 @media only screen and (max-width: 1190px) {
     .about-grid-wrapper {
         display: grid;
@@ -596,6 +611,7 @@ article.newsletter-updates {
 
 
 }
+*/
 
 @media only screen and (max-width: 675px) {
 
@@ -793,6 +809,19 @@ article.newsletter-updates {
     }
 }
 */
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
