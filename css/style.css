@@ -209,7 +209,7 @@ header.aboutHeader {
 
 header.contactHeader {
     background-image: url(../assets/img/large-img/bubbles-l.png);
-    height: 30vw;
+    height: 20vw;
     background-position: bottom;
 }
 
@@ -323,8 +323,11 @@ article.newsletter-updates {
 }
 
 .text-about-newsletter {
-    width: 30vw;
-    padding-left: 6vw;
+    width: 28vw;
+    text-align: center;
+    padding-top: 1em;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .newsletter-signup-form {
@@ -635,7 +638,6 @@ article.newsletter-updates {
 .mySlides {
     display: none;
     text-align: center;
-    /*    margin: 0 463px; */
 }
 
 .slideshow-container:first-child {
@@ -2026,7 +2028,7 @@ footer {
 
     header.contactHeader {
         background-image: url(../assets/img/medium-img/bubbles-m.png);
-        height: 30vw;
+        height: 10vw;
         background-position: bottom;
     }
 
@@ -2139,11 +2141,15 @@ footer {
         margin-right: auto;
     }
 
-    .text-about-newsletter {
-        width: 50vw;
-        padding-left: 0;
+    .newsletter{
+        display:block;
         margin-left: auto;
         margin-right: auto;
+
+    }
+
+    .text-about-newsletter {
+        width: 40vw;
     }
 
     .text-about-newsletter {
@@ -2171,14 +2177,14 @@ footer {
     }
 
     .fp-album-cover {
-        width: 75vw;
+        width: 18em;
     }
 
     .about-album {
         grid-row: 3;
         margin-left: auto;
         margin-right: auto;
-        width: 80vw;
+        width: 70vw;
         padding: 0;
     }
 
@@ -2188,8 +2194,8 @@ footer {
 
     .about-grid-wrapper {
 
-        background-size: 130%;
-        background-position: 8% 30%;
+        background-size: 190%;
+        background-position: 0% 95%;
         /*    background-attachment:fixed;*/
         margin-right: 0vw;
         margin-left: 0vw;
@@ -2202,7 +2208,7 @@ footer {
         /*        width: 80%;*/
         padding-right: 0px;
         padding-top: 30px;
-        width: 80%;
+        width: 60%;
         margin-left: auto;
         margin-right: auto;
 
@@ -2227,6 +2233,37 @@ footer {
         /*        margin-bottom: auto;*/
         background: rgba(var(--grey-rgb), 0.8)
     }
+
+    /*Quote slideshow */
+    .slideshow-container {
+        padding: 10px;
+
+    }
+
+    .mySlides {
+        width: 70%;
+        margin: auto;
+    }
+
+    /*Next and previous buttons */
+    .prev,
+    .next {
+        margin-left: 0px;
+        margin-right: 0px;
+        padding: 16px 0;
+    }
+
+    /*Positioning the "next button" to the right*/
+    .next {
+
+        right: 2em;
+
+    }
+
+    .prev {
+        left: 2em;
+    }
+
 
     /*    ABOUT --- P R E S S    */
 
@@ -2288,7 +2325,7 @@ footer {
 
     header.contactHeader {
         background-image: url(../assets/img/small-img/bubbles-s.png);
-        height: 60vw;
+        height: 10vw;
         background-position: bottom;
     }
 
@@ -2360,11 +2397,12 @@ footer {
 
     /*   Front Page    */
 
-    .text-about-newsletter {
+ .text-about-newsletter {
         width: 70vw;
-        padding-bottom: 8px;
-        margin-left: auto;
-        margin-right: auto;
+    }
+
+    .fp-album-cover {
+        width: 14em;
     }
 
     .theInstagram {
@@ -2418,15 +2456,21 @@ footer {
     }
 
     .vocal-coaching-paragraph {
-        /*    padding: 0 6vw 50px;*/
+            padding: 0 6vw 50px;
         padding: 0;
         width: 80%;
         margin-left: auto;
         margin-right: auto;
     }
 
-
-
+    .slideshow-container-press {
+        margin: 0px;
+        padding: 0;
+    }
+    myPressSlides{
+    margin: 0px;
+    padding: 10em;
+    }
 
 
 
