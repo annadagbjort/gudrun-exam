@@ -268,7 +268,6 @@ header.contactHeader {
     color: var(--text-red);
 }
 
-
 .fp-header {
     grid-column: span 2;
     padding-top: 1.2em;
@@ -287,21 +286,9 @@ iframe.front-page-youtube {
     margin-right: auto;
 }
 
-/*
-@media only screen and (max-width: 700px) {
-    iframe.front-page-youtube {
-        width: 80vw;
-        height: 53vw;
-
-    }
-
-}
-*/
-
 .the-video-title-fetched {
     text-align: center;
 }
-
 
 article.newsletter-updates {
     background-image: url(../assets/img/large-img/blue-smile-large.png);
@@ -357,39 +344,6 @@ article.newsletter-updates {
     margin-right: auto;
 }
 
-/*
-@media only screen and (max-width: 650px) {
-    .transparent-backg {
-        background: rgba(var(--white-rgba), 0.7);
-        width: 80vw;
-        margin: auto;
-        padding-top: 20px;
-        padding-bottom: 20px;
-        box-shadow: 0px 0px 33px 30px rgba(var(--white-rgba), 0.7);
-    }
-
-    .text-about-newsletter {
-        width: 40vw;
-    }
-
-    .fp-newsletter {
-        width: 40vw;
-    }
-
-}
-
-@media only screen and (max-width: 450px) {
-    .text-about-newsletter {
-        width: 70vw;
-    }
-
-    .fp-newsletter {
-        width: 50vw;
-    }
-
-}
-*/
-
 .debut-album {
     /*    display: grid;
     grid-template-columns: 1fr 1fr;*/
@@ -415,33 +369,7 @@ article.newsletter-updates {
     padding: 0em 3em;
     display: block;
     margin-right: auto;
-    /*    text-align: center;*/
 }
-
-/*
-@media only screen and (min-width: 1175px) {
-    .about-album {
-        width: 30vw;
-    }
-}
-
-@media only screen and (max-width: 700px) {
-    .about-album {
-        width: 80vw;
-        margin: auto;
-        padding: 0em 1em;
-    }
-}
-
-@media only screen and (max-width: 450px) {
-
-
-    .fp-album-cover {
-        width: 18em;
-        padding: 0em 1em;
-    }
-}
-*/
 
 .about-album > button {
     display: block;
@@ -449,9 +377,6 @@ article.newsletter-updates {
     margin-right: auto;
     margin-top: 1em;
 }
-
-
-
 
 .theInstagram {
     display: flex;
@@ -475,32 +400,6 @@ article.newsletter-updates {
 }
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 /*A B O U T  P A G E */
 
 .grey-bg {
@@ -517,13 +416,6 @@ article.newsletter-updates {
     /*    margin: 0 300px 50px 300px;*/
     padding: 0 20vw 50px;
 }
-
-/*.about-wrapper {
-    margin: 0 100px;
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
-    grid-gap: 1rem 10rem;
-}*/
 
 .about-grid-wrapper {
     /*    display: grid;*/
@@ -544,17 +436,6 @@ article.newsletter-updates {
     width: 100px;
 }
 
-.img-grid {
-    /*
-    margin-right: auto;
-    margin-left: 6px;
-    height: 50vw;
-    padding-bottom: 100px;
-*/
-
-}
-
-
 .about-header {
     grid-column: 1/-1;
     margin-top: 60px;
@@ -565,10 +446,6 @@ article.newsletter-updates {
     padding-right: 30px;
     padding-top: 30px;
     width: 50%;
-    /*
-    margin-top: -13px;
-    margin-left: 20vw;
-*/
 }
 
 .about-see-more {
@@ -593,42 +470,6 @@ article.newsletter-updates {
     margin-left: auto;
 }
 
-
-
-/*
-@media only screen and (max-width: 1190px) {
-    .about-grid-wrapper {
-        display: grid;
-        grid-template-columns: 1fr;
-        grid-auto-flow: row;
-        margin: auto;
-    }
-
-    .about-grid-wrapper > img {
-        margin: auto;
-        padding-bottom: 20px;
-        padding-right: 0px;
-    }
-
-    .read-more-button {
-        margin: auto;
-        margin-top: 30px;
-        margin-bottom: 40px;
-
-    }
-
-    .about-text,
-    .about-see-more {
-        padding-right: 0;
-        margin: auto;
-    }
-
-
-
-}
-*/
-
-
 /*Quote slideshow */
 .slideshow-container {
     position: relative;
@@ -652,11 +493,6 @@ article.newsletter-updates {
     top: 50%;
     width: auto;
     margin-top: -30px;
-
-    /*
-    margin-left: 350px;
-    margin-right: 350px;
-*/
     margin-left: 26vw;
     margin-right: 26vw;
     padding: 16px;
@@ -710,128 +546,11 @@ article.newsletter-updates {
     color: var(--text-red);
 }
 
-/*
-@media only screen and (max-width: 1174px) {
-    .img-grid {
-        padding-bottom: 50px;
-        margin: 0 auto;
-    }
-
-    .vocal-coaching-paragraph {
-        margin: 0 100px 50px 100px;
-    }
-
-    .mySlides {
-        margin: 0 auto;
-    }
-
-    .quote {
-        margin: 0 auto;
-    }
-
-    .mySlides {
-        width: 400px;
-    }
-
-    .prev,
-    .next {
-        margin-left: 15px;
-        margin-right: 75px;
-    }
-
-    .about-wrapper {
-        grid-template-columns: 1fr;
-    }
-
-    .vocal-coaching-paragraph {
-        margin: 0 auto;
-        padding: 0 50px;
-    }
-
-    .vocal-coaching-wrapper {
-        margin: 0 -48px 0 -10px;
-    }
-
-    .slideshow-container {
-        left: 25px;
-        margin-top: 50px;
-    }
-
-    .dot-container {
-        margin-left: 40px;
-        margin-top: -17px;
-    }
-
-    .book-lessons {
-
-    }
-
-}
-*/
-
-/*
-@media only screen and (max-width: 650px) {
-    .img-grid {
-        max-width: 300px;
-    }
-
-    .grey-bg {
-        margin: 20px -165px 20px -10px;
-    }
-
-    .mySlides {
-        margin: 0 auto;
-    }
-
-    .quote {
-        margin: 0 auto;
-    }
-
-    .prev,
-    .next {
-        margin-left: -36px;
-        margin-right: -75px;
-    }
-
-    .about-wrapper {
-        grid-template-columns: 1fr;
-    }
-
-    .vocal-coaching-paragraph {
-        margin: 0 auto;
-        padding: 0 50px;
-    }
-
-    .slideshow-container {
-        left: 70px;
-        text-align: center;
-    }
-
-    .dot-container {
-        margin-left: 165px;
-    }
-
-    .book-lessons {
-    }
-}
-*/
 
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-/*    P R E S S     */
+/*    A B O U T  PAGE - P R E S S     */
 
 article.quotes {
     text-align: center;
@@ -1227,11 +946,6 @@ footer {
         /*        margin: 0 15px;*/
     }
 }
-
-
-
-
-
 
 
 
@@ -1669,16 +1383,6 @@ footer {
     height: 400px;
     object-fit: cover;
     object-position: -20% 0;
-
-
-
-    /*    parallax feature*/
-    /*
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-position: center;
-*/
-
 }
 
 @media only screen and (max-width: 630px) {
@@ -1691,8 +1395,6 @@ footer {
     }
 }
 
-
-
 .performance-des {
     position: absolute;
     width: 100%;
@@ -1702,8 +1404,6 @@ footer {
     padding: 20px;
     z-index: 1;
 }
-
-
 
 /*performance videos*/
 
@@ -1758,8 +1458,6 @@ footer {
 }
 
 
-
-
 /*mobile- extra small screens*/
 
 @media only screen and (max-width: 600px) {
@@ -1810,7 +1508,6 @@ footer {
         border-radius: 30%;
     }
 
-
     /*video parent container*/
     .live-performances-videos {
         display: flex;
@@ -1820,12 +1517,10 @@ footer {
         padding: 0;
     }
 
-
     .youtubeVideosIframe {
         padding: 20px;
         flex-basis: 100%;
     }
-
 
     /*font styling*/
     p {
@@ -1896,15 +1591,6 @@ footer {
         padding: 20px;
         flex-basis: 100%;
     }
-
-
-    /*font styling*/
-    /*
-    p {
-        font-size: 1em;
-        padding-top: 10px;
-    }
-*/
 }
 
 
@@ -1971,10 +1657,6 @@ footer {
     /*font styling*/
     p {
         font-size: 1em;
-        /*
-        padding-top: 10px;
-        margin-right: 20px;
-*/
     }
 
     h4 {
@@ -2160,11 +1842,6 @@ footer {
         width: 30vw;
     }
 
-    /*album section*/
-    /*   .debut-album-wrapper {
-        grid-template-columns: 1fr;
-        grid-auto-flow: row;
-    }*/
     .fp-header {
         grid-column: span 1;
     }
@@ -2333,7 +2010,6 @@ footer {
 
     .top-logo {
         max-width: 11em;
-
     }
 
     .logo-nav-wrapper {

@@ -657,7 +657,6 @@ function showInfo(jsonData) {
 
 
 
-
 //Press Quotes!
 var slidePressIndex = 1;
 showPressSlides(slidePressIndex);
